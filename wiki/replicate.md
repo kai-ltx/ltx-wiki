@@ -2,11 +2,12 @@
 title: Replicate
 type: entity
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/api-replicate-ltx-video.md
   - raw/inference-providers-overview.md
   - raw/integration-cloud-platforms.md
+  - raw/tutorial-ltx-video-replicate-fal-pricing-may-2026.md
 tags:
   - inference
   - cloud
@@ -138,9 +139,37 @@ The model is open source and can be self-hosted using Replicate's `cog` tool wit
 
 - `chenxwh/ltx-video` -- Community implementation with additional features
 
+## LTX-2.3 and LTX-2 Models (May 2026)
+
+As of May 2026, Replicate hosts three official Lightricks models plus community variants:
+
+| Model | URL | Notes |
+|-------|-----|-------|
+| `lightricks/ltx-2.3-pro` | https://replicate.com/lightricks/ltx-2.3-pro | Audio-to-video, retake, extend, portrait 9:16, up to 4K/50fps |
+| `lightricks/ltx-2-fast` | https://replicate.com/lightricks/ltx-2-fast | Low latency; storyboarding, mobile apps, high-volume production |
+| `lightricks/ltx-2-retake` | https://replicate.com/lightricks/ltx-2-retake | Retake endpoint; $0.10/s |
+| `lucataco/ltx-video-iclora` | https://replicate.com/lucataco/ltx-video-iclora | Community; IC-LoRA for style/character consistency |
+
+**Quick-start (Python, LTX-2.3-pro):**
+```python
+import replicate
+
+output = replicate.run(
+    "lightricks/ltx-2.3-pro",
+    input={
+        "prompt": "A surfer rides a wave at sunset",
+        "image": open("frame.jpg", "rb"),
+        "fps": 24,
+        "width": 1280,
+        "height": 720,
+    }
+)
+print(output)
+```
+
 ## Limitations
 
-Compared to [[fal-ai]] and [[wavespeed-ai]], Replicate has limited LTX model coverage. In addition to the original LTX-Video model, Replicate now hosts an **LTX-2 retake endpoint** (`lightricks/ltx-2-retake` at https://replicate.com/lightricks/ltx-2-retake, $0.10/s). However, it does not yet support LTX-2.3, 19B, or features such as audio-to-video, video extend, LoRA, and ControlNet.
+Replicate does not support LoRA training or ControlNet via API (see [[fal-ai]] for these). Audio-to-video requires the `ltx-2.3-pro` endpoint specifically.
 
 ## Hugging Face Integration
 

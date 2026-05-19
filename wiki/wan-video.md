@@ -2,11 +2,12 @@
 title: Wan Video
 type: concept
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/competitor-model-wan-video.md
   - raw/open-source-comparison.md
   - raw/related-work-and-comparisons.md
+  - raw/competitor-wan-2-7-release-april-2026.md
 tags:
   - competitor
   - alibaba
@@ -53,6 +54,23 @@ Wan Video is Alibaba's open-source video generation model family, developed by t
 - Speech-to-Video model for digital human creation
 - Converts portrait photos into film-quality avatars capable of speaking, singing, and performing
 
+### Wan 2.6 (December 2025)
+- Open-source image model (text-to-image focus)
+
+### Wan 2.7 (Cloud launch late March/April 22, 2026; open weights Q2 2026)
+- **Architecture:** MoE diffusion transformer — 27B total parameters, 14B active per inference pass
+- **Unified architecture** covering text-to-video, image-to-video, reference-to-video with voice cloning, and instruction-based video editing
+- **4K image generation** (2K for video output)
+- **Up to 9 reference images** for style and content guidance
+- **Coherent image set generation** — up to 12 related images per single request
+- **Thinking mode** for enhanced compositional reasoning
+- **Native audio output** built in (first Wan version with this)
+- **First and last frame control** for precise video bookending
+- **Multi-reference character consistency** across scenes
+- Generates 1080p video up to 15 seconds
+- Apache 2.0 license, no face filters, no regional blocks
+- Competes directly with [[competitor-kling|Kling 3.0]], [[competitor-runway|Runway Gen-4.5]], and Veo models on ELO leaderboard
+
 ## Capabilities
 
 - Text-to-video, image-to-video, text+image-to-video (TI2V)
@@ -74,14 +92,19 @@ Wan Video is Alibaba's open-source video generation model family, developed by t
 
 ## Weaknesses
 
-- **Slower generation** -- 10-12 minutes for 5 seconds at 720p on an H100
-- **High VRAM for best quality** -- 14B model needs 60-80 GB VRAM
-- **No native audio** -- video only
-- **Shorter clip duration** -- limited to approximately 5 seconds per generation
+- **Slower generation** -- 10-14x slower than [[ltx-2.3-model|LTX-2.3]] on equivalent hardware (12–18 min vs. 1–2 min real-world)
+- **High VRAM for best quality** -- 14B model needs 20+ GB VRAM for longer clips; 60-80 GB for full precision
+- **No native audio** — Wan 2.2 and earlier; Wan 2.7 adds native audio
+- **Shorter clip duration** — earlier versions limited to ~5 seconds; 2.7 supports up to 15 seconds
+- **Open weights delayed** — Wan 2.7 cloud launched April 2026, open weights expected mid-to-late Q2 2026
 
 ## Comparison to LTX
 
-In the [[open-source-video-generation-landscape]], Wan 2.2 leads in motion realism and has the lowest VRAM entry point. However, [[ltx-2-overview|LTX-2]] is dramatically faster (approximately 18x), generates native 4K with synchronized audio, and offers a broader product ecosystem (desktop app, studio, MCP integration). The [[related-work-and-comparisons|LTX-2 paper]] reports LTX-2 is approximately 18x faster than Wan 2.2 on an H100 and ranked higher on the Artificial Analysis benchmark.
+In the [[open-source-video-generation-landscape]], Wan 2.2 leads in motion realism and cinematic quality for detailed, longer-form work. However, [[ltx-2.3-model|LTX-2.3]] is dramatically faster (10–14x in community benchmarks, ~18x per LTX-2 paper on H100), generates native 4K with synchronized audio, and offers a broader product ecosystem (desktop app, studio, MCP integration). Community consensus splits along use case lines: LTX for speed/social/iteration; Wan for cinematic/high-detail longer-form work.
+
+Wan 2.7 (2026) narrows the gap with native audio, up to 15-second clips, and MoE efficiency improvements, but open weights are delayed. LTX-2.3 still holds the #1 open-weight model position on the Artificial Analysis leaderboard (Elo 1121) as of March 2026, ahead of Wan 2.2.
+
+For a detailed community benchmark comparison, see [[ltx-model-comparisons]].
 
 ## See Also
 

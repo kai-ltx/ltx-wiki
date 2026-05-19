@@ -2,11 +2,12 @@
 title: Modal
 type: entity
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/hosting-modal-ltx-video.md
   - raw/inference-providers-overview.md
   - raw/cloud-deployment-platforms.md
+  - raw/tutorial-ltx-video-runpod-modal-cloud-gpu-2026.md
 tags:
   - hosting
   - cloud
@@ -74,6 +75,38 @@ The inference logic is wrapped in a Modal `Cls` that:
 - All outputs saved locally AND on a Modal Volume
 - Volumes can be explored from the Modal Dashboard
 - Command line access via `modal volume` commands
+
+## LTX-2.3 on Modal (Example)
+
+A 20-second 480p video at moderate quality takes approximately 2 seconds on a warm Modal container.
+
+```python
+import modal
+
+app = modal.App("ltx-video")
+image = modal.Image.debian_slim().pip_install(
+    "ltx-video", "diffusers", "accelerate", "transformers", "torch"
+)
+
+@app.function(gpu="A100", image=image, timeout=300)
+def generate_video(prompt: str, num_frames: int = 120) -> bytes:
+    from ltx_video.pipelines import LTXVideoPipeline
+    pipe = LTXVideoPipeline.from_pretrained("Lightricks/LTX-2.3")
+    pipe = pipe.to("cuda")
+    result = pipe(prompt=prompt, num_frames=num_frames)
+    return result.video_bytes
+
+@app.local_entrypoint()
+def main():
+    video = generate_video.remote("A surfer at golden hour, cinematic")
+    with open("output.mp4", "wb") as f:
+        f.write(video)
+```
+
+- **Text-to-Video example:** https://modal.com/docs/examples/ltx
+- **Image-to-Video example:** https://modal.com/docs/examples/image_to_video
+
+The `ltx-video` PyPI package (`pip install ltx-video`) provides native Python pipelines without requiring Diffusers, with full access to IC-LoRA, guidance parameters, and all LTX-2.3 features. Official docs: https://docs.ltx.video/open-source-model/integration-tools/pytorch-api
 
 ## When to Choose Modal
 

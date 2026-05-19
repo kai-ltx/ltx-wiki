@@ -2,13 +2,15 @@
 title: LTX Video REST API
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - https://docs.ltx.video/
   - https://docs.ltx.video/welcome
   - https://docs.ltx.video/quickstart
   - https://docs.ltx.video/authentication
   - https://ltx.io/model/api
+  - raw/ltx-news-ltx-studio-api-async-hdr-may-2026.md
+  - raw/tutorial-ltx-api-async-hdr-endpoints-may-2026.md
 tags:
   - api
   - ltx-video
@@ -56,7 +58,7 @@ API keys are generated at the [[ltx-video-api|Developer Console]] (https://conso
 
 ## Endpoints
 
-The API provides six endpoints. See [[ltx-video-api-endpoints]] for full parameter details.
+The API provides seven documented endpoints across v1 and v2. See [[ltx-video-api-endpoints]] for full parameter details and [[ltx-api-async-hdr]] for async/HDR specifics.
 
 | Endpoint | Method | Path | Description |
 |----------|--------|------|-------------|
@@ -66,6 +68,18 @@ The API provides six endpoints. See [[ltx-video-api-endpoints]] for full paramet
 | Retake | POST | `/v1/retake` | Re-generate a section of video |
 | Extend | POST | `/v1/extend` | Lengthen an existing video |
 | Upload | POST | `/v1/upload` | Get a pre-signed upload URL |
+| HDR Conversion | POST | `/v2/video-to-video-hdr` | Convert SDR video to HDR (per-frame EXR output) |
+
+### Async API (v2, added May 2026)
+
+As of May 3, 2026, all major generation endpoints are available as non-blocking async operations under the `/v2/` prefix. See [[ltx-api-async-hdr]] for the full async pattern.
+
+**Async pattern:**
+1. Submit job to async endpoint → receive `job_id`
+2. Poll `GET /v2/jobs/{job_id}` for status (`pending`, `processing`, `complete`, `failed`)
+3. On `complete`, download from `result.video_url`
+
+This enables long-running generations without HTTP timeout issues and integrates naturally into production pipelines.
 
 ## Models
 
@@ -106,6 +120,8 @@ LTX models are also available through third-party platforms:
 
 ## API Changelog (2026)
 
+- **May 3, 2026**: Async v2 endpoints added for all major generation operations (text-to-video, image-to-video, audio-to-video, retake, extend). See [[ltx-api-async-hdr]].
+- **April 23, 2026**: New `POST /v2/video-to-video-hdr` endpoint — SDR-to-HDR conversion returning per-frame EXR images. See [[ltx-api-async-hdr]].
 - **April 1, 2026**: Updated pricing for LTX-2.3 text-to-video and image-to-video endpoints.
 - **February 18, 2026**: New `v1/extend` endpoint for extending video duration.
 - **January 19, 2026**: New `v1/upload` endpoint for uploading assets via signed URLs.

@@ -2,12 +2,14 @@
 title: fal.ai
 type: entity
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/api-fal-ai-ltx-video.md
   - raw/api-fal-ai-ltx.md
   - raw/inference-providers-overview.md
   - raw/cloud-deployment-platforms.md
+  - raw/tutorial-ltx-video-replicate-fal-pricing-may-2026.md
+  - raw/ltx-news-ltxv-13b-distilled-0-9-8-may-2026.md
 tags:
   - inference
   - cloud
@@ -38,11 +40,12 @@ Keys are managed at https://fal.ai/dashboard/keys
 
 ## Available Model Endpoints
 
-### LTX Video (Original)
+### LTX Video (Original / LTXV 0.9.x)
 - `fal-ai/ltx-video` -- Text-to-video
 - `fal-ai/ltx-video/image-to-video` -- Image-to-video
 - `fal-ai/ltx-video-13b-dev/image-to-video` -- 13B dev (highest quality I2V)
 - `fal-ai/ltx-video-13b-distilled/image-to-video` -- 13B distilled (fast I2V)
+- `fal-ai/ltxv-13b-098-distilled` -- LTXV 13B Distilled v0.9.8 (May 2026; 4–8 steps, ~12s full MSR)
 
 ### LTX Video 2.0
 - `fal-ai/ltx-2/text-to-video` -- Pro T2V
@@ -154,7 +157,7 @@ curl -X POST \
 }
 ```
 
-## Pricing
+## Pricing (effective April 1, 2026)
 
 ### Video Generation (per second of output)
 

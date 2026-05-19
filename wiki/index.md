@@ -26,6 +26,9 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 
 - [[lightricks-company]] — Founded 2013, $1.8B valuation, 600 employees, 730M+ downloads
 - [[ltx-studio]] — Web-based AI video production platform (5 pricing tiers)
+- [[ltx-studio-canvas]] — Collaborative infinite workspace for multi-user production (April 2026)
+- [[ltx-studio-flows]] — Node-based workflow automation: chain prompt/image/video/upscaling nodes (May 2026)
+- [[ltx-studio-apr-may-2026-updates]] — Full changelog: Editing Space, Kling 3.0 Pro, Veo 3.1 Lite, Seedance 2.0, ChatGPT Image 2.0
 - [[ltx-desktop]] — Free open-source desktop app (Apache 2.0), LTX-2.3 powered
 - [[ltx-api]] — LTX developer API (5 endpoints, per-second billing)
 - [[ltx-mcp-integration]] — MCP/agent integration status (AGENTS.md, no dedicated server yet)
@@ -106,6 +109,7 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 ## Official API
 
 - [[ltx-video-api]] — REST API overview (api.ltx.video)
+- [[ltx-api-async-hdr]] — Async generation endpoints + HDR conversion endpoint (added May 2026)
 - [[ltx-video-api-endpoints]] — All 6 endpoints with parameters
 - [[ltx-video-api-models]] — Model tiers (fast, pro for LTX-2 and 2.3)
 - [[ltx-video-api-pricing]] — Per-second pricing ($0.04–$0.32/s)
@@ -240,6 +244,7 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 
 - [[wan-video]] — Alibaba Wan 2.1/2.2: best motion realism, Apache 2.0, but slower
 - [[hunyuan-video]] — Tencent HunyuanVideo: 13B, best multi-person scenes
+- [[hunyuan-world]] — Tencent HY-World-2.0 + HunyuanWorld-Voyager: 3D world generation from single photo (April 2026)
 - [[cogvideo]] — Zhipu CogVideoX: strong text-video alignment, slower
 - [[mochi]] — Genmo Mochi 1: 10B, great physics, stuck at 480p
 - [[open-sora]] — HPC-AI Tech: MIT license, $200K training, near-Sora quality

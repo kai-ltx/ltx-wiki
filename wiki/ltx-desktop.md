@@ -2,7 +2,7 @@
 title: LTX Desktop
 type: product
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - https://github.com/Lightricks/LTX-Desktop
   - https://github.com/Lightricks/ltx-desktop/releases
@@ -11,6 +11,8 @@ sources:
   - https://ltx.io/model/model-blog/how-to-set-up-ltx-desktop
   - https://crepal.ai/blog/aivideo/ltx-2-3-desktop-app-review/
   - raw/ltx2-nvidia-optimization-and-desktop.md
+  - raw/ltx-news-ltx-desktop-v1-0-5-april-2026.md
+  - raw/ltx-news-ltx-studio-api-async-hdr-may-2026.md
 tags:
   - ltx-desktop
   - open-source
@@ -21,7 +23,7 @@ tags:
 
 # LTX Desktop
 
-LTX Desktop is a free, open-source desktop application for generating videos with LTX models. Part of the [[ltx-ecosystem]], it combines a full non-linear video editor with on-device AI generation. Currently in beta (v1.0.4 as of April 2026).
+LTX Desktop is a free, open-source desktop application for generating videos with LTX models. Part of the [[ltx-ecosystem]], it combines a full non-linear video editor with on-device AI generation. Currently at v1.0.5 (released April 28, 2026).
 
 - **GitHub:** https://github.com/Lightricks/LTX-Desktop
 - **Website:** https://ltx.io/ltx-desktop
@@ -131,6 +133,31 @@ See [[ltx-2-community-reception]] for broader reception context.
 - Requires capable GPU hardware
 - Generation speed limited by local GPU
 - No access to "Ultra" tier quality (API-only)
+
+## Version History
+
+| Version | Date | Key Changes |
+|---------|------|-------------|
+| v1.0.5 | 2026-04-28 | Bug fixes (API key, A2V restrictions, error messages); volume control for video assets |
+| v1.0.3 | 2026-04-03 | Significant VRAM reduction; expanded GPU compatibility to 12 GB+ VRAM |
+| v1.0.0 | 2026-03 | Initial release alongside LTX-2.3 |
+
+### v1.0.5 Bug Fixes (April 28, 2026)
+
+- **API Key First Launch**: LTX API key set during first launch now reflects in UI without restart.
+- **Insufficient Funds Error**: Now shows dedicated message with a button linking to the LTX API console to purchase credits.
+- **A2V Local Generations**: Portrait and custom resolution A2V generation is now allowed (previously limited to landscape only).
+- **Backend Launch Error**: Fixed a failure case where a launch error appeared with no message and a non-functional retry button.
+
+### v1.0.5 Improvements
+
+- App version is now logged at startup in reported log files.
+- Added volume control for video assets directly from Gen Space asset thumbnails.
+
+### v1.0.3 Changes (April 3, 2026)
+
+- Significantly reduced VRAM usage, enabling 12 GB+ VRAM GPUs (previously required 16 GB+).
+- Materially expanded addressable consumer hardware base for local LTX-2.3 inference.
 
 ## Roadmap
 

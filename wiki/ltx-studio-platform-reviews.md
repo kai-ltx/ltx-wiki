@@ -2,10 +2,11 @@
 title: LTX Studio Platform Reviews
 type: analysis
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/social-ltx-studio-platform-reviews.md
   - raw/social-blog-independent-reviews.md
+  - raw/community-ltx-studio-user-reviews-2026.md
 tags:
   - ltx-studio
   - platform
@@ -80,14 +81,39 @@ Mixed reviews. Some users report quality variability and discuss platform stabil
 | GPU required | No | Yes | Yes |
 | Customization | Limited | Full | Moderate |
 
+## Aggregate Ratings (as of mid-2026)
+
+| Platform | Rating |
+|----------|--------|
+| G2 | Positive across 82 user reviews |
+| SelectHub | 88% User Satisfaction |
+| Product Hunt / SourceForge | 4.7/5 with 94% positive |
+| AI Magly / Dupple | 4.5/5 |
+
+## Consistently Praised Strengths (2026 Reviews)
+
+- **Speed** — cited as "unmatched" and the fastest AI video response system reviewers have used; the single most frequently cited positive attribute
+- **UI / Ease of Use** — intuitive, rapid adoption; accessible to content creators without technical backgrounds
+- **Workflow Efficiency** — automates repetitive production tasks; agency users highlight rapid storyboard and brief iteration
+- **Character Consistency and Lip Sync** — improvements in maintaining identity across generated clips praised
+
+## Consistently Noted Weaknesses (2026 Reviews)
+
+- **Character detail in motion** — "poor reproduction of the details of the characters in movement and the morphing of faces" (recurring across platforms)
+- **Billing transparency** — multiple users flag billing issues and difficult refund processes (Trustpilot)
+- **Customer support** — "many users have experienced unresponsive or ineffective customer support" (G2, Trustpilot, SelectHub)
+- **Clip length limits** — users want clips beyond 10–12 seconds
+- **CPU/performance limits** — some users report "false CPU generation limits" misaligning with actual hardware
+
 ## Sentiment
 
-- **Positive:** Ease of use, character consistency, storytelling-first workflow
-- **Concerns:** Video quality variability, subscription costs for heavy use
-- **Distinguishing feature:** Scene-based thinking and persistent character profiles praised as unique differentiators
+- **Positive:** Speed, ease of use, character consistency, storytelling-first workflow
+- **Concerns:** Billing transparency, support quality, character detail in motion, clip length limits
+- **Audience split:** Higher scores from marketing/content professionals; lower from technical film production users
 
 ## See Also
 
 - [[ltx-desktop-community-reception]]
 - [[blog-reviews-ltx]]
 - [[community-sentiment-overview]]
+- [[ltx-studio]]

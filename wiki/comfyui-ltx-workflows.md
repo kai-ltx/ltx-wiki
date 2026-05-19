@@ -2,7 +2,7 @@
 title: ComfyUI LTX Video Workflows
 type: guide
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - https://docs.ltx.video/open-source-model/integration-tools/comfy-ui
   - https://docs.comfy.org/tutorials/video/ltx/ltx-2-3
@@ -14,6 +14,7 @@ sources:
   - https://www.mimicpc.com/workflows/ltxv-video
   - raw/social-reddit-comfyui-workflows.md
   - raw/social-youtube-tutorials-reviews.md
+  - raw/tutorial-ltx-video-comfyui-23-audio-sync-workflow-may-2026.md
 tags:
   - comfyui
   - ltx-video
@@ -186,6 +187,44 @@ Community noted significant improvements in LTX 2.3 over previous versions:
 - Better preservation of fine details: skin textures, fabric movements, hair
 - Stronger adherence to complex, multi-sentence prompts
 
+## LTX-2.3 Audio-to-Video Workflow (May 2026)
+
+LTX-2.3 received day-0 support in ComfyUI and enables native audio-to-video generation (including lip-sync) as a single-pass generation step — not a post-process overlay.
+
+### Requirements
+
+- ComfyUI v0.16+
+- LTX-2.3 model checkpoint (~44 GB full, ~22 GB fp16)
+- At least 24 GB VRAM (RTX 4090 or A100)
+- `ComfyUI-LTXVideo` custom node pack (Lightricks official)
+
+### Key New Nodes (released April 1, 2026)
+
+| Node | Purpose |
+|------|---------|
+| `LTXVConditioning` | Multimodal conditioning: text + audio + image |
+| `LTXVScheduler` | Step/CFG scheduler tailored to LTX-2.3's distilled model |
+| `EmptyLTXVLatentVideo` | Creates appropriately sized latent tensors for LTX-2.3 |
+| `LTXVSaveConditioning` / `LTXVLoadConditioning` | Cache encoded prompts for reuse (reduces latency on iterative workflows) |
+| `Multimodal Guider` | Independently tune prompt adherence and audio/visual consistency |
+
+### Audio-to-Video Workflow Steps
+
+1. Load portrait image via `LoadImage` node.
+2. Provide speech audio via `LoadAudio` or live capture with `RecordAudio`.
+3. Feed both into the `LTX-2.3 generator` node (synthesizes frames where subject speaks in sync with audio).
+4. Encode resulting frames to MP4 using `SaveVideo`.
+
+LTX-2.3's native audio VAE handles lip-sync, mouth movement, facial expressions, and head motion all in one generation pass.
+
+### Portrait (9:16) Settings
+
+Use `896×1584` resolution at 24 or 48 FPS for social/mobile output. No crop or resize post-process needed.
+
+**Pre-built workflow JSONs:**
+- https://www.comfy.org/workflows/video_ltx2_3_ia2v-adca306765ce/
+- https://docs.comfy.org/tutorials/video/ltx/ltx-2-3
+
 ## Related Pages
 
 - [[comfyui-ltx-integration-overview]] -- Integration overview
@@ -195,3 +234,4 @@ Community noted significant improvements in LTX 2.3 over previous versions:
 - [[comfyui-ltx-workflow-tutorials]] -- Tutorial catalog
 - [[comfyui-ltx-performance-tips]] -- Optimization tips
 - [[comfyui-ltx-model-comparison]] -- Comparison with other video models
+- [[ltx2-comfyui-integration]] -- LTX-2 ComfyUI integration guide

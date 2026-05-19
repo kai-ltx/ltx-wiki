@@ -2,7 +2,7 @@
 title: LTX Studio
 type: product
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - https://ltx.studio
   - https://ltx.studio/pricing
@@ -12,6 +12,10 @@ sources:
   - https://en.wikipedia.org/wiki/LTX_Studio
   - https://ltx.studio/blog/ltx-2-the-complete-ai-creative-engine-for-video-production
   - https://www.cined.com/ltx-studio-takes-its-next-big-step-editing/
+  - raw/ltx-news-ltx-studio-canvas-seedance2-april-2026.md
+  - raw/ltx-news-ltx-studio-flows-video-to-video-may-2026.md
+  - raw/ltx-news-ltx-studio-api-async-hdr-may-2026.md
+  - raw/community-ltx-studio-product-updates-apr-may-2026.md
 tags:
   - ltx-studio
   - ai-video
@@ -78,6 +82,57 @@ LTX Studio is [[lightricks-company]]'s flagship cloud-based AI video production 
 - Veo 2 model (available from Standard tier)
 - Veo 3.1 model (available from Pro tier)
 - LTX's own models including [[ltx-2-overview]]
+- Kling 3.0 Pro ([[competitor-kling|Kling AI]]) — cinematic AI video up to 15 seconds, multi-shot, director-style prompting (integrated April 27, 2026)
+- Veo 3.1 Lite (Google) — cost-effective option for AI video at scale (integrated April 26, 2026)
+- Seedance 2.0 (ByteDance) — Standard and Fast variants (integrated April 26, 2026)
+- ChatGPT Image 2.0 (OpenAI) — integrated for image generation layer (May 4, 2026)
+
+### Editing Space (April 19, 2026)
+
+Unified image editing workspace consolidating brush tools, upscaling, camera angle adjustment, and visual fine-tuning into a single flow. CineD described this as "LTX Studio taking its next big step." Reduces the need to leave the platform for post-generation editing.
+
+### Canvas (Collaborative Infinite Workspace)
+
+Released late April 2026. See [[ltx-studio-canvas]] for full details.
+
+- Teams generate, iterate, and align concepts in real time or asynchronously
+- Combines image/video moodboards, visual ideation, and team collaboration
+- Seamless transition from concept to production: storyboards → video generation → audio → timeline → export
+- Primary visual ideation layer before full production commitment
+
+### Flows (Workflow Automation)
+
+Launched May 7, 2026. See [[ltx-studio-flows]] for full details.
+
+- Visual node-based workflow builder: connect prompt, image, video, and upscaling nodes
+- Smart caching: previously generated outputs reused when inputs haven't changed
+- Enterprise Brand Kit integration for consistent large-scale production
+- Supported node types: text/prompt, image input, video generation, upscaling, audio, export
+
+### Video-to-Video with IC-LoRA Controls
+
+Launched May 11, 2026.
+
+- **Pose Control**: Extracts skeleton/pose from input video to guide character animation
+- **Depth Control**: Extracts depth map to preserve 3D spatial structure through style transformation
+- **Edge Control**: Extracts outlines to preserve composition while changing appearance
+- Backed by [[ltx-2.3-model]]'s IC-LoRA adapters on the 22B DiT backbone
+- See [[ic-lora]] for technical details
+
+### SDR-to-HDR Conversion
+
+Launched April 2026.
+
+- One-click SDR-to-HDR conversion for any existing video
+- Available as both a platform UI feature and via the [[ltx-video-api|LTX API]] (`POST /v2/video-to-video-hdr`)
+- See [[ltx-api-async-hdr]] for API usage
+
+### Brand Kit (Enterprise)
+
+Launched April 2026, Enterprise plan only.
+
+- Embed brand assets (logos, color palettes, style references) into generation pipelines
+- Tightly integrated with [[ltx-studio-flows|Flows]] for consistent large-scale branded content
 
 ### Editing Capabilities
 

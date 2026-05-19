@@ -2,17 +2,19 @@
 title: HunyuanVideo
 type: concept
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/competitor-model-hunyuan-video.md
   - raw/open-source-comparison.md
   - raw/related-work-and-comparisons.md
+  - raw/competitor-tencent-hyworld-2-april-2026.md
 tags:
   - competitor
   - tencent
   - video-generation
   - open-source
   - dit
+  - 3d-world-model
 ---
 
 # HunyuanVideo
@@ -52,6 +54,20 @@ HunyuanVideo is Tencent's open-source video foundation model that achieves perfo
 - Full training pipeline with FSDP, context parallel, gradient checkpointing
 - LoRA tuning scripts released
 
+### HY-World-2.0 (April 16, 2026)
+- State-of-the-art **3D world model** — an evolution of the HunyuanWorld ecosystem
+- Not a video generation model in the traditional sense; targets spatial intelligence and world simulation
+
+### HunyuanWorld-Voyager (Open-sourced April–May 2026)
+- World's first ultra-long-range world model with **native 3D reconstruction**
+- Generates interactive RGBD video sequences conditioned on camera input
+- Supports real-time 3D reconstruction from a single input image
+- Exports point cloud videos directly to 3D formats (no COLMAP required)
+- Scalable data engine: automated camera pose estimation + metric depth prediction
+- Training data: 100,000+ video clips (real-world + synthetic Unreal Engine renders)
+- **#1 on Stanford's WorldScore benchmark** with 77.62, surpassing WonderWorld (72.69) and CogVideoX-I2V (62.15)
+- Use cases: VR, gaming, simulations, spatial intelligence applications
+
 ## Architecture Innovations (v1.5)
 
 - **SSTA (Selective and Sliding Tile Attention):** Prunes redundant spatiotemporal KV blocks, achieving 1.87x end-to-end speedup over FlashAttention-3 for 10-second 720p synthesis
@@ -83,6 +99,7 @@ HunyuanVideo excels at multi-person scenes and cinematic quality within consumer
 
 ## See Also
 
+- [[hunyuan-world]] — Tencent's 3D world model line (HY-World-2.0, HunyuanWorld-Voyager)
 - [[open-source-video-generation-landscape]]
 - [[wan-video]]
 - [[video-generation-architectures]]

@@ -62,3 +62,6 @@ Fixed critical issues:
 - Speed claim fixed in wan-video.md ("5-10x" → "18x faster than Wan 2.2")
 - LTX-2.3 parameter count clarified ("~20B" → "22B (20.9B excluding text encoder)")
 - LoRA support version corrected in ltx-video-overview.md ("v0.9.7+" → "v0.9.5+")
+
+## [2026-05-19] ingest | Weekly update
+Sources added: 23 files (LTX news: 6, Community: 5, Competitors: 7, Tutorials/Integrations: 5). Pages created: [[ltx-studio-canvas]], [[ltx-studio-flows]], [[ltx-api-async-hdr]], [[hunyuan-world]], [[ltx-studio-apr-may-2026-updates]]. Pages updated: [[ltx-desktop]], [[ltx-video-api]], [[ltx-studio]], [[ltx-video-098]], [[apple-silicon-setup]], [[replicate]], [[fal-ai]], [[runpod]], [[modal]], [[comfyui-ltx-workflows]], [[competitor-kling]], [[competitor-luma]], [[competitor-runway]], [[competitor-sora]], [[wan-video]], [[hunyuan-video]], [[ltx-2-community-reception]], [[ltx-studio-platform-reviews]], [[lora-community-ecosystem]].

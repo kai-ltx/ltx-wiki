@@ -2,9 +2,10 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/competitor-product-kling.md
+  - raw/competitor-kling-3-o3-release-feb-2026.md
 tags:
   - competitor
   - video-generation
@@ -27,8 +28,19 @@ Kling AI is an AI video and image generation platform built by Kuaishou Technolo
 - Integrated voice and motion control
 - Major quality and coherence improvements
 
-### Kling 3.0 Pro (2026)
-- Latest model, also available in [[ltx-studio]] as a third-party integration
+### Kling 3.0 / Kling O3 (February 4, 2026)
+- Built on the new "Omni One" unified architecture (text-to-video, image-to-video, editing in one engine)
+- **Native 4K output** — upgraded from previous 1080p maximum
+- **Native audio generation** — video and audio generate together; lip-sync and facial expressions auto-matched
+- **Multi-shot storyboarding** — up to 6 connected shots per request (up to 15-second total)
+- **Physics-accurate motion** — models gravity, balance, deformation, collision, inertia
+- **60fps** playback support
+- Multi-modal input: text + reference images + reference video simultaneously
+- **Multi-character reference** for identity consistency across scenes
+- Launched with no waitlist; available to all users immediately
+- API name "Kling O3"; consumer name "Kling 3.0" — same underlying model
+- Held **Elo score of 1,243** on AI video benchmarks at launch (#1 position)
+- Also available in [[ltx-studio]] as a third-party integration (Kling 3.0 Pro integrated April 27, 2026)
 
 ## Key Features
 
@@ -59,22 +71,24 @@ The ability to extract dance/movement patterns from one video and apply them to 
 ~20 credits per standard video, ~100 credits per high-quality 1080p video. Daily credits on the free tier expire at midnight.
 
 ## Strengths
-- Industry-leading 3-minute video duration (vs. 60s [[competitor-runway|Runway]], 35s [[competitor-sora|Sora]])
+- **Native 4K output** and 60fps with Kling 3.0 (Omni One architecture)
+- **#1 ELO score** (1,243) at Kling 3.0 launch, ahead of Runway Gen-4.5 and Veo 3.1
+- Industry-leading 3-minute video duration (vs. 60s [[competitor-runway|Runway]])
 - Unique motion transfer capability
 - Largest user base among AI video tools (22M+)
 - Proven commercial traction ($240M ARR)
-- Integrated audio (Kling 2.6+)
-- 1080p at 48 fps
+- Integrated audio (Kling 2.6+, full native audio in 3.0)
+- Physics-accurate motion (3.0: gravity, inertia, collision modeling)
+- Multi-shot storyboarding up to 6 shots per request (3.0)
 - Available in [[ltx-studio]] as an integrated model option
 
 ## Weaknesses
-- No production workflow (clip generator only, lacks storyboarding and timeline)
-- No [[character-consistency]] across separate generations
-- Daily credit expiry on free tier
+- No production workflow (clip generator only, lacks full storyboarding and timeline)
 - No local deployment (cloud-only, China-based servers)
 - No open-source model; fully proprietary
 - Data privacy concerns (Chinese company, data processing in China)
 - Professional camera controls limited compared to [[competitor-runway|Runway]] or [[ltx-studio]]
+- Daily credit expiry on free tier
 
 ## Comparison to LTX Studio
 

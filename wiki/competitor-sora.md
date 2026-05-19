@@ -1,10 +1,11 @@
 ---
-title: Sora (OpenAI)
+title: Sora (OpenAI) — Discontinued
 type: competitor
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/competitor-product-sora.md
+  - raw/competitor-sora-shutdown-april-2026.md
 tags:
   - competitor
   - video-generation
@@ -19,10 +20,19 @@ Sora is OpenAI's text-to-video generation product, which launched to significant
 
 ## Shutdown Timeline
 - **March 24, 2026:** OpenAI announces discontinuation
-- **April 26, 2026:** Sora app and web experience shut down
-- **September 24, 2026:** Sora API discontinued
+- **April 26, 2026:** Sora app and web experience shut down (**executed**)
+- **September 24, 2026:** Sora API discontinued (planned)
 
 The shutdown was so abrupt that Disney, which had committed $1 billion to a partnership, learned of the decision less than an hour before the public announcement.
+
+## Reasons for Shutdown
+- Burning approximately **$1 million per day** in compute costs
+- Active users peaked at ~1 million, declined to fewer than 500,000 by shutdown announcement
+- OpenAI strategic shift toward coding and enterprise products (away from creative AI tools)
+- Video generation economics fundamentally challenged at scale
+
+## Market Impact
+Following the Sora shutdown, competing AI video apps ([[competitor-runway|Runway]], [[competitor-kling|Kling]], [[competitor-pika|Pika]], [[competitor-luma|Luma]]) saw increased traffic and user growth. The closure signals that even well-funded video AI products face significant unit-economics challenges. Sora's failure reinforces that [[ltx-studio]] and [[ltx-2-overview|LTX-2]]'s open-source approach (offloading compute to users) is more economically sustainable.
 
 ## Model Versions
 

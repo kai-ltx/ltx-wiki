@@ -2,9 +2,11 @@
 title: LTX-2 Community Reception
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/ltx2-community-reception.md
+  - raw/community-ltx-23-release-reception-march-april-2026.md
+  - raw/community-reddit-ltx-video-vs-wan22-benchmark-2026.md
 tags:
   - ltx-2
   - community
@@ -98,18 +100,43 @@ Half the community calling it better than ComfyUI; other half preferring ComfyUI
 - **Comfy.org Blog** -- Day-one ComfyUI support coverage
 - **The Neuron Daily** -- "BREAKING: LTX 2.3 is an open video production studio on your desktop"
 
-## LTX-2.3 Reception (March 2026)
+## LTX-2.3 Reception (March–April 2026)
+
+### Launch Stats
+- r/StableDiffusion thread: **700+ upvotes, 147 comments** — one of the more popular open-source video model release threads
+- Near **5 million total downloads** since the January 2026 full open-source LTX-2 release
+- Community user Aurel Manea: "results were indeed much better than LTX 2.0 regarding movement and coherence"
+- **#1 open-weight model** on Artificial Analysis leaderboard at Elo 1121, 10 Elo points ahead of Wan 2.2 at release
 
 ### Positive
-- Sharper details and improved textures widely praised
-- Native portrait mode (9:16) appreciated for social media use cases
-- Cleaner audio acknowledged as significant improvement
-- [[ltx-desktop|LTX Desktop]] app praised for accessibility
+- Rebuilt VAE with sharper detail retention widely praised
+- Native portrait mode (9:16) appreciated for social content creators
+- Improved image-to-video quality over LTX-2.0
+- Integrated one-pass audio/vocoder generation
+- Updated official ComfyUI nodes shipped alongside the release
+- Community-built EasyCache optimization achieved 2.3x inference speedup
+- Quantized models appeared for consumer hardware Lightricks never officially tested
 
 ### Concerns
-- [[ltx-2-lora-training|LoRA compatibility]] broken (LTX-2 LoRAs not compatible with 2.3)
+- [[ltx-2-lora-training|LoRA compatibility]] broken (LTX-2 LoRAs not directly compatible with 2.3)
 - Migration effort required for existing workflows
 - 22B model still demanding for consumer hardware
+
+## LTX-2.3 vs Wan 2.2 Community Benchmarks (Early 2026)
+
+Community comparisons across multiple blogs and forums established a clear community consensus:
+
+| Dimension | LTX-2.3 | Wan 2.2 |
+|-----------|---------|---------|
+| Speed | **10–14x faster** (1–2 min vs 12–18 min on same hardware) | Slow |
+| Motion realism | Good, stable | **Cinematic, weighty** |
+| Texture detail | Softens under motion | **Better micro-texture** |
+| Audio | **Integrated one-pass** | Requires post or audio node |
+| Hardware (min) | ~16 GB VRAM | ~20+ GB for smooth output |
+| ComfyUI ecosystem | Growing rapidly (official nodes) | **More mature** at time of comparison |
+| Use case | Speed/social/iteration | Cinematic/high-detail/long-form |
+
+Community framing: "open source vs. lock-in" — LTX-2 positioned as fully open-weights alternative. The 10–12 second clip length limit was the most common complaint from LTX users wanting longer output.
 
 ## G2 User Reviews
 

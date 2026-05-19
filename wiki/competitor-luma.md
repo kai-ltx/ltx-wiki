@@ -2,14 +2,16 @@
 title: Luma Dream Machine
 type: competitor
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/competitor-product-luma.md
+  - raw/competitor-luma-ray3-14-jan-2026.md
 tags:
   - competitor
   - video-generation
   - luma
   - dream-machine
+  - ray3
   - proprietary
   - cloud-platform
   - hdr
@@ -29,10 +31,15 @@ Luma AI's Dream Machine is an AI video generation platform distinguished by its 
 - 16-bit EXR export for professional post-production workflows
 - Draft Mode for rapid, low-cost exploration
 
-### Ray3.14 (2025-2026)
-- Native 1080p generation
-- 4x faster than Ray3, 3x lower cost
-- Improved stability and prompt adherence
+### Ray3.14 (January 26, 2026)
+- Designed to eliminate the quality-speed-cost tradeoff
+- **4x faster** than Ray3; **3x lower cost** per second of generated video
+- **Native 1080p** output (no upscaling required)
+- **Character Seeds:** maintain identity consistency across separate generated clips via named seeds
+- **Modify with Instructions:** natural language editing of already-generated content (VFX, advertising, film, design workflows)
+- Improved motion control and stronger temporal consistency
+- Available in Dream Machine (consumer) and Enterprise API
+- Active flagship model as of May 2026; competes with [[competitor-runway|Runway Gen-4.5]], [[competitor-kling|Kling 3.0]], and [[wan-video|Wan 2.7]]
 
 ### Ray3 Modify (December 2025)
 - Hybrid-AI workflow for acting and performances
@@ -59,18 +66,16 @@ Luma AI's Dream Machine is an AI video generation platform distinguished by its 
 ### Luma Agents
 A newer platform direction offering AI agents for creative work; higher tiers primarily scale through agent access.
 
-## Pricing (2026)
+## Pricing (as of January 2026)
 
-| Plan | Price |
-|------|-------|
-| **Free** | $0 (limited) |
-| **Lite** | ~$10/mo |
-| **Standard** | ~$20/mo |
-| **Plus** | $30/mo |
-| **Pro** | $90/mo |
-| **Ultra/Premier** | $300/mo |
+| Plan | Price | Credits |
+|------|-------|---------|
+| **Free** | $0 | 30 daily credits |
+| **Lite** | $9.99/mo | 1,600 monthly credits |
+| **Plus** | $29.99/mo | 4,200 monthly credits + 1080p upscale |
+| **Unlimited** | $94.99/mo | Unlimited Relaxed-speed generations |
 
-20% discount for yearly billing. Commercial use rights on all paid plans.
+Enterprise API access available separately. Commercial use rights on all paid plans.
 
 ## Strengths
 - Only AI video tool with native HDR and 16-bit EXR export (critical for professional post-production)
@@ -86,7 +91,7 @@ A newer platform direction offering AI agents for creative work; higher tiers pr
 - Hit-or-miss quality -- inconsistent results described as "casual creator territory"
 - Prompt adherence issues with complex prompts
 - No storyboarding workflow (individual clip generator)
-- No [[character-consistency]] across independent generations
+- No character consistency across independent generations
 - No local deployment; no open-source model
 - Smaller community than [[competitor-runway|Runway]] or [[competitor-kling|Kling]]
 - Product direction may shift toward "Agents" and away from pure video generation

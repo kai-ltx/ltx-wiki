@@ -2,17 +2,19 @@
 title: LoRA Community Ecosystem
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - raw/social-lora-training-community-ecosystem.md
   - raw/community-project-lora-training-tools.md
   - raw/third-party-lora-training-services.md
+  - raw/community-ltx-comfyui-lora-ecosystem-april-may-2026.md
 tags:
   - community
   - lora
   - ecosystem
   - civitai
   - huggingface
+  - ic-lora
 ---
 # LoRA Community Ecosystem
 
@@ -91,9 +93,50 @@ api.upload_folder(
 )
 ```
 
+## Official IC-LoRA Releases (April–May 2026)
+
+Lightricks shipped several new [[ic-lora|IC-LoRA]] adapters for LTX-2.3 in this period:
+
+### HDR IC-LoRA (~April 23, 2026)
+- Adds HDR-style color grading and dynamic range control to generated video
+- Initial community reports: tiled VAE decoding caused video flickering (GitHub issue #470, ComfyUI-LTXVideo)
+- Fix: switching from tiled to non-tiled (default) VAE decode eliminated flickering
+- Lightricks acknowledged and monitored the issue actively
+
+### LipDub IC-LoRA
+- Enables dubbing or rephrasing of speech in existing video
+- Generates new lip movements and audio matching target text while preserving speaker identity
+- Significant for multi-language content creation
+- YouTube walkthrough: "LTX 2.3 Just Changed AI Dubbing Forever"
+
+### Union IC-LoRA
+- Combines depth and edge control conditions in a **single model** (replaces running two separate adapters)
+- Operates on downsampled latents to reduce memory usage and speed up inference
+- Important for running on consumer-grade hardware
+
+### ID-LoRA (Identity-Controlled Video)
+- Maintains consistent character identity across generated video clips
+- Community workflow available on RunComfy.com: "LTX 2.3 ID-LoRA in ComfyUI — Identity-Controlled Video Creator"
+
+## GitHub Activity (April–May 2026)
+
+- **ComfyUI-LTXVideo issue #470** — HDR IC-LoRA flickering: community-diagnosed and resolved within days
+- **LTX-2 repo issue #128** — ComfyUI workflow issues with `video_ltx2_t2v_distilled` config: active thread with Lightricks team engagement
+- Pattern: active community-to-Lightricks feedback loop, issues resolved quickly
+
+## Ecosystem Scale (May 2026)
+
+| Platform | LTX-Video | LTX-2 | LTX-2.3 |
+|----------|-----------|-------|---------|
+| HuggingFace adapter models | 24 | 49 | 20 |
+| Community fine-tunes | 25 | 54 | 27 |
+
+Common friction points: hardware memory requirements for longer clips; occasional workflow compatibility gaps when Lightricks updates the model between ComfyUI node updates.
+
 ## References
 
 - [[lora-training]]
 - [[ltx-video-trainer]]
 - [[third-party-training-services]]
 - [[ic-lora]]
+- [[comfyui-ltx-lora-training-control]]

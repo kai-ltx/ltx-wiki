@@ -2,13 +2,15 @@
 title: LTX Video 0.9.8
 type: release
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-19
 sources:
   - https://huggingface.co/Lightricks/LTX-Video
   - https://huggingface.co/Lightricks/LTX-Video-0.9.8-13B-distilled
   - https://blog.fal.ai/new-ltxv-0-9-8-model-live-on-fal/
   - https://aicreators.tools/model/video/79
   - https://github.com/Lightricks/LTX-Video
+  - raw/ltx-news-ltxv-13b-distilled-0-9-8-may-2026.md
+  - raw/ltx-news-ltxv-13b-distilled-game-changer-may-2026.md
 tags:
   - ltx-video
   - release
@@ -93,6 +95,22 @@ Version 0.9.8 is the latest major release of LTX Video, continuing the [[ltxv-13
 - **Fal.ai (13B full):** https://fal.ai/models/fal-ai/ltx-video-13b-dev/image-to-video
 - **Fal.ai (13B distilled):** https://fal.ai/models/fal-ai/ltx-video-13b-distilled/image-to-video
 - **Replicate:** https://replicate.com/lightricks/ltx-video
+
+## 13B Distilled Variant — May 2026 Launch
+
+The LTXV 13B Distilled variant received a major marketing push in May 2026, including an official LTX Studio X thread on approximately May 14, 2026 (starting at status ID 1922676336583234047) with the headline "Big news! We're introducing LTXV 13B Distilled, and it's a game-changer for video generation."
+
+**Key claims from the official announcement:**
+- Full multi-scale rendering in as little as **12 seconds** — nearly 5x faster than the base (non-distilled) 13B model
+- High-quality results in only **4–8 diffusion steps**
+- 5-second 720p video in ~9.5 seconds on an H100, ~1.5 minutes on an RTX 5090
+- FP8 quantization support (`ltxv-13b-0.9.8-distilled-fp8.safetensors`)
+- Available on fal.ai at `fal-ai/ltxv-13b-098-distilled`
+- Compatible with ComfyUI via official `Lightricks/ComfyUI-LTXVideo` nodes
+
+An earlier Show HN thread (Hacker News item ID 43987218, ~May 6, 2026) generated significant discussion about the speed improvements for local inference use cases.
+
+**Distinction from LTX-2.x series:** The 0.9.8 distilled variant is part of the LTXV 0.9.x lineage (video-only, no synchronized audio), separate from [[ltx-2-overview|LTX-2]] / [[ltx-2.3-model|LTX-2.3]] which generate synchronized audio+video. Use 0.9.8 distilled for maximum video-only speed on lightweight hardware.
 
 ## Known Issues
 
