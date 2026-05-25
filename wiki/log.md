@@ -65,3 +65,11 @@ Fixed critical issues:
 
 ## [2026-05-19] ingest | Weekly update
 Sources added: 23 files (LTX news: 6, Community: 5, Competitors: 7, Tutorials/Integrations: 5). Pages created: [[ltx-studio-canvas]], [[ltx-studio-flows]], [[ltx-api-async-hdr]], [[hunyuan-world]], [[ltx-studio-apr-may-2026-updates]]. Pages updated: [[ltx-desktop]], [[ltx-video-api]], [[ltx-studio]], [[ltx-video-098]], [[apple-silicon-setup]], [[replicate]], [[fal-ai]], [[runpod]], [[modal]], [[comfyui-ltx-workflows]], [[competitor-kling]], [[competitor-luma]], [[competitor-runway]], [[competitor-sora]], [[wan-video]], [[hunyuan-video]], [[ltx-2-community-reception]], [[ltx-studio-platform-reviews]], [[lora-community-ecosystem]].
+
+## [2026-05-25] ingest | Weekly update
+Sources added: 9 files (Area1/LTX news: 2, Area2/Community: 1, Area3/Competitors: 4, Area4/Tutorials: 2). Pages created: none. Pages updated: [[ic-lora]], [[camera-control-loras]], [[lora-community-ecosystem]], [[competitor-kling]], [[wan-video]].
+Key findings: (1) Community IC-LoRA Cameraman V1 by Cseti released May 22 — camera motion transfer for LTX-2.3; (2) LTX Studio Video-to-Video and Flows already documented from prior week; (3) Sora app shutdown confirmed Apr 26; (4) Runway Gen-4 (May 3) with native audio; Kling 3.5 browser-based platform (May 2026); (5) Wan 2.7 pricing confirmed $6/min; LTX-2.3 Diffusers support still "coming soon".
+
+## [2026-05-25] lint | Weekly health check
+Broken links: 80 (all pre-existing; 0 introduced this week). Index drift: 0. Format issues: 0 (all 5 updated pages have clean frontmatter with correct updated: 2026-05-25).
+Pre-existing broken link breakdown: ~50 trailing-backslash artifacts (CRLF encoding in source files), 5× [[related-work-and-comparisons]] (file not created), 6× [[comfyui-integration]] → should be [[comfyui-ltx-integration-overview]] (noted in Apr 13 lint, not yet fully resolved), 4 GitHub section-anchor links in github-community-forks.md, 1× [[character-consistency]] in competitor-pika.md. No new pages added to or removed from index — index drift remains at 0.

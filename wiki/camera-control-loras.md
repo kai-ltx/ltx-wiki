@@ -2,10 +2,11 @@
 title: Camera Control LoRAs
 type: community-project
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-25
 sources:
   - raw/community-project-camera-control-loras.md
   - raw/community-project-ic-lora-controls.md
+  - raw/community-ic-lora-cameraman-v1-may2026.md
 tags:
   - community
   - lora
@@ -66,8 +67,32 @@ This enables users to guide video generation using edge maps, depth information,
 | Pierre-Jean | trajectory-lora | Camera trajectory control |
 | eisneim | bullet_time | Bullet time camera effect |
 | Burgstall | headbanger-lora | Head movement animation |
+| Cseti | LTX2.3-22B_IC-LoRA-Cameraman_v1 | Full cinematic motion transfer |
 
-See [[lora-ecosystem]] for the complete inventory of community and official LoRAs.
+### IC-LoRA Cameraman V1 (May 22, 2026)
+
+The most capable community camera LoRA to date. Released by **Cseti** on May 22, 2026, the Cameraman IC-LoRA transfers cinematic camera movement from a reference video to any new generation.
+
+**Key features:**
+- Video-to-video camera motion transfer (not just preset moves)
+- Handles compound motions: zoom_in + tilt_up, orbit_cw + pan_left, etc.
+- Trained with LTX-trainer (official Lightricks framework) on LTX-2.3 22B
+- Training resolution buckets: 768×512×57, 768×512×89, 768×512×121 frames
+- First-frame conditioning at 0.2 for scene consistency
+- No trigger word — motion is read from the reference video automatically
+
+**Usage rule:** Do NOT include camera movement descriptions in prompts. The model reads motion from the reference video; text prompts for camera behavior will interfere.
+
+**Model downloads:**
+- HuggingFace: `Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1`
+- File: `LTX2.3-22B_IC-LoRA-Cameraman_v1_10500.safetensors`
+
+**ComfyUI workflows:**
+- Workflow JSON: available on HuggingFace datasets (stablediffusiontutorials)
+- Hosted workflow: https://www.runcomfy.com/comfyui-workflows/ltx-2-3-ic-lora-in-comfyui-v2v-motion-track-video-workflow
+- Civitai model page: https://civitai.com/models/2525197/cameraman-ic-lora-for-ltx23-22b
+
+See [[lora-ecosystem]] for the complete inventory of official and community LoRAs.
 
 ## See Also
 

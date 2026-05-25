@@ -2,7 +2,7 @@
 title: Wan Video
 type: concept
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-05-25
 sources:
   - raw/competitor-model-wan-video.md
   - raw/open-source-comparison.md
@@ -57,7 +57,7 @@ Wan Video is Alibaba's open-source video generation model family, developed by t
 ### Wan 2.6 (December 2025)
 - Open-source image model (text-to-image focus)
 
-### Wan 2.7 (Cloud launch late March/April 22, 2026; open weights Q2 2026)
+### Wan 2.7 (Cloud launch April 3, 2026; open weights expected mid–late Q2 2026)
 - **Architecture:** MoE diffusion transformer — 27B total parameters, 14B active per inference pass
 - **Unified architecture** covering text-to-video, image-to-video, reference-to-video with voice cloning, and instruction-based video editing
 - **4K image generation** (2K for video output)
@@ -69,6 +69,7 @@ Wan Video is Alibaba's open-source video generation model family, developed by t
 - **Multi-reference character consistency** across scenes
 - Generates 1080p video up to 15 seconds
 - Apache 2.0 license, no face filters, no regional blocks
+- API pricing: **$6.00/min** (33% cheaper than prior Wan versions) via providers including fal.ai and Replicate
 - Competes directly with [[competitor-kling|Kling 3.0]], [[competitor-runway|Runway Gen-4.5]], and Veo models on ELO leaderboard
 
 ## Capabilities

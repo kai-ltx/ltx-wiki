@@ -2,7 +2,7 @@
 title: LoRA Community Ecosystem
 type: reference
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-05-25
 sources:
   - raw/social-lora-training-community-ecosystem.md
   - raw/community-project-lora-training-tools.md
@@ -117,6 +117,27 @@ Lightricks shipped several new [[ic-lora|IC-LoRA]] adapters for LTX-2.3 in this 
 ### ID-LoRA (Identity-Controlled Video)
 - Maintains consistent character identity across generated video clips
 - Community workflow available on RunComfy.com: "LTX 2.3 ID-LoRA in ComfyUI — Identity-Controlled Video Creator"
+
+## Community LoRA Releases — May 2026
+
+A burst of new community IC-LoRA adapters for LTX-2.3 was released the week of May 19–25, 2026:
+
+### IC-LoRA Cameraman V1 (Cseti, May 22, 2026)
+The first community-built **camera motion transfer** LoRA for LTX-2.3 22B. Unlike the official camera control LoRAs (which use preset movements), Cameraman V1 reads camera behavior from a reference video and replicates it — pans, tilts, zoom-in/out, orbits, and compound combinations.
+
+- HuggingFace: `Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1`
+- Civitai: https://civitai.com/models/2525197/cameraman-ic-lora-for-ltx23-22b
+- ComfyUI workflow (RunComfy): V2V Motion Track workflow
+- Tutorial: https://www.stablediffusiontutorials.com/2026/05/ltx2.3-cameraman-ic-lora.html
+- Key rule: Don't describe camera movement in the text prompt — model reads it from reference video
+
+See [[camera-control-loras]] for full installation and usage details.
+
+### ID LoRA LipSync (May 2026)
+Companion release for **character identity + LipSync** in LTX-2.3. Maintains consistent character appearance across shots while synchronizing lip movements with audio.
+- Tutorial: https://www.stablediffusiontutorials.com/2026/05/ltx2.3-id-lora.html
+
+These two releases significantly expand the composable IC-LoRA toolkit available for LTX-2.3 beyond what Lightricks ships officially.
 
 ## GitHub Activity (April–May 2026)
 

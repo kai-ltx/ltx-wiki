@@ -2,7 +2,7 @@
 title: IC-LoRA (In-Context LoRA)
 type: concept
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-05-25
 sources:
   - https://huggingface.co/Lightricks/LTX-Video
   - https://huggingface.co/Lightricks/LTX-Video-0.9.7-dev
@@ -15,6 +15,9 @@ sources:
   - raw/tutorial-lora-training-quick-start.md
   - raw/ltx-video-trainer.md
   - raw/social-lora-training-community-ecosystem.md
+  - raw/community-ic-lora-cameraman-v1-may2026.md
+  - raw/tutorial-ltx23-ic-lora-cameraman-comfyui-may2026.md
+  - raw/tutorial-ltx23-id-lora-lipsync-may2026.md
 tags:
   - ltx-video
   - ic-lora
@@ -74,10 +77,12 @@ Unlike spatial concatenation approaches (which fail for structural controls in v
 
 ### For LTX-2.3 (22B base)
 
-| Model | Control Type |
-|-------|-------------|
-| LTX-2.3-22b-IC-LoRA-Union-Control | Depth + Pose + Canny (unified) |
-| LTX-2.3-22b-IC-LoRA-Motion-Track-Control | Sparse point tracking control |
+| Model | Source | Control Type |
+|-------|--------|-------------|
+| LTX-2.3-22b-IC-LoRA-Union-Control | Official (Lightricks) | Depth + Pose + Canny (unified) |
+| LTX-2.3-22b-IC-LoRA-Motion-Track-Control | Official (Lightricks) | Sparse point tracking control |
+| LTX2.3-22B_IC-LoRA-Cameraman_v1 | Community (Cseti, May 2026) | Cinematic camera motion transfer |
+| LTX-2.3 ID LoRA | Community (May 2026) | Character identity + LipSync |
 
 ## Full Modality List (from AVControl Paper)
 
@@ -214,6 +219,16 @@ IC-LoRA is specifically designed for video and uses a more lightweight mechanism
 The IC-LoRA Detailer for LTX-2 is the most widely adopted IC-LoRA model, used in 29+ HuggingFace Spaces. The Union Control model for LTX-2.3 is used in 21+ Spaces.
 
 Community member **prithivMLmods** created a dedicated Space for [[camera-control-loras|camera control]] using IC-LoRA dolly effects (58 likes). The [[jetson-thor-deployment|Jetson Thor deployment]] by Divhanthegray also integrates camera control LoRAs for dolly, jib, and static movements.
+
+### May 2026 Community LoRA Burst
+
+In the week of May 19–25, 2026, community member **Cseti** released two major IC-LoRA adapters for LTX-2.3:
+
+1. **IC-LoRA Cameraman V1** (May 22, 2026) — Camera motion transfer from reference video. Supports pans, tilts, zooms, orbits, and compound motions. Trained on the LTX-2.3 22B model using the official ltx-trainer framework. Available at `Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1` on HuggingFace. See [[camera-control-loras]] for full details.
+
+2. **ID LoRA LipSync** (May 2026) — Character identity preservation with synchronized audio-visual lipsync. Enables consistent character appearance across shots with accurate lip movement for generated dialogue. Tutorial at stablediffusiontutorials.com.
+
+This marks growing community maturity — moving beyond style LoRAs toward specialized cinematographic control adapters for LTX-2.3.
 
 See [[lora-ecosystem]] for the full inventory of official and community LoRA adapters, and [[camera-control-loras]] for camera-specific controls.
 

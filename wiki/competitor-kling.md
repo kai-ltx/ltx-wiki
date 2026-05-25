@@ -2,10 +2,11 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-05-25
 sources:
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
+  - raw/competitor-kling-3-updates-2026.md
 tags:
   - competitor
   - video-generation
@@ -27,6 +28,17 @@ Kling AI is an AI video and image generation platform built by Kuaishou Technolo
 - First model in the family with synchronized audio and video in a single pass
 - Integrated voice and motion control
 - Major quality and coherence improvements
+
+### Kling 3.5 (Mid 2026)
+- Supports **native 1080p resolution at 60 frames per second**
+- Cinematic frame rate achievable without "soap opera" artifacts
+- Key upgrade for professional workflows requiring high frame rate output
+
+### Browser-Based Platform (May 2026)
+- Kling transitioned to a fully **browser-based rendering experience** in May 2026
+- Complex scenes render without high-end local hardware
+- Significantly reduces the barrier to entry for new users
+- Competes more directly with LTX Studio's cloud-first approach (contrasting with LTX Desktop's local-first track)
 
 ### Kling 3.0 / Kling O3 (February 4, 2026)
 - Built on the new "Omni One" unified architecture (text-to-video, image-to-video, editing in one engine)
