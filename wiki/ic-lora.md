@@ -2,7 +2,7 @@
 title: IC-LoRA (In-Context LoRA)
 type: concept
 created: 2026-04-13
-updated: 2026-05-25
+updated: 2026-06-01
 sources:
   - https://huggingface.co/Lightricks/LTX-Video
   - https://huggingface.co/Lightricks/LTX-Video-0.9.7-dev
@@ -18,6 +18,7 @@ sources:
   - raw/community-ic-lora-cameraman-v1-may2026.md
   - raw/tutorial-ltx23-ic-lora-cameraman-comfyui-may2026.md
   - raw/tutorial-ltx23-id-lora-lipsync-may2026.md
+  - raw/ltx-news-ic-lora-hdr-lipdub-nvfp4-june2026.md
 tags:
   - ltx-video
   - ic-lora
@@ -81,6 +82,8 @@ Unlike spatial concatenation approaches (which fail for structural controls in v
 |-------|--------|-------------|
 | LTX-2.3-22b-IC-LoRA-Union-Control | Official (Lightricks) | Depth + Pose + Canny (unified) |
 | LTX-2.3-22b-IC-LoRA-Motion-Track-Control | Official (Lightricks) | Sparse point tracking control |
+| LTX-2.3-22b-IC-LoRA-HDR | Official (Lightricks, Jun 2026) | 16-bit HDR generation; SDR→HDR via LogC3 |
+| LTX-2.3-22b-IC-LoRA-LipDub | Official (Lightricks, Jun 2026) | Joint audio-visual lip-dubbing (JustDubIt) |
 | LTX2.3-22B_IC-LoRA-Cameraman_v1 | Community (Cseti, May 2026) | Cinematic camera motion transfer |
 | LTX-2.3 ID LoRA | Community (May 2026) | Character identity + LipSync |
 

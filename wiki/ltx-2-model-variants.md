@@ -2,10 +2,11 @@
 title: LTX-2 Model Variants and Quantizations
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-06-01
 sources:
   - raw/ltx2-model-variants-quantizations.md
   - raw/ltx2-capabilities-and-specifications.md
+  - raw/ltx-news-ltx23-model-variants-may27-2026.md
 tags:
   - ltx-2
   - model-variants
@@ -36,6 +37,9 @@ Official and community weight variants for the [[ltx-2-overview|LTX-2]] model fa
 | ltx-2.3-22b-dev.safetensors | BF16 | Full model (~42GB), for fine-tuning |
 | ltx-2.3-22b-distilled.safetensors | BF16 | 8-step distilled, faster inference |
 | ltx-2.3-fp8 | FP8 | Lower VRAM setups |
+| ltx-2.3-22b-dev-mxfp8 | MXFP8 | Microscaling FP8; transformer-only (Kijai, May 2026) |
+| ltx-2.3-22b-distilled-mxfp8 | MXFP8 | Distilled + Microscaling FP8 (Kijai, May 2026) |
+| ltx-2.3-22b-dev-nvfp4 | NVFP4 | Official Lightricks; 21.7 GB; RTX 50xx (Blackwell) only |
 
 ## Upscalers
 
@@ -44,7 +48,7 @@ Operate entirely in latent space (before VAE decode), used in the recommended tw
 | Upscaler | Function | Version |
 |----------|----------|---------|
 | Spatial upscaler (1.5x) | Resolution upscaling | LTX-2 and LTX-2.3 |
-| Spatial upscaler (2x) | Resolution upscaling | LTX-2 and LTX-2.3 |
+| Spatial upscaler (2x) v1.1 | Resolution upscaling (updated May 2026) | LTX-2.3 |
 | Temporal upscaler | Frame rate doubling | LTX-2.3 only |
 
 Example workflow: Generate at 512x768, upscale to 1024x1536. Generate at 24 FPS, temporal upscale to 48 FPS.
@@ -79,10 +83,15 @@ See [[ltx-2-nvidia-optimization]] for details.
 | NVFP8 | 2x faster | 40% less | RTX 30/40/50 Series |
 | NVFP4 | 3x faster | 60% less | RTX 50 Series only |
 
-## Community FP8 Variants
+## Community FP8 / MXFP8 Variants
 
 - **GitMylo/LTX-2-comfy_gemma_fp8_e4m3fn** -- FP8 Gemma text encoder for ComfyUI
-- **Kijai/LTXV2_comfy** -- Community ComfyUI-optimized weights (includes audio VAE)
+- **Kijai/LTXV2_comfy** -- Community ComfyUI-optimized weights (includes Audio VAE, MXFP8 variants)
+- **Kijai Audio VAE (May 2026)** -- Standalone audio VAE enabling audio-conditioned generation in ComfyUI workflows
+- **Dynamic LoRA rank-105 (Kijai, May 2026)** -- Dynamic-rank LoRA for LTX-2.3
+
+### MXFP8 (Microscaling FP8)
+MXFP8 is a newer quantization format (MX-format) offering better accuracy than standard FP8 at similar memory footprint. These are transformer-only weights requiring separate VAE and text encoder files.
 
 ## VRAM Requirements by Variant
 

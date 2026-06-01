@@ -2,10 +2,11 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-06-01
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
+  - raw/competitor-runway-gen45-benchmark-2026.md
 tags:
   - competitor
   - video-generation
@@ -39,7 +40,7 @@ Runway is the industry-standard AI video generation platform, widely considered 
 
 ### Gen-4.5 (December 2025)
 - Runway's current flagship video model
-- **Elo score of 1,247** on Artificial Analysis Text-to-Video benchmark (top position as of May 2026)
+- **Elo score of 1,247** on Artificial Analysis Text-to-Video benchmark (top position as of June 2026, confirmed)
 - Ahead of Google Veo 3.1, Kling 3.0, and Sora 2 on that benchmark
 - Supports text-to-video and image-to-video; 2–10 second clip durations
 
