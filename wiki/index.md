@@ -259,6 +259,7 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 - [[competitor-kling]] — Kling AI: 22M users, $240M ARR, 3-min duration
 - [[competitor-sora]] — Sora (OpenAI): SHUTTING DOWN Apr 2026
 - [[competitor-luma]] — Luma Dream Machine: reasoning-based, native HDR/EXR
+- [[competitor-grok-imagine-video]] — Grok Imagine Video 1.5 (xAI): #1 I2V leaderboard (Elo 1404), native audio, API preview June 2026
 - [[competitor-veo]] — Veo 3.1 (Google): strongest closed-source, native 4K
 - [[desktop-video-tools]] — ComfyUI, A1111, Martini, Fooocus vs LTX Desktop
 - [[mcp-video-integrations]] — Pictory, Veo2, MiniMax MCP vs LTX MCP

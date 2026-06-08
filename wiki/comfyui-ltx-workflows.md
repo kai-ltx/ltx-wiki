@@ -2,7 +2,7 @@
 title: ComfyUI LTX Video Workflows
 type: guide
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-06-08
 sources:
   - https://docs.ltx.video/open-source-model/integration-tools/comfy-ui
   - https://docs.comfy.org/tutorials/video/ltx/ltx-2-3
@@ -15,6 +15,7 @@ sources:
   - raw/social-reddit-comfyui-workflows.md
   - raw/social-youtube-tutorials-reviews.md
   - raw/tutorial-ltx-video-comfyui-23-audio-sync-workflow-may-2026.md
+  - raw/tutorial-comfyui-ic-lora-motion-track-june-2026.md
 tags:
   - comfyui
   - ltx-video

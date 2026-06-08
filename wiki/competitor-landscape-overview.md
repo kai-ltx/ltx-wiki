@@ -2,8 +2,10 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-06-08
 sources:
+  - raw/competitor-ai-video-landscape-june-2026.md
+  - raw/competitor-grok-imagine-video-1-5-june-2026.md
   - raw/competitor-product-runway.md
   - raw/competitor-product-pika.md
   - raw/competitor-product-kling.md
@@ -33,6 +35,7 @@ This page summarizes the product-level competitive landscape for [[ltx-studio]] 
 | [[competitor-kling\|Kling AI]] | 1080p / 48fps | 3 minutes | Yes (2.6+) | No | ~$10/mo |
 | [[competitor-pika\|Pika Labs]] | 1080p | 3-10s | No | No | $10/mo |
 | [[competitor-luma\|Luma Dream Machine]] | 1080p (4K upscaled) | 5-10s | No | Character reference | ~$10/mo |
+| [[competitor-grok-imagine-video\|Grok Imagine Video 1.5 (xAI)]] | 720p | ~6s | Yes | Preserves source image | $0.08–0.14/s (API only) |
 
 ### Discontinued
 | Platform | Status | Key Legacy |
@@ -104,6 +107,24 @@ See [[mcp-video-integrations]] for detailed coverage. LTX MCP is the only open-s
 - [[competitor-kling|Kling]] leads in user count (22M+) and proven commercial traction ($240M ARR)
 - [[competitor-runway|Runway]] remains the industry standard for professional use
 - [[ltx-studio]]'s multi-model strategy hedges against any single model falling behind
+
+
+## Regulatory Environment (June 2026)
+
+### EU AI Act Article 50
+
+- **Enforcement date:** August 2, 2026
+- All AI-generated video distributed to EU audiences must include machine-readable marking
+- Multi-layered approach required: embedded metadata + pixel-level watermarks + fingerprinting
+- **Transition:** Systems already on market before August 2 have until December 2, 2026 (per AI Omnibus, May 2026)
+- Fines: up to €15M or 3% of worldwide annual turnover
+- **Seedance 2.0** ships with C2PA watermarking built in
+- **Google SynthID** provides pixel-level watermarking as complement to C2PA
+- TikTok has labeled 1.3B+ AI-generated videos using C2PA detection
+
+### California SB 942
+- In effect since January 1, 2026
+- Requires disclosure of AI-generated content distributed in California
 
 ## See Also
 - [[ltx-studio]]

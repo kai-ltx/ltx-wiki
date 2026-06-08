@@ -2,7 +2,7 @@
 title: IC-LoRA (In-Context LoRA)
 type: concept
 created: 2026-04-13
-updated: 2026-06-01
+updated: 2026-06-08
 sources:
   - https://huggingface.co/Lightricks/LTX-Video
   - https://huggingface.co/Lightricks/LTX-Video-0.9.7-dev
@@ -19,6 +19,8 @@ sources:
   - raw/tutorial-ltx23-ic-lora-cameraman-comfyui-may2026.md
   - raw/tutorial-ltx23-id-lora-lipsync-may2026.md
   - raw/ltx-news-ic-lora-hdr-lipdub-nvfp4-june2026.md
+  - raw/ltx-news-ic-lora-union-motion-track-2026-06.md
+  - raw/tutorial-comfyui-ic-lora-motion-track-june-2026.md
 tags:
   - ltx-video
   - ic-lora
@@ -80,8 +82,8 @@ Unlike spatial concatenation approaches (which fail for structural controls in v
 
 | Model | Source | Control Type |
 |-------|--------|-------------|
-| LTX-2.3-22b-IC-LoRA-Union-Control | Official (Lightricks) | Depth + Pose + Canny (unified) |
-| LTX-2.3-22b-IC-LoRA-Motion-Track-Control | Official (Lightricks) | Sparse point tracking control |
+| LTX-2.3-22b-IC-LoRA-Union-Control | Official (Lightricks) | Depth + Pose + Canny (unified); ComfyUI workflow "AI on the Lot 2026" on comfy.org; Python usage in LTX-2 issue #203 |
+| LTX-2.3-22b-IC-LoRA-Motion-Track-Control | Official (Lightricks) | Sparse point tracking via colored spline overlays; ComfyUI workflow on RunComfy (V2V Motion Track); Python usage in LTX-2 issue #203 |
 | LTX-2.3-22b-IC-LoRA-HDR | Official (Lightricks, Jun 2026) | 16-bit HDR generation; SDR→HDR via LogC3 |
 | LTX-2.3-22b-IC-LoRA-LipDub | Official (Lightricks, Jun 2026) | Joint audio-visual lip-dubbing (JustDubIt) |
 | LTX2.3-22B_IC-LoRA-Cameraman_v1 | Community (Cseti, May 2026) | Cinematic camera motion transfer |

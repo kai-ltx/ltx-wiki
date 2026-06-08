@@ -2,12 +2,13 @@
 title: Wan Video
 type: concept
 created: 2026-04-13
-updated: 2026-05-25
+updated: 2026-06-08
 sources:
   - raw/competitor-model-wan-video.md
   - raw/open-source-comparison.md
   - raw/related-work-and-comparisons.md
   - raw/competitor-wan-2-7-release-april-2026.md
+  - raw/competitor-ai-video-landscape-june-2026.md
 tags:
   - competitor
   - alibaba
@@ -57,7 +58,7 @@ Wan Video is Alibaba's open-source video generation model family, developed by t
 ### Wan 2.6 (December 2025)
 - Open-source image model (text-to-image focus)
 
-### Wan 2.7 (Cloud launch April 3, 2026; open weights expected mid–late Q2 2026)
+### Wan 2.7 (Cloud launch April 3, 2026; open weights confirmed available as of May 2026)
 - **Architecture:** MoE diffusion transformer — 27B total parameters, 14B active per inference pass
 - **Unified architecture** covering text-to-video, image-to-video, reference-to-video with voice cloning, and instruction-based video editing
 - **4K image generation** (2K for video output)
@@ -71,6 +72,13 @@ Wan Video is Alibaba's open-source video generation model family, developed by t
 - Apache 2.0 license, no face filters, no regional blocks
 - API pricing: **$6.00/min** (33% cheaper than prior Wan versions) via providers including fal.ai and Replicate
 - Competes directly with [[competitor-kling|Kling 3.0]], [[competitor-runway|Runway Gen-4.5]], and Veo models on ELO leaderboard
+
+
+### Wan 3.0 (Alibaba roadmap target: mid-2026)
+- **Status:** In development; no public release as of June 2026
+- **Reported specs (unconfirmed):** ~60B parameters, native 4K output, 30-second continuous generation in a single pass
+- **Open weights expected** per Alibaba's public roadmap pattern
+- Source: Wavespeed AI reporting (May 2026); timeline unconfirmed — treat as Q3 risk
 
 ## Capabilities
 
@@ -97,7 +105,7 @@ Wan Video is Alibaba's open-source video generation model family, developed by t
 - **High VRAM for best quality** -- 14B model needs 20+ GB VRAM for longer clips; 60-80 GB for full precision
 - **No native audio** — Wan 2.2 and earlier; Wan 2.7 adds native audio
 - **Shorter clip duration** — earlier versions limited to ~5 seconds; 2.7 supports up to 15 seconds
-- **Open weights delayed** — Wan 2.7 cloud launched April 2026, open weights expected mid-to-late Q2 2026
+- **Open weights available** — Wan 2.7 cloud launched April 3, 2026; open weights confirmed available under Apache 2.0 as of May 2026
 
 ## Comparison to LTX
 

@@ -80,3 +80,10 @@ Key findings: (1) Official Lightricks IC-LoRA HDR (16-bit HDR + SDR→HDR via Lo
 
 ## [2026-06-01] lint | Weekly health check
 Broken links: 0 (in updated pages). Pre-existing broken links in log.md: 6 (all documented in prior lint entries — [[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]). Index drift: 0 (no new pages created this week). Format issues: 0 (all 3 updated pages have valid frontmatter with correct updated: 2026-06-01).
+
+## [2026-06-08] ingest | Weekly update
+Sources added: 4 files (Area1/LTX news: 1, Area2/Community: 0, Area3/Competitors: 2, Area4/Tutorials: 1). Pages created: [[competitor-grok-imagine-video]]. Pages updated: [[wan-video]], [[competitor-landscape-overview]], [[ic-lora]], [[comfyui-ltx-workflows]].
+Key findings: (1) Grok Imagine Video 1.5 (xAI) launched June 3 as new competitor — #1 on I2V leaderboard (Elo 1404), native audio, $0.08–0.14/s, API preview; (2) LTX-2.3 IC-LoRA Union Control and Motion Track Control ComfyUI workflows now available on comfy.org and RunComfy; Python usage in LTX-2 GitHub issue #203; (3) Wan 2.7 open weights confirmed available under Apache 2.0 (as of May 2026); Wan 3.0 on roadmap for mid-2026 (60B params, 30s clips, unconfirmed); (4) EU AI Act Article 50 enforcement August 2, 2026 (with transition to December 2 for existing systems); Sora API sunset September 24, 2026 confirmed; June 2026 AI launch wave is primarily text/reasoning models — video model graph unchanged.
+
+## [2026-06-08] lint | Weekly health check
+Broken links: 0 (in all 5 updated/created pages). Index drift: 0 ([[competitor-grok-imagine-video]] confirmed in index at line 262). Format issues: 0 (all pages have valid frontmatter with correct updated: 2026-06-08). Pre-existing broken links (documented in prior entries, not introduced this week): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]).
