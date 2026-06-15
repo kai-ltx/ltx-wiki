@@ -87,3 +87,10 @@ Key findings: (1) Grok Imagine Video 1.5 (xAI) launched June 3 as new competitor
 
 ## [2026-06-08] lint | Weekly health check
 Broken links: 0 (in all 5 updated/created pages). Index drift: 0 ([[competitor-grok-imagine-video]] confirmed in index at line 262). Format issues: 0 (all pages have valid frontmatter with correct updated: 2026-06-08). Pre-existing broken links (documented in prior entries, not introduced this week): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]).
+
+## [2026-06-15] ingest | Weekly update
+Sources added: 2 files (Area1/LTX news: 0, Area2/Community: 1, Area3/Competitors: 1, Area4/Tutorials: 0). Pages created: none. Pages updated: [[competitor-kling]], [[competitor-landscape-overview]].
+Key findings: (1) Kling AI officially launched its 3.0 model family globally on June 12, 2026 — Video 3.0, Video 3.0 Omni, Image 3.0, Image 3.0 Omni — built on the MVL (Multi-modal Visual Language) framework; Video 3.0 supports native audio in 5+ languages, 15s duration, multi-shot storyboarding, and photorealistic output; Kling v3 now leads the global video leaderboard at Elo 2031; (2) LTX-2 Fast holds global #2 position (Elo 1930); (3) No new LTX model or API releases since May 11 (Video to Video in Studio) and May 3 (Async API); (4) Runway's most recent update was Aleph 2.0 & Edit Studio on May 21 — no new releases this week; (5) Sora API sunset remains September 24, 2026.
+
+## [2026-06-15] lint | Weekly health check
+Broken links: 0 (in both updated pages). Index drift: 0 (no new pages created this week). Format issues: 0 (both updated pages have valid frontmatter with correct updated: 2026-06-15). Pre-existing broken link artifacts (documented in prior entries, not introduced this week): backslash-escaped pipe characters in markdown table cells across competitor-landscape-overview.md — same ~6 artifacts as prior weeks.
