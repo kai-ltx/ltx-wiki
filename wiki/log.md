@@ -87,3 +87,10 @@ Key findings: (1) Grok Imagine Video 1.5 (xAI) launched June 3 as new competitor
 
 ## [2026-06-08] lint | Weekly health check
 Broken links: 0 (in all 5 updated/created pages). Index drift: 0 ([[competitor-grok-imagine-video]] confirmed in index at line 262). Format issues: 0 (all pages have valid frontmatter with correct updated: 2026-06-08). Pre-existing broken links (documented in prior entries, not introduced this week): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]).
+
+## [2026-06-15] ingest | Weekly update
+Sources added: 3 files (Area1/LTX news: 1, Area2/Community: 0, Area3/Competitors: 2, Area4/Tutorials: 0). Pages created: none. Pages updated: [[competitor-kling]], [[wan-video]], [[competitor-landscape-overview]].
+Key findings: (1) No new LTX releases since May 11 (confirmed via ltx.io/release-notes — Video to Video remains most recent Studio feature); (2) Kling AI officially launched Kling 3.0 multi-variant lineup on June 12, 2026 — Video 3.0, Video 3.0 Omni, Image 3.0, Image 3.0 Omni; new capabilities include native multilingual audio (6 languages + accents), 15s video, text/logo preservation, multi-shot storyboard with per-shot camera control, reference video character extraction; 60M+ creators, 30K enterprise clients reported; Ultra-subscriber early access now open; (3) Wan 3.0 confirmed as released (previously listed as "roadmap/unconfirmed"): 60B MoE params, native 4K from frame 1, up to 30s single-pass, multi-shot narratives up to 2–5 min, Apache 2.0 open weights, ~40% faster than Wan 2.6.
+
+## [2026-06-15] lint | Weekly health check
+Broken links: 0 (all links in updated pages verified — all 15 targets confirmed existing). Index drift: 0 (no new pages created this week; all 3 updated pages confirmed in index). Format issues: 0 (all updated pages have valid frontmatter with correct updated: 2026-06-15). Pre-existing broken links (documented in prior entries, unchanged): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]).

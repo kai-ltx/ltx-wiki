@@ -2,11 +2,12 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-05-25
+updated: 2026-06-15
 sources:
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
   - raw/competitor-kling-3-updates-2026.md
+  - raw/competitor-kling-30-official-launch-june-2026.md
 tags:
   - competitor
   - video-generation
@@ -17,7 +18,7 @@ tags:
 ---
 # Kling AI (Kuaishou)
 
-Kling AI is an AI video and image generation platform built by Kuaishou Technology, a publicly traded Beijing-based company. Since launching in June 2024, it has grown to over 22 million users worldwide, generating 168 million+ video clips and reaching an annualized revenue run rate of $240 million by December 2025 (just 19 months after launch).
+Kling AI is an AI video and image generation platform built by Kuaishou Technology, a publicly traded Beijing-based company. Since launching in June 2024, it has grown to over 60 million creators worldwide, generating 600 million+ video clips and forging 30,000+ enterprise partnerships as of June 2026.
 
 ## Model Versions
 
@@ -28,6 +29,36 @@ Kling AI is an AI video and image generation platform built by Kuaishou Technolo
 - First model in the family with synchronized audio and video in a single pass
 - Integrated voice and motion control
 - Major quality and coherence improvements
+
+### Kling 3.0 / Kling O3 (February 4, 2026 announcement; official multi-model launch June 12, 2026)
+- Built on the **Multi-modal Visual Language (MVL) framework** and "Omni One" unified architecture
+- Integrates text-to-video, image-to-video, reference-to-video, and in-video editing in a single native multimodal architecture
+- **Native 4K output** — upgraded from previous 1080p maximum
+- **Native audio generation** — lip-sync and facial expressions auto-matched; supports English, Chinese, Japanese, Korean, Spanish with American/British/Indian accents
+- **Multi-character dialogue** — each character can speak a different language in the same scene
+- **Text preservation in imagery** — logos, signage, branded text remain sharp throughout video
+- **Physics-accurate motion** — models gravity, balance, deformation, collision, inertia
+- **60fps** playback support
+- API name "Kling O3"; consumer name "Kling 3.0" — same underlying model
+- Held **Elo score of 1,243** on AI video benchmarks at launch (#1 position)
+- Also available in [[ltx-studio]] as a third-party integration (Kling 3.0 Pro integrated April 27, 2026)
+
+#### Kling Video 3.0 (official launch June 12, 2026)
+- **Extended duration:** up to 15 seconds (up from 10s in prior generation)
+- **Multi-shot storytelling:** understands multi-scene, multi-shot instructions; adjusts camera angles dynamically; supports shot-reverse-shot, cross-cutting, voiceover
+- **Improved element consistency** via reference video + multiple image references
+- **Photorealistic characters** with expressive, dynamic performances
+- Available to Ultra subscribers at launch; general public rollout "coming soon"
+
+#### Kling Video 3.0 Omni (official launch June 12, 2026)
+- **Reference video extraction:** extracts visual traits and voice characteristics from a reference video, replicates them across new scenes
+- **Multi-shot storyboard feature:** specify duration, shot size, perspective, narrative content, and camera movements per shot
+- Builds on "Elements" feature from Kling Video O1
+
+#### Kling Image 3.0 / Image 3.0 Omni (official launch June 12, 2026)
+- **2K and 4K ultra-high-definition image output**
+- Exceptional texture, lighting, and material quality preservation
+- Designed for professional production assets and virtual scene visualization
 
 ### Kling 3.5 (Mid 2026)
 - Supports **native 1080p resolution at 60 frames per second**
@@ -40,20 +71,6 @@ Kling AI is an AI video and image generation platform built by Kuaishou Technolo
 - Significantly reduces the barrier to entry for new users
 - Competes more directly with LTX Studio's cloud-first approach (contrasting with LTX Desktop's local-first track)
 
-### Kling 3.0 / Kling O3 (February 4, 2026)
-- Built on the new "Omni One" unified architecture (text-to-video, image-to-video, editing in one engine)
-- **Native 4K output** — upgraded from previous 1080p maximum
-- **Native audio generation** — video and audio generate together; lip-sync and facial expressions auto-matched
-- **Multi-shot storyboarding** — up to 6 connected shots per request (up to 15-second total)
-- **Physics-accurate motion** — models gravity, balance, deformation, collision, inertia
-- **60fps** playback support
-- Multi-modal input: text + reference images + reference video simultaneously
-- **Multi-character reference** for identity consistency across scenes
-- Launched with no waitlist; available to all users immediately
-- API name "Kling O3"; consumer name "Kling 3.0" — same underlying model
-- Held **Elo score of 1,243** on AI video benchmarks at launch (#1 position)
-- Also available in [[ltx-studio]] as a third-party integration (Kling 3.0 Pro integrated April 27, 2026)
-
 ## Key Features
 
 ### Video Generation
@@ -63,9 +80,9 @@ Kling AI is an AI video and image generation platform built by Kuaishou Technolo
 - Native audio in single pass (Kling 2.6+)
 
 ### Technical Capabilities
-- Resolution: Up to 1080p at 48 fps
-- Duration: Up to 3 minutes (industry-leading)
-- Architecture: Proprietary diffusion-based Transformer + 3D VAE
+- Resolution: Up to 4K (Kling 3.0+)
+- Duration: Up to 15 seconds for 3.0 models; longer with earlier architectures
+- Architecture: MVL (Multi-modal Visual Language) framework / proprietary diffusion-based Transformer + 3D VAE
 
 ### Unique: Motion Transfer
 The ability to extract dance/movement patterns from one video and apply them to a different subject is unique to Kling among major competitors.
@@ -83,28 +100,28 @@ The ability to extract dance/movement patterns from one video and apply them to 
 ~20 credits per standard video, ~100 credits per high-quality 1080p video. Daily credits on the free tier expire at midnight.
 
 ## Strengths
-- **Native 4K output** and 60fps with Kling 3.0 (Omni One architecture)
+- **Native 4K output** and 60fps with Kling 3.0 (MVL architecture)
 - **#1 ELO score** (1,243) at Kling 3.0 launch, ahead of Runway Gen-4.5 and Veo 3.1
-- Industry-leading 3-minute video duration (vs. 60s [[competitor-runway|Runway]])
+- **Multi-character multilingual dialogue** in a single generation pass (3.0)
+- Text/logo preservation in generated video (3.0) — valuable for e-commerce
+- Multi-shot storyboarding with per-shot camera control (3.0 Omni)
+- 15-second video duration (3.0); industry-leading 3-minute in prior versions
 - Unique motion transfer capability
-- Largest user base among AI video tools (22M+)
-- Proven commercial traction ($240M ARR)
+- Largest user base among AI video tools (60M+)
+- Proven commercial traction (30,000+ enterprise clients)
 - Integrated audio (Kling 2.6+, full native audio in 3.0)
 - Physics-accurate motion (3.0: gravity, inertia, collision modeling)
-- Multi-shot storyboarding up to 6 shots per request (3.0)
 - Available in [[ltx-studio]] as an integrated model option
 
 ## Weaknesses
-- No production workflow (clip generator only, lacks full storyboarding and timeline)
 - No local deployment (cloud-only, China-based servers)
 - No open-source model; fully proprietary
 - Data privacy concerns (Chinese company, data processing in China)
-- Professional camera controls limited compared to [[competitor-runway|Runway]] or [[ltx-studio]]
 - Daily credit expiry on free tier
 
 ## Comparison to LTX Studio
 
-Kling excels as a powerful clip generator with uniquely long video duration (3 minutes) and motion transfer capabilities. However, it lacks the production depth needed for professional video work. [[ltx-studio]] actually integrates Kling models (Kling 2.6 and 3.0 Pro) as available options, positioning them as complements rather than replacements. Teams needing long-form individual clips may use Kling even within [[ltx-studio]], while relying on LTX Studio's workflow tools for the full production pipeline.
+Kling excels as a powerful clip generator with advanced multilingual audio, text preservation, and reference-based character consistency. [[ltx-studio]] actually integrates Kling models (Kling 3.0 Pro) as available options, positioning them as complements rather than replacements. Teams needing specific Kling-only capabilities (multilingual audio, motion transfer) may use Kling even within [[ltx-studio]], while relying on LTX Studio's workflow tools for the full production pipeline.
 
 ## See Also
 - [[competitor-landscape-overview]]

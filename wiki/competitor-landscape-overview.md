@@ -2,9 +2,11 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-06-08
+updated: 2026-06-15
 sources:
   - raw/competitor-ai-video-landscape-june-2026.md
+  - raw/competitor-kling-30-official-launch-june-2026.md
+  - raw/competitor-wan-30-confirmed-release.md
   - raw/competitor-grok-imagine-video-1-5-june-2026.md
   - raw/competitor-product-runway.md
   - raw/competitor-product-pika.md
@@ -32,7 +34,7 @@ This page summarizes the product-level competitive landscape for [[ltx-studio]] 
 |----------|---------------|-------------|-------------|----------------------|---------------------|
 | [[competitor-runway\|Runway Gen-4]] | 4K (Pro) | 60s | No | Best-in-class (reference images) | $12/mo |
 | [[competitor-veo\|Veo 3.1]] | 4K native | 8s base / 140s+ chained | Yes (strong) | Ingredients (3 refs) | $19.99/mo |
-| [[competitor-kling\|Kling AI]] | 1080p / 48fps | 3 minutes | Yes (2.6+) | No | ~$10/mo |
+| [[competitor-kling\|Kling AI]] | 4K / 60fps | 15s (3.0) | Yes (3.0+) | No | ~$10/mo |
 | [[competitor-pika\|Pika Labs]] | 1080p | 3-10s | No | No | $10/mo |
 | [[competitor-luma\|Luma Dream Machine]] | 1080p (4K upscaled) | 5-10s | No | Character reference | ~$10/mo |
 | [[competitor-grok-imagine-video\|Grok Imagine Video 1.5 (xAI)]] | 720p | ~6s | Yes | Preserves source image | $0.08–0.14/s (API only) |
@@ -66,7 +68,7 @@ Only [[ltx-studio]] offers a complete production pipeline (script to storyboard 
 ### Unique Capabilities by Competitor
 - **[[competitor-runway|Runway]]:** Deepest editing suite (Aleph, Act-Two, Multi-Motion Brush), industry-standard status
 - **[[competitor-veo|Veo]]:** True native 4K, strongest audio, Google ecosystem, scene extension (140s+)
-- **[[competitor-kling|Kling]]:** 3-minute duration, motion transfer, 22M+ user base ($240M ARR)
+- **[[competitor-kling|Kling]]:** 3-minute duration, motion transfer, 60M+ user base (30K enterprise clients)
 - **[[competitor-pika|Pika]]:** Creative effects suite (Pikaffects, Pikaswaps), fastest generation (15-30s)
 - **[[competitor-luma|Luma]]:** Reasoning-based generation, native HDR with EXR export, performance preservation
 - **[[competitor-sora|Sora]]:** Best physics simulation (now moot due to shutdown)
@@ -104,7 +106,7 @@ See [[mcp-video-integrations]] for detailed coverage. LTX MCP is the only open-s
 
 - [[competitor-sora|Sora's shutdown]] has opened significant market share, benefiting all remaining players
 - [[competitor-veo|Veo 3.1]] has emerged as the strongest closed-source generation model
-- [[competitor-kling|Kling]] leads in user count (22M+) and proven commercial traction ($240M ARR)
+- [[competitor-kling|Kling]] leads in user count (60M+) and proven commercial traction (30K+ enterprise clients)
 - [[competitor-runway|Runway]] remains the industry standard for professional use
 - [[ltx-studio]]'s multi-model strategy hedges against any single model falling behind
 
