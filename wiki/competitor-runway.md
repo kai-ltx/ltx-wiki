@@ -2,11 +2,12 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-06-01
+updated: 2026-06-30
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
   - raw/competitor-runway-gen45-benchmark-2026.md
+  - raw/competitor-runway-june-2026.md
 tags:
   - competitor
   - video-generation
@@ -50,6 +51,35 @@ Runway is the industry-standard AI video generation platform, widely considered 
 - Targets brand teams, marketers, creative agencies, and filmmakers
 - Positions Runway as an end-to-end AI production system, not just a clip generator
 - Alongside the Agent launch, API additions included: Seedance 2.0 (April), OpenAI GPT Image 2 (April 23), Gemini 3 Pro Image / Nano Banana Pro (April 30)
+
+### Studio Trim (June 18, 2026)
+New feature for all plans: **Studio Trim** lets users stitch, reorder, and export a final video all in one place inside Runway Studio. Clips assembled into a finished export without leaving the platform.
+
+### Agent 2.0 (June 25, 2026)
+Runway upgraded its Agent to **Agent 2.0**, reoriented specifically toward **marketers and performance teams**:
+- Analyzes existing ad performance data (Meta, YouTube, TikTok, Google) and builds next-generation ad variants
+- Generates full campaign assets in one conversation (text, image, video)
+- Auto-cuts to platform-correct aspect ratios: 9:16 (Reels/Stories), 16:9 (YouTube), 1:1 (feed)
+- Localizes copy and visuals across markets without rebuilding from scratch
+- Available all users; 30% launch discount with code AGENT
+
+Agent 2.0 narrows the agentic use case from general creative production (Agent 1.0) to marketing execution specifically, competing with ad-tech platforms and social content tools in addition to video generators.
+
+### Seedance 2.0 4K (June 24, 2026 — API)
+Seedance 2.0 now supports **native 4K output** via the Runway API:
+- Six new 4K ratios: 3840:1646 (21:9), 3840:2160 (16:9), 3840:2880 (4:3), 3840:3840 (1:1), 2880:3840 (3:4), 2160:3840 (9:16)
+- 4K billed at 150 credits/second; 480p/720p/1080p unchanged
+
+### Seedance 2.0 Mini (June 26, 2026 — API)
+New lightweight variant `seedance2_mini` added to the API:
+- T2V, I2V, V2V; 4–15 second durations at 480p or 720p
+- Keyframe control, reference images, reference videos, generated audio
+- Billed at 16 credits/second (64 credit minimum)
+
+### HappyHorse 1.0 (May 29, 2026 — API)
+`happyhorse_1_0` — a third-party licensed model available in Runway's model marketplace:
+- T2V and I2V; 3–15 second durations at 720p–1080p
+- 10 output dimensions for T2V; I2V preserves input aspect ratio
 
 ## Key Features
 

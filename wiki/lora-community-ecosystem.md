@@ -2,12 +2,13 @@
 title: LoRA Community Ecosystem
 type: reference
 created: 2026-04-13
-updated: 2026-05-25
+updated: 2026-06-30
 sources:
   - raw/social-lora-training-community-ecosystem.md
   - raw/community-project-lora-training-tools.md
   - raw/third-party-lora-training-services.md
   - raw/community-ltx-comfyui-lora-ecosystem-april-may-2026.md
+  - raw/tutorial-3dreal-lora-fal-june-2026.md
 tags:
   - community
   - lora
@@ -56,6 +57,33 @@ Notable community contributions on HuggingFace:
 - **svjack** -- Style LoRAs (anime landscape, pixel art)
 - **Pierre-Jean** -- Camera trajectory LoRA
 - **Sameric934** -- General LTX-2 video LoRA
+
+
+## Notable Community IC-LoRAs (June 2026)
+
+### 3DREAL IC-LoRA (June 26, 2026)
+
+Released by **Lovis Odin** (@OdinLovis) in collaboration with **fal.ai**, the **LTX-2.3 3DREAL IC-LoRA** converts rough 3D renders and CG viewport blockouts into photorealistic, cinematic video while preserving the original camera path and composition.
+
+**Key properties:**
+- Base model: LTX-2.3 (22B)
+- Trigger word: `3DREAL`
+- Two variants: **Light** (faithful to input) and **Strong** (aggressive photorealism)
+- Pipeline: I2V / V2V
+- License: custom (not Apache 2.0)
+
+**Access:**
+- fal.ai endpoint (no download): `fal-ai/ltx-2.3-quality/render-to-real`
+- LoRA weights on HuggingFace: `fal/LTX-2.3-3DREAL-LoRA`
+- ComfyUI compatible via local LoRA loading
+
+**Use cases:** 3D previz, game engine viewport to cinematic trailer, architecture walkthrough, camera angle exploration. Particularly useful for preserving exact camera motion from 3D software while replacing synthetic textures with photorealistic output.
+
+This adapter enables a new workflow: rough out scenes in Blender/Unreal/game engines, then use 3DREAL to deliver a photorealistic preview — without committing to expensive final renders. Bridges 3D production pipelines with AI video generation in a way that preserves the director's compositional intent.
+
+### Cameraman V1 IC-LoRA (May 22, 2026)
+
+Camera motion transfer LoRA by **Cseti** — extracts camera motion from a reference video and applies it to LTX-2.3 generation. Released on CivitAI and noted in prior wiki updates.
 
 ## Cross-Version LoRA Transfer
 
