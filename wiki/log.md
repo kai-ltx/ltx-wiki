@@ -94,3 +94,10 @@ Key findings: (1) No new LTX model or API releases since May 11 (Video to Video 
 
 ## [2026-06-15] lint | Weekly health check
 Broken links: 0 (all links in updated pages verified — all 15 wikilink targets confirmed existing). Index drift: 0 (no new pages created this week; all updated pages confirmed in index). Format issues: 0 (all updated pages have valid frontmatter with correct updated: 2026-06-15). Pre-existing broken links (documented in prior entries, unchanged): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]).
+
+## [2026-06-30] ingest | Weekly update
+Sources added: 3 files (Area1/LTX news: 1, Area2/Community: 0, Area3/Competitors: 1, Area4/Tutorials: 1). Pages created: none. Pages updated: [[ltx-video-trainer]], [[competitor-runway]], [[lora-community-ecosystem]].
+Key findings: (1) LTX Trainer unified framework released June 17 — 13 training modes covering video, audio, cross-modal, and IC-LoRA from a single config file; new agentic config generation via Claude/LLMs; supports AV2AV joint IC-LoRA (first in ecosystem); (2) Runway: Studio Trim (June 18, stitch/reorder/export in one place), Agent 2.0 (June 25, marketing-focused campaign creation with ad-performance analysis), Seedance 2.0 4K API (June 24, 150 credits/s), Seedance 2.0 Mini API (June 26, 16 credits/s), HappyHorse 1.0 API (May 29, third-party model); (3) LTX-2.3 3DREAL IC-LoRA released June 26 by Lovis Odin + fal.ai — converts 3D renders/CG blockouts to photorealistic video while preserving camera path and composition; available on fal.ai endpoint with no download required; (4) No new LTX Studio releases since May 11; no new core model releases; Veo 4 not announced as of June 30.
+
+## [2026-06-30] lint | Weekly health check
+Broken links: 0 (all wikilinks in 3 updated pages verified). Index drift: 0 (no new pages created). Format issues: 0 (all updated pages have valid frontmatter with correct updated: 2026-06-30). Pre-existing broken link artifacts (unchanged from prior entries): ~6 backslash-escaped table-cell artifacts.
