@@ -2,13 +2,14 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-06-15
+updated: 2026-07-06
 sources:
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
   - raw/competitor-kling-3-updates-2026.md
   - raw/competitor-kling-30-official-launch-june-2026.md
   - raw/community-video-leaderboard-june-2026.md
+  - raw/competitor-kling-funding-july-2026.md
 tags:
   - competitor
   - video-generation
@@ -88,6 +89,23 @@ The ability to extract dance/movement patterns from one video and apply them to 
 
 ~20 credits per standard video, ~100 credits per high-quality 1080p video. Daily credits on the free tier expire at midnight.
 
+## Funding & Business (July 2026)
+
+Kling AI closed a **$2.8 billion funding round on July 3, 2026** at an **$18 billion post-money valuation**, backed by Tencent, Alibaba, Baidu, CITIC Securities, and 34 additional investors. Kuaishou retains ~68% ownership post-round.
+
+**Revenue trajectory:**
+- March 2025: $100M ARR
+- January 2026: $300M ARR
+- March 2026: $500M ARR (5× in 12 months)
+- Q1 2026 revenue: 650M yuan (~$96M), +300% YoY
+
+**IPO plans:** Targeting Hong Kong Stock Exchange listing within 12 months of final payment date.
+
+This positions Kling as the **highest-valued pure-play AI video generation company globally**, exceeding Runway's last known valuation. The simultaneous backing from China's three largest tech giants (Tencent + Alibaba + Baidu) is historically unprecedented in a single round.
+
+**Compliance note:** EU AI Act Article 50 (enforcement August 2, 2026) creates data-sovereignty complexity for European enterprise customers given Kling's China-based data processing.
+
+
 ## Strengths
 - **#1 AI video leaderboard** (Elo 2031 with Kling 3.0 as of June 2026)
 - **60M+ creators worldwide** — largest user base in AI video
@@ -95,7 +113,7 @@ The ability to extract dance/movement patterns from one video and apply them to 
 - Multi-shot storyboarding in Video 3.0 Omni (specify per-shot duration, angle, content)
 - Physics-accurate motion and strong prompt adherence
 - Available in [[ltx-studio]] and [[competitor-runway|Runway]] as integrated model options
-- Enterprise-proven: 30,000+ enterprise clients, $240M+ ARR
+- Enterprise-proven: 30,000+ enterprise clients, $500M ARR (March 2026)
 
 ## Weaknesses
 - No local/offline deployment (cloud-only, China-based servers)

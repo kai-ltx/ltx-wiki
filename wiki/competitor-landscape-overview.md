@@ -2,11 +2,13 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-06-15
+updated: 2026-07-06
 sources:
   - raw/competitor-kling-30-official-launch-june-2026.md
   - raw/community-video-leaderboard-june-2026.md
   - raw/competitor-ai-video-landscape-june-2026.md
+  - raw/competitor-kling-funding-july-2026.md
+  - raw/competitor-seedance-25-july-2026.md
   - raw/competitor-grok-imagine-video-1-5-june-2026.md
   - raw/competitor-product-runway.md
   - raw/competitor-product-pika.md
@@ -33,6 +35,7 @@ This page summarizes the product-level competitive landscape for [[ltx-studio]] 
 | Platform | Max Resolution | Max Duration | Native Audio | Character Consistency | Pricing (Entry Paid) |
 |----------|---------------|-------------|-------------|----------------------|---------------------|
 | [[competitor-runway\|Runway Gen-4]] | 4K (Pro) | 60s | No | Best-in-class (reference images) | $12/mo |
+| [[competitor-seedance|Seedance 2.5]] (ByteDance) | 4K native (10-bit) | 30s native | No | Up to 50 multimodal refs | API only |
 | [[competitor-veo\|Veo 3.1]] | 4K native | 8s base / 140s+ chained | Yes (strong) | Ingredients (3 refs) | $19.99/mo |
 | [[competitor-kling|Kling AI 3.0]] | 4K (Image 3.0 Omni) / 1080p video | 15s (Video 3.0) | Yes (2.6+, 5+ languages) | Advanced (Video 3.0 Omni) | ~$10/mo |
 | [[competitor-pika\|Pika Labs]] | 1080p | 3-10s | No | No | $10/mo |
@@ -103,11 +106,12 @@ See [[mcp-video-integrations]] for detailed coverage. LTX MCP is the only open-s
 - Maximum single-clip duration trails [[competitor-veo|Veo]] (140s+ chained); Kling 3.0 Video is now 15s (down from prior 3-minute cap in 2.x)
 - Physics simulation trails historical [[competitor-sora|Sora 2]] (now discontinued)
 
-## Market Dynamics (June 2026)
+## Market Dynamics (July 2026)
 
 - [[competitor-sora|Sora's shutdown]] has opened significant market share, benefiting all remaining players
 - [[competitor-veo|Veo 3.1]] has emerged as the strongest closed-source generation model
-- [[competitor-kling|Kling]] leads the global leaderboard (Elo 2031 with Video 3.0); 60M+ users, 30,000+ enterprise clients
+- [[competitor-kling|Kling]] leads the global leaderboard (Elo 2031 with Video 3.0); 60M+ users, 30,000+ enterprise clients; raised $2.8B at **$18B valuation** (July 3, 2026), backed by Tencent, Alibaba, and Baidu simultaneously; ARR $500M (March 2026); HK IPO targeted within 12 months
+- **Seedance 2.5 (ByteDance, early July 2026):** Native 30-second video, up to 50 multimodal references, local editing, native 4K 10-bit. Marks ByteDance's direct entry into the premium video generation market
 - [[competitor-runway|Runway]] remains the industry standard for professional use
 - [[ltx-studio]]'s multi-model strategy hedges against any single model falling behind
 

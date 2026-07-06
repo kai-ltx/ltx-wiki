@@ -95,9 +95,41 @@ Key findings: (1) No new LTX model or API releases since May 11 (Video to Video 
 ## [2026-06-15] lint | Weekly health check
 Broken links: 0 (all links in updated pages verified — all 15 wikilink targets confirmed existing). Index drift: 0 (no new pages created this week; all updated pages confirmed in index). Format issues: 0 (all updated pages have valid frontmatter with correct updated: 2026-06-15). Pre-existing broken links (documented in prior entries, unchanged): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]).
 
+
+## [2026-07-06] Weekly Update — Kling $2.8B Raise, Seedance 2.5, ByteDance Entry
+
+**Research period:** 2026-06-30 to 2026-07-06
+
+**Pages updated:**
+- `wiki/competitor-kling.md` — Added Funding & Business section: $2.8B raise at $18B valuation (July 3, 2026), investors (Tencent, Alibaba, Baidu, CITIC Securities, 38 total), Kuaishou diluted to ~68%, ARR trajectory ($100M→$300M→$500M in 12 months), HK IPO target within 12 months. Updated ARR figure in Strengths to $500M.
+- `wiki/competitor-landscape-overview.md` — Added [[competitor-seedance|Seedance 2.5]] to competitor table; updated Market Dynamics to July 2026, added Kling $18B valuation context and Seedance 2.5 entry.
+- `wiki/competitor-seedance.md` (NEW) — Created new page documenting Seedance 2.0 (API tiers, C2PA watermarking) and Seedance 2.5 (native 30s, 50 multimodal refs, local editing, native 4K 10-bit).
+
+**Raw files created:**
+- `raw/competitor-kling-funding-july-2026.md`
+- `raw/competitor-seedance-25-july-2026.md`
+
+**Lint results:** 0 broken links in updated/created pages. Pre-existing broken links (documented in prior entries, unchanged): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]). Index drift: 0 (competitor-seedance.md added to index below). Format issues: 0.
+
 ## [2026-06-30] ingest | Weekly update
 Sources added: 3 files (Area1/LTX news: 1, Area2/Community: 0, Area3/Competitors: 1, Area4/Tutorials: 1). Pages created: none. Pages updated: [[ltx-video-trainer]], [[competitor-runway]], [[lora-community-ecosystem]].
 Key findings: (1) LTX Trainer unified framework released June 17 — 13 training modes covering video, audio, cross-modal, and IC-LoRA from a single config file; new agentic config generation via Claude/LLMs; supports AV2AV joint IC-LoRA (first in ecosystem); (2) Runway: Studio Trim (June 18, stitch/reorder/export in one place), Agent 2.0 (June 25, marketing-focused campaign creation with ad-performance analysis), Seedance 2.0 4K API (June 24, 150 credits/s), Seedance 2.0 Mini API (June 26, 16 credits/s), HappyHorse 1.0 API (May 29, third-party model); (3) LTX-2.3 3DREAL IC-LoRA released June 26 by Lovis Odin + fal.ai — converts 3D renders/CG blockouts to photorealistic video while preserving camera path and composition; available on fal.ai endpoint with no download required; (4) No new LTX Studio releases since May 11; no new core model releases; Veo 4 not announced as of June 30.
+
+
+## [2026-07-06] Weekly Update — Kling $2.8B Raise, Seedance 2.5, ByteDance Entry
+
+**Research period:** 2026-06-30 to 2026-07-06
+
+**Pages updated:**
+- `wiki/competitor-kling.md` — Added Funding & Business section: $2.8B raise at $18B valuation (July 3, 2026), investors (Tencent, Alibaba, Baidu, CITIC Securities, 38 total), Kuaishou diluted to ~68%, ARR trajectory ($100M→$300M→$500M in 12 months), HK IPO target within 12 months. Updated ARR figure in Strengths to $500M.
+- `wiki/competitor-landscape-overview.md` — Added [[competitor-seedance|Seedance 2.5]] to competitor table; updated Market Dynamics to July 2026, added Kling $18B valuation context and Seedance 2.5 entry.
+- `wiki/competitor-seedance.md` (NEW) — Created new page documenting Seedance 2.0 (API tiers, C2PA watermarking) and Seedance 2.5 (native 30s, 50 multimodal refs, local editing, native 4K 10-bit).
+
+**Raw files created:**
+- `raw/competitor-kling-funding-july-2026.md`
+- `raw/competitor-seedance-25-july-2026.md`
+
+**Lint results:** 0 broken links in updated/created pages. Pre-existing broken links (documented in prior entries, unchanged): ~6 artifacts ([[lightricks]], 2× [[comfyui-integration]], [[dit-architecture]], [[related-work-and-comparisons]], [[character-consistency]]). Index drift: 0 (competitor-seedance.md added to index below). Format issues: 0.
 
 ## [2026-06-30] lint | Weekly health check
 Broken links: 0 (all wikilinks in 3 updated pages verified). Index drift: 0 (no new pages created). Format issues: 0 (all updated pages have valid frontmatter with correct updated: 2026-06-30). Pre-existing broken link artifacts (unchanged from prior entries): ~6 backslash-escaped table-cell artifacts.
