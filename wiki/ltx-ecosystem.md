@@ -2,7 +2,7 @@
 title: LTX Ecosystem
 type: concept
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-07-21
 sources:
   - https://ltx.io/
   - https://ltx.studio
@@ -11,6 +11,7 @@ sources:
   - https://docs.ltx.video/welcome
   - https://ltx.io/ltx-desktop
   - https://ltx.io/model/ltx-developer-program
+  - raw/ltx-news-ltx-explore-launch-july20-2026.md
 tags:
   - ltx
   - ecosystem
@@ -34,6 +35,7 @@ Lightricks
 │
 └── LTX (Professional AI Video)
     ├── LTX Studio (ltx.studio) — Commercial web platform
+    ├── LTX Explore (app.ltx.io) — No-code self-service tier (July 2026)
     ├── LTX Desktop — Open-source desktop app
     ├── LTX Models
     │   ├── LTX-Video / LTXV (original, 2B/13B)

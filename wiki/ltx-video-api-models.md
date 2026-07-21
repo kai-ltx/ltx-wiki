@@ -2,10 +2,11 @@
 title: LTX Video API Model Tiers
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-07-21
 sources:
   - https://docs.ltx.video/models
   - https://docs.ltx.video/
+  - raw/ltx-news-ltx-2-deprecation-july-2026.md
 tags:
   - api
   - models
@@ -17,6 +18,8 @@ tags:
 # LTX Video API Model Tiers
 
 The [[ltx-video-api]] exposes four model IDs across two generations (LTX-2 and LTX-2.3) and two tiers (Fast and Pro). These are the API-specific identifiers; for the underlying open-source model weights, see [[ltx-2-huggingface]] and [[ltx-2-3-huggingface]].
+
+> **Deprecation notice (as of 2026-07-02):** `ltx-2-fast` and `ltx-2-pro` are being retired. As of **July 15, 2026**, requests to these model IDs are automatically served by LTX-2.3 at unchanged LTX-2 pricing. On **August 15, 2026**, the old model IDs will be removed entirely and return an error. All integrations should migrate to `ltx-2-3-fast`/`ltx-2-3-pro` before that date. Known migration gotchas: LTX-2 LoRAs do not transfer cleanly to LTX-2.3 (different parameter count/VAE), prompts resolve more literally (positional language like "left/right" is followed more strictly), default contrast/saturation render punchier, and identical seeds do not reproduce identical output across the two generations. See [[ltx-2-version-history]].
 
 ## Available Models
 

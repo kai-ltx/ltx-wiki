@@ -2,10 +2,11 @@
 title: LTX-2 Version History
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-07-21
 sources:
   - raw/ltx2-version-history-and-releases.md
   - raw/comfyui-ltx-version-history.md
+  - raw/ltx-news-ltx-2-deprecation-july-2026.md
 tags:
   - ltx-2
   - version-history
@@ -81,6 +82,14 @@ Focused on builder-requested improvements for real-world workflows. This was an 
 | Upscalers | Spatial only | Spatial (1.5x/2x) + Temporal |
 | LTX Desktop | No | Yes |
 | LoRA compatibility | LTX-2 LoRAs | Not backward compatible |
+
+### LTX-2 Deprecation -- July 2026
+
+- Announced July 2, 2026 via the API changelog.
+- **July 15, 2026:** `ltx-2-fast`/`ltx-2-pro` API requests are automatically served by LTX-2.3 at unchanged pricing.
+- **August 15, 2026:** `ltx-2-fast`/`ltx-2-pro` model IDs are removed entirely; requests return an error.
+- Completes the transition to LTX-2.3 as the sole supported API/open-source model line.
+- Migration caveats documented by the community: LoRAs don't transfer (parameter count and VAE changed), prompts resolve more literally, default color grading is punchier, and identical seeds diverge after ~10-12 steps between generations.
 
 ## No Intermediate Versions
 

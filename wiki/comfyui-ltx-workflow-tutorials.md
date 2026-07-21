@@ -2,8 +2,9 @@
 title: ComfyUI LTX Video Workflow Tutorials
 type: catalog
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-07-21
 sources:
+  - raw/tutorial-ltx-23-outpainting-comfyui-workflow-july-2026.md
   - https://comfyui-wiki.com/en/tutorial/advanced/ltx-video-workflow-step-by-step-guide
   - https://comfyui-box.com/advanced-tutorial/ltx-workflow/
   - https://stable-diffusion-art.com/ltxv-13b/
@@ -97,6 +98,19 @@ A catalog of available tutorials and guides for [[comfyui-ltx-integration-overvi
 - **URL:** https://apatero.com/blog/comfyui-ltx-2-3-audio-video-workflow-tutorial-2026
 - **Model:** LTX-2.3
 - Audio-synchronized video generation, [[comfyui-ltx-node-reference|MultimodalGuider]] for independent audio/video control, cross-modal guidance tuning.
+
+### MimicPC -- LTX 2.3 Video Outpainting (Easy)
+- **URL:** https://www.mimicpc.com/workflows/ltx-23-video-outpainting-easy-expand-any-video-canvas-in-comfyui
+- **Model:** LTX-2.3
+- Hosted, no-install ComfyUI workflow for canvas expansion/outpainting; published within days of the July 13, 2026 [[ltx-video-api-endpoints|Reframe API]] launch.
+
+### YouTube -- Extend Your Videos with LTX 2.3 Outpainting
+- **URL:** https://www.youtube.com/watch?v=L22ARC8GzYI
+- Node-by-node walkthrough of the outpainting workflow: upload source video, choose target aspect ratio, run coarse-generation + seam-refinement passes.
+
+### HuggingFace Space -- LTX-2.3 Outpaint (linoyts)
+- **URL:** https://huggingface.co/spaces/linoyts/LTX-2-3-outpaint
+- Hosted, in-browser demo of the outpainting IC-LoRA, no local install required. The underlying LoRA training config (`video_outpainting_lora.yaml`) is in the Lightricks/LTX-2 GitHub repo under `packages/ltx-trainer/configs/`, trainable via the unified [[ltx-video-trainer|LTX Trainer]] framework (June 2026).
 
 ## Official Documentation
 

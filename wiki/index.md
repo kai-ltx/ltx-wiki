@@ -2,7 +2,7 @@
 title: Wiki Index
 type: overview
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-07-21
 ---
 
 # Wiki Index
@@ -26,6 +26,7 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 
 - [[lightricks-company]] — Founded 2013, $1.8B valuation, 600 employees, 730M+ downloads
 - [[ltx-studio]] — Web-based AI video production platform (5 pricing tiers)
+- [[ltx-explore]] — No-code self-service tier, 30+ capabilities, no API/setup (July 2026)
 - [[ltx-studio-canvas]] — Collaborative infinite workspace for multi-user production (April 2026)
 - [[ltx-studio-flows]] — Node-based workflow automation: chain prompt/image/video/upscaling nodes (May 2026)
 - [[ltx-studio-apr-may-2026-updates]] — Full changelog: Editing Space, Kling 3.0 Pro, Veo 3.1 Lite, Seedance 2.0, ChatGPT Image 2.0

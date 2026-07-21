@@ -2,7 +2,7 @@
 title: LTX Video API Endpoints
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-07-21
 sources:
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/text-to-video
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/image-to-video
@@ -10,6 +10,7 @@ sources:
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/retake
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/extend
   - https://docs.ltx.video/api-documentation/api-reference/upload/create-upload
+  - raw/ltx-news-video-outpainting-api-july13-2026.md
 tags:
   - api
   - endpoints
@@ -19,7 +20,7 @@ tags:
 
 # LTX Video API Endpoints
 
-Detailed parameter reference for all six endpoints of the [[ltx-video-api]]. All endpoints accept POST requests, require Bearer token authentication, and return binary MP4 data on success.
+Detailed parameter reference for all seven endpoints of the [[ltx-video-api]]. All endpoints accept POST requests, require Bearer token authentication, and return binary MP4 data on success (except Reframe, which returns video honoring the requested aspect ratio).
 
 ## Text-to-Video
 
@@ -146,6 +147,31 @@ Lengthen videos from the beginning or end while maintaining continuity. Added Fe
 
 Tip: For portrait sequences longer than 8-10 seconds, extend rather than regenerate to preserve subject consistency.
 
+## Reframe (Video Outpainting)
+
+**POST** `https://api.ltx.video/v1/reframe`
+
+Expands a video's canvas to a new aspect ratio by generating only the newly exposed regions, preserving all original pixels, composition, motion, text, and logos. Added July 13, 2026.
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `video_uri` | string | Yes | -- | Input video URL (up to 60 seconds) |
+| `target_aspect_ratio` | string | Yes | -- | One of `1:1`, `4:5`, `5:4`, `9:16`, `16:9` |
+| `resolution` | string | No | 1080p variant | Output resolution matching target aspect ratio |
+| `model` | string | No | `ltx-2-3-pro` | Model ID |
+
+### Supported Aspect Ratios / Resolutions
+
+| Aspect Ratio | Resolutions |
+|---|---|
+| 1:1 | 720x720, 1080x1080 |
+| 4:5 | 720x900, 1080x1350 |
+| 5:4 | 900x720, 1350x1080 |
+| 9:16 | 720x1280, 1080x1920 |
+| 16:9 | 1280x720, 1920x1080 |
+
+Uses two-stage generation internally: a coarse pass fills the newly exposed canvas, followed by a seam-refinement pass for artifact-free blending at the original-frame boundary. Designed for repurposing one source video across multiple platform aspect ratios without reshooting.
+
 ## Upload
 
 **POST** `https://api.ltx.video/v1/upload`
@@ -181,6 +207,7 @@ See [[ltx-video-api-input-formats]] for a Python upload example and size limits.
 | Audio-to-video | No | Yes |
 | Retake | No | Yes |
 | Extend | No | Yes |
+| Reframe (outpainting) | No | Yes |
 
 ## Related Pages
 

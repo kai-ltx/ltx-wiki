@@ -2,11 +2,12 @@
 title: LTX Video Community Model Comparisons
 type: analysis
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-07-21
 sources:
   - raw/social-reddit-model-comparisons.md
   - raw/social-blog-independent-reviews.md
   - raw/social-general-sentiment-consensus.md
+  - raw/community-outpainting-iclora-reaction-2026.md
 tags:
   - comparisons
   - wan
@@ -65,6 +66,21 @@ Remaining gaps: "Complex physics (water, crowds) and emotional tonal subtlety st
 2. **CogVideoX** -- Moderate speed
 3. **HunyuanVideo** -- Slower
 4. **Wan 2.2** -- Slowest but highest quality
+
+## July 2026: "No Single Winner" Stack Narrative
+
+Comparison content published in this period (nemovideo.com's "LTX 2.3 vs WAN 2.2", apatero.com's "LTX-2 vs Wan vs Kling") reinforces a recurring community framing: professional creators run a "stack" of models chosen per use case rather than standardizing on one.
+
+- **LTX-2.3** -- fastest iteration (a 5s 720p clip that takes ~4-5 min on Wan 2.2 completes in under a minute), native 9:16, one-pass audio, and the only major open model with documented licensed training data plus a clean Apache 2.0 commercial story.
+- **Wan 2.2/2.5** -- still preferred for cinematic camera work and narrative content where motion quality matters most.
+- **Kling** -- preferred for dynamic/expressive movement and native audio-driven dialogue/singing generation in one pass.
+
+## Community Reaction to LTX-2.3 Outpainting (July 2026)
+
+Following the [[ltx-video-api-endpoints|Reframe API]] launch (July 13, 2026) and a companion community outpainting IC-LoRA, reaction was quick and positive:
+- X/Twitter user A.I.Warper tested the outpainting IC-LoRA and called it "pretty impressive."
+- A Medium writeup framed LTX Reframe as solving the recurring pain point of repurposing one hero video across multiple platform aspect ratios (16:9, 9:16, 1:1) without reshoots or manual paint-in.
+- ComfyUI tutorials and hosted workflows (MimicPC, HuggingFace Spaces) appeared within days -- consistent with the fast tutorial-ization pattern seen after prior LTX-2.3 IC-LoRA drops (Union Control, Motion Track, 3DREAL). See [[comfyui-ltx-workflow-tutorials]].
 
 ## Notable Community Quotes
 

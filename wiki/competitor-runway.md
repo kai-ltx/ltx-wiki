@@ -2,12 +2,13 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-06-30
+updated: 2026-07-21
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
   - raw/competitor-runway-gen45-benchmark-2026.md
   - raw/competitor-runway-june-2026.md
+  - raw/competitor-runway-api-additions-july-2026.md
 tags:
   - competitor
   - video-generation
@@ -80,6 +81,15 @@ New lightweight variant `seedance2_mini` added to the API:
 `happyhorse_1_0` — a third-party licensed model available in Runway's model marketplace:
 - T2V and I2V; 3–15 second durations at 720p–1080p
 - 10 output dimensions for T2V; I2V preserves input aspect ratio
+
+### API Additions (July 2026)
+
+Runway continued expanding its model-agnostic API marketplace rather than shipping a new flagship model this cycle:
+- **July 1, 2026:** Gemini Omni Flash available via the Runway API; Nano Banana 2 Lite added for fast image generation.
+- **July 2, 2026:** "Agent Skills" introduced — build ad campaigns, create commercials, and localize ads via simple command prompts (extends the Agent 2.0 marketing focus from June).
+- **Mid-July 2026:** Optional `negativePrompt` parameter added for Veo3, Veo3.1, and Veo3.1-fast text-to-video/image-to-video requests; Seedream 5.0 Lite (ByteDance image model) added to the API.
+
+This reinforces Runway's aggregator strategy: bundling its own Gen-4/Gen-4.5/Aleph models with third-party models ([[competitor-veo|Veo]], [[competitor-kling|Kling]], [[competitor-seedance|Seedance/Seedream]], FLUX) under one subscription/API.
 
 ## Key Features
 

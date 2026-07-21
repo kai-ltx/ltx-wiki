@@ -2,12 +2,13 @@
 title: HunyuanVideo
 type: concept
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-07-21
 sources:
   - raw/competitor-model-hunyuan-video.md
   - raw/open-source-comparison.md
   - raw/related-work-and-comparisons.md
   - raw/competitor-tencent-hyworld-2-april-2026.md
+  - raw/competitor-hunyuanvideo-vram-optimization-2026.md
 tags:
   - competitor
   - tencent
@@ -92,6 +93,16 @@ HunyuanVideo is Tencent's open-source video foundation model that achieves perfo
 - **Lower native resolution** -- generation is 480p-720p; 1080p requires upscaling stage
 - **License ambiguity** -- Tencent Hunyuan Community License for original model is more restrictive than Apache 2.0
 - **Slower than LTX** for equivalent quality output
+
+## VRAM Optimization Update (July 2026)
+
+The practical VRAM floor for running HunyuanVideo has continued to drop through 2026, narrowing the historical gap with [[ltx-2.3-model|LTX-2.3]]:
+
+- Tencent's official floor for the original 13B model: ~14GB with CPU offloading enabled.
+- ComfyUI's native (non-optimized) implementation recommends 24GB, since the pipeline also loads the Qwen 2.5-VL text encoder, byT5 glyph encoder, VAE, and a separate super-resolution model.
+- **HunyuanVideo-1.5** (8.3B) with FP8 quantization + tiling: ~8GB practical VRAM.
+- Community temporal-tiled VAE decode/encode nodes (via ComfyUI v0.3.10) brought the original 13B model down to ~8GB at reduced resolution, versus ~32GB previously required.
+- Net effect: HunyuanVideo is now workable on consumer 12-16GB GPUs via FP8 + tiling + offloading, though LTX-2.3 remains faster to iterate with at equivalent hardware.
 
 ## Comparison to LTX
 
