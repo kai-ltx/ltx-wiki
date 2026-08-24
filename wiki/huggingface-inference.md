@@ -2,11 +2,12 @@
 title: Hugging Face Inference
 type: entity
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - raw/api-huggingface-inference-providers.md
   - raw/api-inference-providers-overview.md
   - raw/integration-cloud-platforms.md
+  - raw/community-huggingface-ltx-2-5-discussions-tab-sentiment-2026-08.md
 tags:
   - inference
   - cloud
@@ -86,6 +87,24 @@ Hugging Face partners with inference providers that can be accessed transparentl
 - **[[fal-ai]]** -- Endpoint `fal-ai/ltx-video`, supports image-to-video and text-to-video
 - **[[replicate]]** -- Model `lightricks/ltx-video`, accessible via Replicate API or HF gateway
 
+## Gated Repos: LTX-2.5 (August 2026)
+
+Not every LTX repo on the Hub is openly downloadable. **`Lightricks/LTX-2.5` is gated** under the `ltx-2-community-license-agreement`: you must accept the terms on the model page, and `snapshot_download` / `from_pretrained` require an **authenticated read token with gated-repo scope**. An unscoped or anonymous request fails rather than falling back.
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="Lightricks/LTX-2.5",
+    local_dir="./ltx-2.5",
+    token="hf_YOUR_TOKEN",   # must have gated-repo access after accepting terms
+)
+```
+
+This is why several ungated third-party conversions (e.g. `guillaume127/LTX-2.5-FP8`) circulated in the days after release — they were used, among other things, to read the gated transformer's safetensors header without accepting the license. Quality of such mirrors is unvalidated; see [[ltx-2.5-local-inference]].
+
+As of 2026-08-24 the LTX-2.5 model page carried **~1.3k-1.4k likes** and the LTX.io org **~4.64k-4.68k followers**, with **~60 open and 15 closed community threads** less than two weeks after publication. The discussions tab has been the fastest support channel in practice: Lightricks org members (`art-alex`, `michaellightricks`) answer there directly, and one reported ComfyUI checkpoint-loading bug was fixed within roughly 48 hours. For what those threads say about the model itself, see [[ltx-2.5-community-reception]].
+
 ## Hugging Face Spaces
 
 Over 100 community Spaces host LTX Video demos. Notable Spaces include:
@@ -135,3 +154,9 @@ Hugging Face (via self-hosted diffusers or Inference Endpoints) provides the bro
 - Full upscaler pipeline integration
 
 This makes it the most flexible option for researchers and developers who need capabilities beyond what managed API providers offer.
+
+## Related Pages
+
+- [[inference-providers-overview]]
+- [[huggingface-spaces-ecosystem]]
+- [[ltx-2.5-community-reception]] -- What the LTX-2.5 discussions tab reported

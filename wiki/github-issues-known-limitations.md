@@ -2,9 +2,10 @@
 title: GitHub Issues and Known Limitations
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - raw/github-issues-discussions.md
+  - raw/community-github-lightricks-ltx-2-issues-ltx-2-5-defects-2026-08.md
 tags:
   - github
   - issues
@@ -95,6 +96,51 @@ These are confirmed architectural or design limitations, not bugs:
 7. **Quantized model artifacts:** [[gguf-quantizations|GGUF quantized]] versions can produce noise artifacts without error messages
 8. **LoRA compatibility:** Some [[lora-ecosystem|LoRA]] configurations silently fail in certain pipeline modes
 
+## Lightricks/LTX-2 Issue Tracker: LTX-2.5 Defects (August 2026)
+
+Issue traffic on the official `Lightricks/LTX-2` inference repo spiked after the 2026-08-11 [[ltx-2.5-model|LTX-2.5]] release. The table below is from a GitHub REST API query with `since=2026-08-11`, excluding spam/non-English noise (#281, #285, #287, #295). **All issue bodies below were read directly — this section is verified, not aggregated.**
+
+| # | Opened | State (2026-08-24) | Title |
+|---|---|---|---|
+| 275 | 2026-08-12 | open | Confirm: LTX-2.5 video/audio VAE *encoders* are byte-identical to LTX-2.3 (undocumented) |
+| 277 | 2026-08-12 | **open** | [LTX-2.5] DiffVAE AUTO tiling produces gray tails at the 2^32 stage-5 element boundary |
+| 278 | 2026-08-12 | closed | Recommendations on GGUF's versatility and using Qwen |
+| 283 | 2026-08-14 | open | Train/inference parity: three divergences between ltx-trainer and ltx-core / ltx-pipelines |
+| 284 | 2026-08-14 | closed | Omni-Rewriter now expands prompts into the public LTX-2.5 paragraph dialect |
+| 286 | 2026-08-16 | closed | OneTrainer support |
+| 288 | 2026-08-16 | **open** | [ltx-pipelines] i2v at 1216x832 crashes DiffVAE decoder with illegal memory access |
+| 290 | 2026-08-17 | closed | [LTX-2.5] Diffusers diffusion_decoder weights differ from the standalone DiffVAE checkpoint |
+| 291 | 2026-08-18 | closed | Timestep distribution / shift: proposal |
+| 292 | 2026-08-19 | open | ltx-kernels build fails on rolling-release toolchains (CUDA mismatch + -Werror) |
+| 296 | 2026-08-24 | open | `--quantization fp8-cast` crashes with any LoRA on pre-Hopper GPUs |
+
+### The diffusion VAE decoder (DiffVAE) defect family — unresolved
+
+Three independent reports inside five days all land on the same subsystem: the new diffusion-based video VAE decoder that is LTX-2.5's headline quality change. This is the **most significant unresolved cluster at the end of the window** — **all still open as of 2026-08-24**.
+
+- **#277 — gray tiles at the 2^32 element boundary.** Reporter `fff-ttt` on A100-SXM4-80GB, PyTorch 2.9.1+cu128, 1920x1088 @24fps: the decoder "can **silently produce neutral-gray frame tails or rectangular gray tiles** when AUTO tiling selects a chunked stage-5 tile whose channels-last activation reaches the `2**32` flattened-element boundary." Silent corruption, not an exception. Isolated to decode rather than either diffusion stage: "The same finite stage-2 latent decodes cleanly with a smaller explicit tile."
+- **#288 — deterministic i2v crash at 1216x832.** Reporter `mabry1985`: `ltx_pipelines.distilled` with image conditioning at 1216x832 crashes with `cudaErrorIllegalAddress`, **3/3 across seeds**. The same resolution *without* `--image` is fine, and i2v at 1216x704 and 1216x768 are fine. 832 is a legal size (64x13) and passes the pipeline's own divisible-by-64 check.
+- **Intermittent Blackwell variant.** A second reporter on #288 (`sonificator`, RTX PRO 6000 Blackwell sm120, CUDA 13.2) hit a related **non-deterministic** `CUBLAS_STATUS_INTERNAL_ERROR` at 960x896 / 481 frames — three takes passed, the fourth crashed with identical arguments.
+- **Vendor position:** `michaellightricks` replied to both on 2026-08-18 and explicitly linked them — "This looks like the same DiffVAE AUTO / chunked tiling issue as #288. We will take a look at it and follow up here." No fix at window close.
+
+Practical mitigation, from the community rather than a patch: **reduce the VAE decode tile size** (768 → 512), or set `temporal_size: 64` / `temporal_overlap: 16`. See [[ltx-2.5-local-inference]].
+
+### Confirmed architecture fact surfaced by #275
+
+`ofir-bar-tal` diffed the shipped 2.5 VAEs against the VAE bundled in `ltx-2.3-22b-dev`: "**Every encoder tensor and per-channel normalization stat is byte-for-byte identical between 2.3 and 2.5.** The audio *decoder* is also identical. Only the video decoder differs." `michaellightricks` confirmed on 2026-08-18: "that matches our intent... **Cached 2.3 latents are valid for 2.5 training and inference encode.**" He noted this would be added to the docs and declined to promise it beyond 2.5. The behaviour was previously **undocumented** — absent from README, release notes and model card.
+
+### Diffusers packaging mismatch (#290, closed)
+
+`mglyn` compared `Lightricks/LTX-2.5-Diffusers/diffusion_decoder` against the native VAE: **405 of 407 name/shape-matching tensors differ numerically**, with 0 missing and 0 unexpected keys — structurally compatible but built from different (likely release-candidate) weights. Closed as a [[diffusers-integration|Diffusers]]-side export problem: "The standalone VAE in `Lightricks/LTX-2.5` is the canonical decoder for LTX-2.5," redirecting to huggingface/diffusers PR #14447.
+
+### Quantization gap on pre-Hopper hardware (#296, open)
+
+`raywangruihua`: `ICLoraPipeline` with `--quantization fp8-cast` on an **RTX 3060** fails at `fuse_lora_weights` → `_fp8_cast_fuse` with `ValueError("type fp8e4nv not supported in this architecture")`. Practical effect: **the documented low-VRAM quantization path is unusable together with LoRAs on pre-Hopper consumer GPUs.** See [[fp8-quantization]].
+
+### Vendor responsiveness
+
+Lightricks staff (`michaellightricks`, `art-alex`) replied to essentially every substantive LTX-2.5 issue, typically within 2-6 days, and shipped at least one fix — the NVFP4 ComfyUI loading bug, reported on the Hugging Face discussions tab — **inside roughly 48 hours**. See [[ltx-2.5-community-reception]] for the sentiment context.
+
 ## ComfyUI-LTXVideo Issues
 
 Separate issue tracker at https://github.com/Lightricks/ComfyUI-LTXVideo/issues. Common themes:
@@ -123,3 +169,5 @@ Active PRs at https://github.com/Lightricks/LTX-Video/pulls. The project accepts
 - [[community-feature-requests]] -- Feature request landscape
 - [[fp8-quantization]] -- FP8 quantization details
 - [[installation-quickstart]] -- Setup guide
+- [[ltx-2.5-community-reception]] -- LTX-2.5 reception, including vendor response times
+- [[ltx-2.5-local-inference]] -- Tiling workarounds for the DiffVAE decoder

@@ -2,10 +2,11 @@
 title: GGUF Quantizations
 type: community-project
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - raw/community-project-gguf-quantizations.md
   - raw/community-project-community-models-finetunes.md
+  - raw/tutorial-ltx-2-5-local-vram-quantization-guide-2026-08.md
 tags:
   - community
   - quantization
@@ -13,6 +14,8 @@ tags:
   - low-vram
   - comfyui
   - city96
+  - ltx-2-5
+  - abiray
 ---
 
 # GGUF Quantizations
@@ -57,6 +60,22 @@ Community member **city96** created GGUF (GPT-Generated Unified Format) quantiza
 - The Q4_K_M variant is commonly used in community benchmarks
 - Part of a broader ecosystem of GGUF quantizations for diffusion models
 
+## LTX-2.5 GGUF: `Abiray/LTX-2.5-Distilled-GGUF`
+
+**Repository:** https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF
+
+Quantized GGUF builds of the [[ltx-2.5-model|LTX-2.5]] **distilled 22B transformer**, for memory-constrained local runs. **No GGUF existed at launch** (2026-08-11) -- its absence was one of the most-reported gaps in the first 24 hours of HF discussions. These are day-two community builds.
+
+Reported community consensus on quality:
+
+| Quant | Verdict |
+|---|---|
+| Q8 | **Virtually identical** to full precision |
+| Q4 | **The sweet spot** -- minimal quality loss |
+| Q3 | **Noticeable degradation** |
+
+For the natively-supported alternatives (FP8 cast, FP8 scaled-mm, MXFP8, NVFP4), see [[fp8-quantization]] and [[ltx-2.5-local-inference]].
+
 ## Additional GGUF Variants
 
 Other community members have also published GGUF quantizations:
@@ -69,6 +88,8 @@ See [[community-models-finetunes]] for the full landscape of community quantizat
 
 ## See Also
 
+- [[ltx-2.5-local-inference]] -- LTX-2.5 VRAM baselines and quantization options
+- [[fp8-quantization]] -- the natively supported quantization path
 - [[community-models-finetunes]] -- Overview of all community models, quantizations, and finetunes
 - [[render-benchmarks]] -- Performance benchmarks including quantized model comparisons
 - [[ltx-video-overview]] -- LTX Video base model

@@ -2,11 +2,12 @@
 title: LTX Video Memory Optimization
 type: guide
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - https://huggingface.co/docs/diffusers/main/optimization/memory
   - https://huggingface.co/docs/diffusers/api/pipelines/ltx_video
   - https://huggingface.co/Lightricks/LTX-Video
+  - raw/tutorial-ltx-2-5-local-vram-quantization-guide-2026-08.md
 tags:
   - memory
   - optimization
@@ -14,6 +15,7 @@ tags:
   - fp8
   - offloading
   - performance
+  - ltx-2-5
 ---
 
 # LTX Video Memory Optimization
@@ -198,6 +200,38 @@ export_to_video(video, "output.mp4", fps=24)
 | 24 GB | 13B + FP8 or 2B BF16 + torch.compile |
 | 40+ GB | 13B BF16 + torch.compile |
 
+## LTX-2.5 Memory Figures
+
+The numbers above target the 2B/13B [[ltx-video-overview|LTX-Video]] family. LTX-2.5's 22B transformer is a different budget entirely -- full detail in [[ltx-2.5-local-inference]].
+
+| Item | Figure |
+|---|---|
+| Official baseline (bf16 `ltx-pipelines`) | **32 GB VRAM**, 32 GB system RAM, ~100 GB storage |
+| ComfyUI int8 pack (community/launch materials) | **16 GB VRAM** minimum, 24 GB comfortable |
+| 22B transformer weights in FP8 | **~22 GB** |
+| 22B transformer weights in NVFP4 | **~11 GB** |
+| FP8 saving vs bf16 | **~40%** |
+
+The 16 GB and 32 GB numbers describe **different pipelines** (ComfyUI int8 vs bf16 PyTorch) and must not be conflated.
+
+### Minimum working config on a 32 GB card
+
+`--quantization fp8-cast` plus the **distilled checkpoint** (8 steps vs 20-50). Supporting levers, in order:
+
+1. Distilled checkpoint -- "on a 32 GB card this is the difference between working and not"
+2. **Tiled VAE decode** -- the fix when OOM hits at the *decode* stage rather than during sampling; quantization alone does not address it
+3. Offload text encoding to the LTX API -- the Gemma 4 encoder and prompt enhancer both hold VRAM
+4. `--offload cpu` for the transformer
+
+### OOM triage order
+
+Identify *where* memory fails (transformer / text encoder / VAE / upscaler / decode), then reduce one variable at a time: **resolution -> frames -> batch size -> precision -> concurrent models -> decoding strategy**. Close other GPU applications before retesting. A large hardware gap closed by offloading plus aggressive quantization yields a slow experimental setup, not a production machine.
+
+### Grid constraints when tuning down
+
+- Frame counts must satisfy `(F-1) % 8 == 0` -- valid values include 57, 65, 97, 121
+- Dimensions divisible by **64** for two-stage pipelines, **32** for one-stage
+
 ## Environment Variables
 
 ```bash
@@ -207,6 +241,8 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 ## See Also
 
+- [[ltx-2.5-local-inference]] -- LTX-2.5 VRAM, quantization and OOM triage
+- [[fp8-quantization]] -- FP8 cast vs scaled-mm, MXFP8, NVFP4
 - [[ltxv-model-variants]] -- choosing the right model for your hardware
 - [[python-installation-setup]] -- installation including optional dependencies
 - [[ltxv-video-vae]] -- VAE tiling details

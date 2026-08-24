@@ -71,7 +71,7 @@ Commercial use restricted to Pro ($35/mo) and Fancy ($95/mo) plans only. Per-cli
 - Short video duration (3-10 seconds maximum)
 - No native audio generation
 - No storyboarding or multi-scene workflow (individual clip generator only)
-- No [[character-consistency]] across scenes
+- No character consistency across scenes
 - No local deployment (cloud-only)
 - No commercial rights on lower tiers
 - Variable credit costs make budgeting difficult

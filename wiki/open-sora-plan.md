@@ -48,7 +48,7 @@ Open-Sora-Plan is an open-source video generation project from Peking University
 
 ## Comparison to LTX
 
-The [[related-work-and-comparisons|LTX-Video paper]] cites Open-Sora Plan as a model that LTX-Video significantly outperforms in human evaluation. Open-Sora-Plan's main contribution is the research on minute-scale video synthesis with Helios, demonstrating that longer-form generation is achievable. However, it is not production-ready and lacks the resolution, audio, speed, and ecosystem features of [[ltx-2-overview|LTX-2]].
+The [[paper-ltx-video|LTX-Video paper]] cites Open-Sora Plan as a model that LTX-Video significantly outperforms in human evaluation. Open-Sora-Plan's main contribution is the research on minute-scale video synthesis with Helios, demonstrating that longer-form generation is achievable. However, it is not production-ready and lacks the resolution, audio, speed, and ecosystem features of [[ltx-2-overview|LTX-2]].
 
 ## See Also
 

@@ -2,7 +2,7 @@
 title: LTX Video API Endpoints
 type: reference
 created: 2026-04-13
-updated: 2026-07-21
+updated: 2026-08-24
 sources:
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/text-to-video
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/image-to-video
@@ -11,16 +11,82 @@ sources:
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/extend
   - https://docs.ltx.video/api-documentation/api-reference/upload/create-upload
   - raw/ltx-news-video-outpainting-api-july13-2026.md
+  - raw/tutorial-ltx-2-5-api-v2-integration-and-model-matrix-2026-08.md
 tags:
   - api
   - endpoints
   - ltx-video
   - video-generation
+  - ltx-2-5
+  - async
 ---
 
 # LTX Video API Endpoints
 
-Detailed parameter reference for all seven endpoints of the [[ltx-video-api]]. All endpoints accept POST requests, require Bearer token authentication, and return binary MP4 data on success (except Reframe, which returns video honoring the requested aspect ratio).
+Detailed parameter reference for the endpoints of the [[ltx-video-api]]. All endpoints accept POST requests and require Bearer token authentication.
+
+There are now **two surfaces**:
+
+| Surface | Base URL | Style |
+|---|---|---|
+| **v2 (async)** | `https://api.ltx.io/v2/...` | Submit returns a job `id`; poll for the result. New domain, required for LTX-2.5. |
+| v1 (sync) | `https://api.ltx.video/v1/...` | Single call returns binary MP4. |
+
+The `/v1/` sync equivalents documented below still exist. The **new `api.ltx.io` domain and the `/v2` async surface** arrived with LTX-2.5 on 2026-08-11.
+
+## The /v2 Async Surface (api.ltx.io)
+
+Full endpoint list under `/v2`:
+
+`submit-text-to-video`, `submit-image-to-video`, `submit-audio-to-video`, `submit-retake`, `submit-extend`, `submit-video-to-video-hdr` (upscale video to HDR), `submit-video-to-video-reframe`, `get-job-status`, plus `create-upload`.
+
+### Canonical async request
+
+**POST** `https://api.ltx.io/v2/text-to-video`
+
+```bash
+curl -X POST https://api.ltx.io/v2/text-to-video \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "A majestic eagle soaring through clouds at sunset",
+    "model": "ltx-2-5-pro",
+    "duration": 8,
+    "resolution": "1920x1080"
+  }'
+```
+
+The call responds **immediately** with the job `id` and `created_at` (ISO 8601). Poll `GET /v2/text-to-video/{id}` until `status` is `completed`, then download from `result.video_url`.
+
+### Request fields
+
+| Field | Type | Required | Default | Notes |
+|---|---|---|---|---|
+| `prompt` | string | Yes | -- | Max **5000 characters** |
+| `model` | enum | Yes | -- | See [[ltx-video-api-models]] |
+| `duration` | integer **or null** | Yes | -- | Pass `null` for Automatic Duration |
+| `resolution` | string | Yes | -- | e.g. `1920x1080` |
+| `fps` | integer | No | `24` | |
+| `generate_audio` | boolean | No | `true` | |
+| `camera_motion` | enum | No | -- | See camera motion options below |
+
+### Automatic Duration
+
+`duration` is required but **nullable**. Passing `null` lets `ltx-2-5-fast` / `ltx-2-5-pro` choose clip length from the prompt before diffusion begins, using the duration-head model patch. On fal.ai the equivalent is `duration: "auto"`, which is the default there -- see [[fal-ai]]. Padding a prompt to "fill time" degrades output rather than lengthening it.
+
+### Error codes
+
+`400`, `401`, **`402` (Payment Required)**, `422`, `429`, `500`, `503`. See [[ltx-video-api-errors]].
+
+### Console and docs
+
+Developer Console: https://console.ltx.io -- log in, add credits, create an API key. The docs root exposes an agent-readable index: append `/llms.txt` to any URL for a page-level index, or `.md` for the markdown version of any page.
+
+---
+
+## The /v1 Sync Surface (api.ltx.video)
+
+The endpoints below return binary MP4 data on success (except Reframe, which returns video honoring the requested aspect ratio).
 
 ## Text-to-Video
 
@@ -208,6 +274,8 @@ See [[ltx-video-api-input-formats]] for a Python upload example and size limits.
 | Retake | No | Yes |
 | Extend | No | Yes |
 | Reframe (outpainting) | No | Yes |
+
+This holds for LTX-2 and LTX-2.3. **LTX-2.5 does not follow it:** `ltx-2-5-fast` gains audio-to-video (async-only via `v2/audio-to-video`) while `ltx-2-5-pro` has no audio-to-video and no editing endpoints at all. Retake, Extend and Reframe remain **exclusive to `ltx-2-3-pro`**. Full matrix in [[ltx-video-api-models]].
 
 ## Related Pages
 

@@ -54,7 +54,7 @@ Generates "squish" effects -- animations where hands squeeze deformable objects 
 Generates "cakeify" effects -- scenes where a person cuts a cake shaped like various objects. Prompt format: `CAKEIFY a person using a knife to cut a cake shaped like [your object]`. Public training dataset available at Lightricks/Cakeify-Dataset on HuggingFace.
 
 ### Significance of Official LoRAs
-These demonstrations show that custom video effects can be trained with relatively small datasets, trigger word patterns enable easy activation, and creative applications extend well beyond standard video generation (viral effects, social media content). Both LoRAs work with the image-to-video pipeline and include [[comfyui-integration\|ComfyUI]] workflows.
+These demonstrations show that custom video effects can be trained with relatively small datasets, trigger word patterns enable easy activation, and creative applications extend well beyond standard video generation (viral effects, social media content). Both LoRAs work with the image-to-video pipeline and include [[comfyui-ltx-integration-overview\|ComfyUI]] workflows.
 
 ## Types of Creative Content Demonstrated
 

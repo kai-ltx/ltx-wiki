@@ -2,7 +2,7 @@
 title: Community Sentiment Overview for LTX Video
 type: analysis
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - raw/social-general-sentiment-consensus.md
   - raw/social-reddit-stablediffusion-discussions.md
@@ -10,6 +10,9 @@ sources:
   - raw/social-x-twitter-announcements-demos.md
   - raw/social-hackernews-discussions.md
   - raw/social-blog-independent-reviews.md
+  - raw/community-huggingface-ltx-2-5-discussions-tab-sentiment-2026-08.md
+  - raw/community-reddit-ltx-2-5-vs-minimax-h3-speed-quality-debate-2026-08.md
+  - raw/community-reddit-stablediffusion-ltx-2-5-launch-hands-on-2026-08.md
 tags:
   - sentiment
   - community
@@ -99,8 +102,31 @@ The community tracks a clear upward trajectory:
 | May 2025 | 0.9.7-0.9.8 / 13B | "Huge step" in quality |
 | Jan 2026 | LTX-2 | Audio-video sync, 4K capability |
 | Mar 2026 | LTX-2.3 | "First open-weights model to credibly remove the quality asterisk" |
+| Aug 2026 | LTX-2.5 | **Split.** Speed and low-VRAM reach praised; two regressions vs 2.3 reported |
 
-Sentiment has improved significantly with each version update.
+Sentiment improved with every version update **through LTX-2.3**. LTX-2.5 is the first release where that streak broke — see below.
+
+## LTX-2.5: The First Genuinely Split Release (August 2026)
+
+LTX-2.5 (2026-08-11) is the first LTX release where community sentiment did not simply improve on its predecessor. Full treatment: [[ltx-2.5-community-reception]].
+
+**What stayed on trend (praised):** speed, and reach onto 6GB-class consumer GPUs within 48 hours of release via community and third-party tooling. Compatibility also improved — unlike the LTX-2 → 2.3 migration, most 2.3 LoRAs carried over, and Lightricks confirmed on GitHub that **the 2.3 VAE encoders are byte-for-byte identical in 2.5, so cached 2.3 latents remain valid**.
+
+**What broke the trend (two independently-reported regressions vs [[ltx-2.3-model|LTX-2.3]]):**
+
+1. **Image-to-video character/identity consistency** — Hugging Face discussions #30, #14, #38. One user's direct A/B: the same portrait rendered correctly by 2.3 and "completely different" by 2.5.
+2. **External-audio lip-sync** — HF #57 and #44. Multiple users recommend **staying on 2.3 for singing avatars and music-video workflows**.
+
+The clearest signal that this is scoped rather than blanket negativity: user `LabMike3D` posted both a strong endorsement ("LTX 2.5 Just Changed Local AI Video Forever!") and the "Don't Use LTX 2.5 For Music Videos! Stick To LTX 2.3" warning, describing 2.5 as "excellent and highly usable for many other use cases, just not for music video clips with external audio."
+
+**Reading the sentiment carefully.** Two cautions apply to any LTX-2.5 sentiment tally:
+
+- **Reddit was not directly fetchable** in this research pass; r/StableDiffusion material came via an aggregator supplying titles, authors and dates only — post bodies and comment threads were not read, and vote counts are unavailable.
+- The community **openly disputed whether its own negative wave was organic** (one user: "don't trust bot troll posts"), so thread counts should not be read as a sentiment measurement.
+
+Harsh verdicts such as "no visible improvement" over 2.3 and "the current architecture / data approach is a dead end" are **individual community judgements**, contradicted by other users in the same window — not measured findings.
+
+**Vendor response remained a positive.** Lightricks staff answered essentially every substantive report on both Hugging Face and GitHub, and fixed a reported NVFP4/ComfyUI loading bug inside roughly 48 hours. The counterweight: the [[github-issues-known-limitations|diffusion VAE decoder defect family]] was still open at window close.
 
 ## Overall Verdict
 
@@ -115,3 +141,4 @@ The community consensus is that LTX Video occupies a distinct and valued niche a
 - [[x-twitter-ltx-announcements]]
 - [[hackernews-ltx-discussions]]
 - [[blog-reviews-ltx]]
+- [[ltx-2.5-community-reception]]

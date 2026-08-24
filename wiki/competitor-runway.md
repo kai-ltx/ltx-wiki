@@ -2,13 +2,14 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-07-21
+updated: 2026-08-24
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
   - raw/competitor-runway-gen45-benchmark-2026.md
   - raw/competitor-runway-june-2026.md
   - raw/competitor-runway-api-additions-july-2026.md
+  - raw/competitor-runway-media-router-orchestration-pivot-july-2026.md
 tags:
   - competitor
   - video-generation
@@ -42,8 +43,8 @@ Runway is the industry-standard AI video generation platform, widely considered 
 
 ### Gen-4.5 (December 2025)
 - Runway's current flagship video model
-- **Elo score of 1,247** on Artificial Analysis Text-to-Video benchmark (top position as of June 2026, confirmed)
-- Ahead of Google Veo 3.1, Kling 3.0, and Sora 2 on that benchmark
+- **Elo score of 1,247** on the Artificial Analysis Text-to-Video benchmark **at launch** (December 2025). Superseded: as of 2026-08-24 Runway is absent from the AA top-31 in both T2V and I2V with-audio.
+- Still Runway's **last frontier video model** as of August 2026 — no Gen 5 announced
 - Supports text-to-video and image-to-video; 2–10 second clip durations
 
 ### Runway Agent (May 13, 2026)
@@ -90,6 +91,28 @@ Runway continued expanding its model-agnostic API marketplace rather than shippi
 - **Mid-July 2026:** Optional `negativePrompt` parameter added for Veo3, Veo3.1, and Veo3.1-fast text-to-video/image-to-video requests; Seedream 5.0 Lite (ByteDance image model) added to the API.
 
 This reinforces Runway's aggregator strategy: bundling its own Gen-4/Gen-4.5/Aleph models with third-party models ([[competitor-veo|Veo]], [[competitor-kling|Kling]], [[competitor-seedance|Seedance/Seedream]], FLUX) under one subscription/API.
+
+### Media Router (July 23, 2026) — the orchestration pivot
+
+On **Thursday 2026-07-23** Runway launched **Runway Media Router** through **Runway Dev**, its developer platform released earlier in July 2026. Media Router automatically selects the best image, video or audio generation model for a request based on whether the developer prioritizes **quality, speed or cost**. Runway claims it is **the first model router built specifically for generative media** (routers are already common for LLMs). It is distinct from the mid-July API marketplace expansion: Media Router is a saved, no-model-specified routing configuration layered on top of Runway Dev's third-party model roster.
+
+**Named Runway Dev customers:** Adobe, Cloudflare, ElevenLabs, Expedia, Shutterstock, Quora — companies building media generation into their own products via Runway's API rather than sending users to Runway's app.
+
+Anthony Maggio, Runway CPO: *"The routing really fits into that overall promise of being the easiest one-stop shop for developers to integrate with any type of generative media model."* Co-founder/co-CEO Anastasis Germanidis: *"You need great models underneath, but the orchestration increasingly matters a lot because people are building entire campaigns with those models... It's something that we increasingly had to build — that intelligence layer that comes on top of the pure pixel models."*
+
+**Geopolitical routing preference.** Maggio noted Chinese generative media models are increasingly popular, but many businesses "might not be comfortable working with models that come out of China," so they can set a preference for **American model providers** — a preference he expects to become more common as the US administration explores bans and sanctions against Chinese open AI models. This is **directly relevant to LTX's positioning as a non-Chinese open-weights option**, and mirrors the license carve-out problem with [[competitor-minimax-hailuo|MiniMax H3]] and the China-region-only access channels for [[wan-video|Wan 3.0]].
+
+**Token pricing context.** Media Router launched weeks after Runway **replaced its unlimited subscription plans with token-based pricing**, a move that drew criticism from some users. Maggio says customers are mainly interested in routing for token pricing and quality — part of 2026's broader enterprise token-bill backlash.
+
+Also in August 2026, the Runway API added **4K output for Seedance 2.0** (`seedance2`) across text, image and video endpoints, and shipped Model Router as a saved routing configuration for video, image and audio.
+
+### The frontier-model gap (as of August 2026)
+
+Runway's **last dedicated frontier video model release remains Gen-4.5, from December 2025**. Aside from **Aleph 2.0** (video editing, May 2026), Runway has not shipped a new frontier video model in months. TechCrunch explicitly asked when Runway plans to release Gen 5 — **no answer was given**.
+
+Per Artificial Analysis, Aleph 2.0 still ranks among leading **video editing** models, but Runway's text-to-video and image-to-video models no longer lead the rankings. **As of 2026-08-24 Runway appears nowhere in the Artificial Analysis top-31 for either text-to-video-with-audio or image-to-video-with-audio.** The top 20 T2V spots are held by Google, ByteDance and Alibaba. For reference, Gen-4.5 topped the AA Text-to-Video Arena at **1,247 Elo** at launch in December 2025 — a figure this page previously cited as a current standing; it is now a historical launch number, not a live ranking.
+
+**Strategic read.** Media Router "assumes that the best model will continue to change" rather than asking developers to bet on one model staying ahead. Runway is repositioning from AI video startup to **infrastructure/orchestration layer for generative media** — if not as the best new AI model, then as the best orchestration layer. Runway valuation: **$3.55B** per PitchBook. Gen-4.5 was internally codenamed "David," trained and served entirely on Nvidia Hopper and Blackwell GPUs; CEO Cristóbal Valenzuela at the time: *"We managed to out-compete trillion-dollar companies with a team of 100 people."*
 
 ## Key Features
 
@@ -138,6 +161,8 @@ Credit costs: Gen-4 ~12 credits/s, Gen-4 Turbo ~5 credits/s. Credits do NOT roll
 - No open-source model; fully proprietary, no local deployment
 - No integrated storyboarding (separate tools, not unified workflow)
 - Slower than some competitors ([[competitor-veo|Veo 3]] generates ~2.2x faster)
+- **No frontier model since Gen-4.5 (December 2025)**; absent from the AA top-31 in both T2V and I2V with-audio as of 2026-08-24
+- Token-based pricing replaced unlimited plans in mid-2026, drawing user criticism
 
 ## Comparison to LTX Studio
 
@@ -158,7 +183,10 @@ With the May 2026 launch of Runway Agent, Runway now directly competes with [[lt
 
 Teams choosing between them often use Runway for individual clip quality and [[ltx-studio]] for full project workflow.
 
+The July 2026 Media Router launch shifts the comparison again. Runway is no longer primarily competing on model quality — it is competing as an aggregation and routing layer, a strategy that partly converges with [[ltx-studio]]'s own multi-model access. The difference is that LTX pairs multi-model access with a **first-party open-weights model** it controls, while Runway's frontier model has been static since December 2025.
+
 ## See Also
 - [[competitor-landscape-overview]]
 - [[ltx-studio]]
-- character consistency
+- [[competitor-seedance]] — Seedance 2.0, now 4K via the Runway API
+- [[competitor-minimax-hailuo]] — Chinese open-weights model Media Router's geo-preference is designed to route around

@@ -2,11 +2,13 @@
 title: Hardware Requirements
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - raw/dev-hardware-requirements.md
   - raw/ltx-video-hardware-requirements-and-inference.md
   - raw/ltx-video-model-sizes-inference-hardware.md
+  - raw/tutorial-ltx-2-5-local-vram-quantization-guide-2026-08.md
+  - raw/tutorial-comfyui-ltx-2-5-nodes-workflows-2026-08.md
 tags:
   - hardware
   - gpu
@@ -14,11 +16,39 @@ tags:
   - performance
   - benchmarks
   - ltx-video
+  - ltx-2-5
 ---
 
 # Hardware Requirements
 
-This page covers GPU VRAM requirements, software dependencies, performance benchmarks, and optimization strategies for running [[ltx-video-overview|LTX-Video]] models locally. For LTX-2/2.3 requirements see [[ltx2-system-requirements]].
+This page covers GPU VRAM requirements, software dependencies, performance benchmarks, and optimization strategies for running [[ltx-video-overview|LTX-Video]] models locally. For LTX-2/2.3 requirements see [[ltx2-system-requirements]]; for LTX-2.5 see [[ltx-2.5-local-inference]].
+
+## LTX-2.5 Baseline (August 2026) -- Two Conflicting Numbers
+
+The two most-quoted LTX-2.5 VRAM figures describe **different pipelines** and are frequently conflated:
+
+| Source | Minimum VRAM | Pipeline |
+|---|---|---|
+| docs.ltx.io system requirements / `ltx-pipelines` / ComfyUI-LTXVideo repo | **32 GB** | bf16 PyTorch, 22B transformer |
+| LTX launch materials via ComfyUI community guides | **16 GB** (24 GB comfortable) | ComfyUI **int8** pack (`*-comfy-int8-convrot`) |
+| NVIDIA optimization guidance for the family | 8-16 GB at 540p / 4 s / 20 steps | mixed |
+
+Full official baseline for the standard Python path:
+
+| Requirement | Value |
+|---|---|
+| GPU | NVIDIA, **at least 32 GB VRAM** |
+| System RAM | 32 GB |
+| Storage | ~100 GB free (recommended distilled set is ~66 GiB across five files) |
+| CUDA | **12.7+** |
+| Python | 3.12+ |
+| PyTorch | ~= 2.7 |
+
+> **CUDA version discrepancy -- unresolved.** The docs.ltx.io system-requirements page and the LTX-2.5 model card say **CUDA 12.7+**; the LTX quantization blog says **CUDA 13.2+** is a hard prerequisite for its quantization walkthrough. Both are recorded here rather than reconciled.
+
+Do not merge requirements from LTX-2.3, [[ltx-desktop]], community GGUF builds and LTX-2.5 Python pipelines into a single spec -- they are four different setups.
+
+Rough 22B weight footprints: **~22 GB in FP8**, **~11 GB in NVFP4** ([[fp8-quantization]]).
 
 ## GPU VRAM Requirements by Model
 
@@ -209,6 +239,8 @@ Fewer frames = less memory. Use the [[upscaler-pipelines|temporal upscaler]] if 
 
 ## See Also
 
+- [[ltx-2.5-local-inference]] -- LTX-2.5 VRAM, quantization and OOM triage
+- [[ltx-2.5-comfyui-integration]] -- the 16 GB int8 ComfyUI path
 - [[ltx2-system-requirements]] -- LTX-2/2.3 specific requirements
 - [[apple-silicon-setup]] -- Running on Mac hardware
 - [[hardware-accessibility]] -- Running on low-end consumer hardware

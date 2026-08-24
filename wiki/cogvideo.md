@@ -54,7 +54,7 @@ CogVideo and its successor CogVideoX are video generation models developed by Zh
 
 - **3D VAE:** Compresses raw video data to 2% of its original size with 8x8x4 compression, significantly reducing training costs
 - **Expert Transformer Block:** Aligns text with video modalities using adaptive LayerNorm
-- **MM-DiT style:** Uses a joint text-video architecture; the [[related-work-and-comparisons|LTX-Video paper]] found that cross-attention outperformed this approach
+- **MM-DiT style:** Uses a joint text-video architecture; the [[paper-ltx-video|LTX-Video paper]] found that cross-attention outperformed this approach
 
 ## Strengths
 
@@ -76,7 +76,7 @@ CogVideo and its successor CogVideoX are video generation models developed by Zh
 
 ## Comparison to LTX
 
-The [[related-work-and-comparisons|LTX-Video paper]] reports that LTX-Video significantly outperforms CogVideoX-2B in human evaluation at similar parameter scale. LTX-2 surpasses CogVideoX across nearly every dimension: native 4K vs 1360x768, up to 50 FPS vs 16 FPS, 20 seconds vs 10 seconds duration, and native synchronized audio.
+The [[paper-ltx-video|LTX-Video paper]] reports that LTX-Video significantly outperforms CogVideoX-2B in human evaluation at similar parameter scale. LTX-2 surpasses CogVideoX across nearly every dimension: native 4K vs 1360x768, up to 50 FPS vs 16 FPS, 20 seconds vs 10 seconds duration, and native synchronized audio.
 
 ## See Also
 

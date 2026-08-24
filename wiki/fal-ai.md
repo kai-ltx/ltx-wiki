@@ -2,7 +2,7 @@
 title: fal.ai
 type: entity
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-08-24
 sources:
   - raw/api-fal-ai-ltx-video.md
   - raw/api-fal-ai-ltx.md
@@ -10,12 +10,14 @@ sources:
   - raw/cloud-deployment-platforms.md
   - raw/tutorial-ltx-video-replicate-fal-pricing-may-2026.md
   - raw/ltx-news-ltxv-13b-distilled-0-9-8-may-2026.md
+  - raw/tutorial-ltx-2-5-fal-six-endpoints-pricing-2026-08.md
 tags:
   - inference
   - cloud
   - api
   - fal-ai
   - lora-training
+  - ltx-2-5
 ---
 
 # fal.ai
@@ -39,6 +41,72 @@ Authorization: Key YOUR_FAL_KEY
 Keys are managed at https://fal.ai/dashboard/keys
 
 ## Available Model Endpoints
+
+### LTX-2.5 (six endpoints, launched 2026-08-11)
+
+fal serves [[ltx-2.5-model|LTX-2.5]] as **six separate endpoints**, billed per second with no subscription underneath. Every modality ships in a quality-optimized **Pro** variant and a speed-optimized **Fast** variant.
+
+| Endpoint ID | Modality | Variant |
+|---|---|---|
+| `lightricks/ltx-2.5/text-to-video/pro` | text-to-video | Pro |
+| `lightricks/ltx-2.5/text-to-video/fast` | text-to-video | Fast |
+| `lightricks/ltx-2.5/image-to-video/pro` | image-to-video | Pro |
+| `lightricks/ltx-2.5/image-to-video/fast` | image-to-video | Fast |
+| `lightricks/ltx-2.5/audio-to-video/pro` | audio-to-video | Pro |
+| `lightricks/ltx-2.5/audio-to-video/fast` | audio-to-video | Fast |
+
+Note the namespace change: these use `lightricks/...`, not the `fal-ai/...` prefix of earlier LTX endpoints. Image-to-video also accepts an **end frame**, pinning where a shot finishes.
+
+#### Capability split by variant
+
+- **Pro** -- 720p or 1080p, 24/25/50 fps, clips of 6, 8 or 10 seconds. Runs **Diffusion Fidelity Rendering** (Pro endpoints only).
+- **Fast** -- 720p, 1080p, 1440p or 2160p (4K), 24/25/48/50 fps, clips **up to 20 seconds**. Trades some DFR fidelity for speed, 4K and the lower per-second price.
+- Both: synchronized audio by default, 16:9 and 9:16, and `duration` defaults to `"auto"` (Auto Duration reads the described action and picks clip length before diffusion begins).
+
+#### LTX-2.5 pricing (per second, audio included at every resolution)
+
+| Variant | 720p | 1080p | 1440p | 4K |
+|---|---|---|---|---|
+| Fast | $0.09/s | $0.13/s | $0.19/s | $0.30/s |
+| Pro (image-to-video) | $0.12/s | $0.17/s | -- | -- |
+
+**Audio-to-video bills per second of *input audio*, not output:** $0.13/s on Fast and $0.17/s on Pro at 1080p.
+
+These match the first-party [[ltx-video-api-pricing|LTX API prices]] exactly.
+
+#### JavaScript client example
+
+```javascript
+import { fal } from "@fal-ai/client";
+
+const result = await fal.subscribe("lightricks/ltx-2.5/text-to-video/pro", {
+  input: {
+    prompt: "Cinematic drone shot over misty mountains at sunrise",
+    resolution: "1080p",
+    duration: "auto",
+    generate_audio: true,
+  },
+  logs: true,
+  onQueueUpdate: (update) => {
+    if (update.status === "IN_PROGRESS") {
+      update.logs.map((log) => log.message).forEach(console.log);
+    }
+  },
+});
+
+console.log(result.data);
+console.log(result.requestId);
+```
+
+Parameter reference lives at `/models/lightricks/ltx-2.5/text-to-video/pro/api`.
+
+#### Professional color / EXR
+
+fal's LTX-2.5 page confirms a **native EXR workflow**: reading and writing cinema-grade EXR inside ACES and DaVinci Wide Gamut, with generative edits returning EXR and no lossy 8-bit round-trip.
+
+#### Licensing note surfaced on the endpoint page
+
+LTX-2.x Community License, **not OSI open source**. Commercial use is permitted, but entities with **annual revenue of at least $10 million must obtain a paid commercial license** from Lightricks first. The license also restricts training competing models. See [[ltx-video-licensing]].
 
 ### LTX Video (Original / LTXV 0.9.x)
 - `fal-ai/ltx-video` -- Text-to-video
@@ -157,7 +225,9 @@ curl -X POST \
 }
 ```
 
-## Pricing (effective April 1, 2026)
+## Pricing (LTX-2 / LTX-2.3, effective April 1, 2026)
+
+For LTX-2.5 pricing see the endpoint section above.
 
 ### Video Generation (per second of output)
 
@@ -180,7 +250,9 @@ Pay-per-second with no minimums.
 
 ## LoRA Training API
 
-fal.ai is the only provider offering a LoRA training API for LTX Video. Dataset requirements:
+fal.ai is the only provider offering a LoRA training API for LTX Video. As of the LTX-2.5 launch fal hosts **more than 80 LTX fine-tunes**, running both the trainers and inference on the resulting adapters. LTX-2.5 also ships a **raw pretrained (non-SFT) checkpoint** alongside the production model, offered for aggressive adaptation toward robotics, synthetic AV, industrial digital twins and private domain models.
+
+Dataset requirements:
 
 - 10-50 training videos demonstrating target style or motion
 - Supported video formats: .mp4, .mov, .avi, .mkv

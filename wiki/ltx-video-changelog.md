@@ -2,14 +2,18 @@
 title: LTX Video Changelog
 type: analysis
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - raw/ltx-video-version-changelog-improvements.md
   - raw/ltx-video-version-changes-changelog.md
   - raw/ltx-video-capabilities-per-version.md
+  - raw/ltx-news-api-changelog-jul21-aug19-2026.md
+  - raw/ltx-news-ltx-2-5-release-2026-08-11.md
 tags:
   - ltx-video
   - changelog
+  - api
+  - ltx-2.5
   - improvements
   - versions
 ---
@@ -149,7 +153,41 @@ This was the largest single update in LTX-Video's history.
 
 ---
 
-## Architecture Constants (Unchanged Across All Versions)
+---
+
+## LTX API Changelog -- July 21 to August 19, 2026
+
+Seven entries landed on the [[ltx-video-api-models|LTX API]] changelog in this window (newest first). LTX's product release-notes page lists **no** Studio-side or open-source entries between July 20, 2026 ([[ltx-explore|LTX Explore]]) and August 11, 2026 (LTX-2.5), so the API changelog is the only record of incremental platform change over that stretch.
+
+### August 19, 2026 -- Audio-to-video generation params
+
+Audio-to-video now accepts `fps` (default 24), `last_frame_uri` (requires `image_uri`), and `camera_motion`, matching text-to-video and image-to-video. Available on `v2/audio-to-video` (async) and `v1/audio-to-video` (sync).
+
+### August 18, 2026 -- Audio-to-video resolution parity
+
+Audio-to-video gains the same resolution tiers as text-to-video and image-to-video: `ltx-2-5-fast` up to 4K, `ltx-2-5-pro` up to 1080p, `ltx-2-3-pro` up to 4K. Maximum input audio length varies by model and tier -- e.g. `ltx-2-3-pro` accepts up to 20 seconds at 720p/1080p and up to 10 seconds at 1440p/4K. New tiers bill at standard published rates ([[ltx-video-api-pricing]]).
+
+### August 16, 2026 -- LTX-2 removal completed
+
+`ltx-2-fast` and `ltx-2-pro` are no longer available; requests specifying them return an error. This closes out the July 2, 2026 deprecation notice, which had scheduled removal for August 15. Migration path: LTX-2.3 (`ltx-2-3-fast`, `ltx-2-3-pro`) or LTX-2.5 (`ltx-2-5-fast`, `ltx-2-5-pro`). See [[ltx-2-version-history]].
+
+### August 11, 2026 -- LTX-2.5 on the API
+
+New models for text-to-video, image-to-video and audio-to-video, portrait and landscape: **`ltx-2-5-fast`** up to 4K, **`ltx-2-5-pro`** at 720p and 1080p. Audio-to-video initially generated at 1080p on both (superseded by the August 18 parity change). Both accept camera motion, `last_frame_uri` on image-to-video, and `"duration": null` for automatic duration. Retake, extend and reframe are **not** supported and remain `ltx-2-3-pro` only. See [[ltx-2.5-model]].
+
+### August 10, 2026 -- Automatic duration
+
+Text-to-video and image-to-video accept `"duration": null` on `ltx-2-5-fast`, letting the model choose clip length from the prompt. Shipped one day ahead of the public LTX-2.5 launch.
+
+### August 2, 2026 -- 720p tier on LTX-2.3
+
+Text-to-video and image-to-video gained a 720p output tier on [[ltx-2.3-model|LTX-2.3]] (`1280x720` landscape, `720x1280` portrait), priced at $0.03/sec on `ltx-2-3-fast` and $0.04/sec on `ltx-2-3-pro`.
+
+### July 21, 2026 -- New API domain `api.ltx.io`
+
+The LTX API is now served at `https://api.ltx.io`, and docs and code samples use it going forward. Existing integrations on `https://api.ltx.video` keep working unchanged -- no migration required.
+
+## Architecture Constants (LTX-Video v0.9.x)
 
 These fundamental design choices remained constant throughout the LTX-Video line:
 
@@ -172,3 +210,6 @@ These fundamental design choices remained constant throughout the LTX-Video line
 - [[ltx-video-capabilities]] -- Capability matrix
 - [[ltx-video-model-variants]] -- Complete model inventory
 - [[ltx-video-architecture]] -- Core architecture details
+- [[ltx-2-version-history]] -- LTX-2 / LTX-2.3 / LTX-2.5 release timeline
+- [[ltx-video-api-models]] -- Current API model IDs
+- [[ltx-video-api-pricing]] -- Per-second pricing

@@ -2,7 +2,7 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-07-06
+updated: 2026-08-24
 sources:
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
@@ -10,6 +10,7 @@ sources:
   - raw/competitor-kling-30-official-launch-june-2026.md
   - raw/community-video-leaderboard-june-2026.md
   - raw/competitor-kling-funding-july-2026.md
+  - raw/competitor-grok-imagine-1080p-update-and-kling-q2-revenue-august-2026.md
 tags:
   - competitor
   - video-generation
@@ -106,6 +107,27 @@ This positions Kling as the **highest-valued pure-play AI video generation compa
 **Compliance note:** EU AI Act Article 50 (enforcement August 2, 2026) creates data-sovereignty complexity for European enterprise customers given Kling's China-based data processing.
 
 
+## Q2 2026 Results (reported August 19-20, 2026)
+
+Kuaishou released Q2 2026 results on **2026-08-19** (TechNode/Caixin coverage 2026-08-20). Kling is now one of the parent company's clearest growth businesses at a moment when the rest of Kuaishou is flat.
+
+| Metric | Q2 2026 |
+|---|---|
+| **Kling AI revenue** | **more than RMB 850 million** (~US$117-120M) |
+| Kling AI YoY growth | **+more than 200%** |
+| Kling AI QoQ growth | **+30%** |
+| **Kling AI H1 2026 revenue** | **RMB 1.5 billion** |
+| Kuaishou group revenue | RMB 35.5 billion (~$5.3B), **up only 1.4% YoY** |
+| Kuaishou adjusted net profit | **RMB 3.9 billion, down 30%** (other coverage reports net profit down 36%) |
+
+Advertising and livestreaming revenue are both under pressure, which makes Kling **structurally more important to Kuaishou** than its absolute revenue share suggests. The company aims to keep free cash flow positive in H2 2026.
+
+**Read:** Kling is scaling revenue faster than any other pure-play AI video business with published financials, but it is doing so inside a parent whose core business has stalled — which increases the pressure on Kling to monetize aggressively and supports the reported HK IPO ambition.
+
+**Benchmark note:** the Elo 2031 figure cited above comes from the June 2026 community leaderboard and is on a different scale from Artificial Analysis. On the AA text-to-video-with-audio board as of 2026-08-24, Kling 3.0 1080p (Pro) sits at **#9, Elo 1,106**, with Kling 3.0 720p at 1,098 and the Omni variants at 1,089/1,088 — behind [[wan-video|Wan 3.0]] (1,244), Gemini Omni Flash (1,238) and [[competitor-minimax-hailuo|MiniMax H3]] (1,228).
+
+**No new Kling model release** was found between 2026-07-21 and 2026-08-24. "Kling 3.0 Turbo" and "Kling 3.0 Omni / native 4K" both launched **2026-06-17**, outside this window. The in-window Kling news is financial.
+
 ## Strengths
 - **#1 AI video leaderboard** (Elo 2031 with Kling 3.0 as of June 2026)
 - **60M+ creators worldwide** — largest user base in AI video
@@ -114,6 +136,7 @@ This positions Kling as the **highest-valued pure-play AI video generation compa
 - Physics-accurate motion and strong prompt adherence
 - Available in [[ltx-studio]] and [[competitor-runway|Runway]] as integrated model options
 - Enterprise-proven: 30,000+ enterprise clients, $500M ARR (March 2026)
+- **Fastest-growing published AI video revenue line:** RMB 850M+ in Q2 2026, +200% YoY, +30% QoQ
 
 ## Weaknesses
 - No local/offline deployment (cloud-only, China-based servers)

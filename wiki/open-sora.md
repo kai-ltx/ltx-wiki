@@ -67,7 +67,7 @@ Open-Sora is a community-driven open-source project by HPC-AI Tech (Colossai tea
 
 ## Comparison to LTX
 
-The [[related-work-and-comparisons|LTX-Video paper]] reports that LTX-Video significantly outperforms Open-Sora Plan in human evaluation. Open-Sora 2.0's MIT license is the most permissive in the space, and its $200K training cost demonstrates remarkable cost-efficiency. However, it trails [[ltx-2-overview|LTX-2]] significantly in resolution (768px vs native 4K), audio (none vs native synchronized), speed, and VRAM efficiency (40 GB+ vs approximately 8 GB quantized).
+The [[paper-ltx-video|LTX-Video paper]] reports that LTX-Video significantly outperforms Open-Sora Plan in human evaluation. Open-Sora 2.0's MIT license is the most permissive in the space, and its $200K training cost demonstrates remarkable cost-efficiency. However, it trails [[ltx-2-overview|LTX-2]] significantly in resolution (768px vs native 4K), audio (none vs native synchronized), speed, and VRAM efficiency (40 GB+ vs approximately 8 GB quantized).
 
 ## See Also
 

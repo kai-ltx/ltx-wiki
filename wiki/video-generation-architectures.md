@@ -16,7 +16,7 @@ tags:
 
 # Video Generation Architectures
 
-A taxonomy of the architectural approaches used by open-source video generation models, synthesized from the [[related-work-and-comparisons|LTX-Video and LTX-2 papers]] and the broader [[open-source-video-generation-landscape]].
+A taxonomy of the architectural approaches used by open-source video generation models, synthesized from the [[paper-ltx-video|LTX-Video and LTX-2 papers]] and the broader [[open-source-video-generation-landscape]].
 
 ## Video Generation Architecture Families
 

@@ -27,7 +27,7 @@ The LTX Discord server is the primary real-time community hub for [[ltx-video-ov
 ## Role in the Ecosystem
 
 ### Community Support
-- Real-time troubleshooting for LTX Video, LTX Desktop, and [[comfyui-integration\|ComfyUI integration]]
+- Real-time troubleshooting for LTX Video, LTX Desktop, and [[comfyui-ltx-integration-overview\|ComfyUI integration]]
 - Discussion of prompting techniques and workflow optimization
 - Sharing of generated content and creative results
 
@@ -44,7 +44,7 @@ The LTX Discord server is the primary real-time community hub for [[ltx-video-ov
 ### Open-Source Community
 - LTX-Video-Trainer community support
 - LoRA sharing and discussion
-- [[comfyui-integration\|ComfyUI]] workflow exchange
+- [[comfyui-ltx-integration-overview\|ComfyUI]] workflow exchange
 - Hardware optimization tips
 
 ## History

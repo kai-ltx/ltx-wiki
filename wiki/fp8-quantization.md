@@ -2,16 +2,20 @@
 title: FP8 Quantization for LTX-Video
 type: concept
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-08-24
 sources:
   - raw/ltx-video-distilled-models-and-optimization.md
   - raw/ltx-video-distilled-optimized-variants.md
+  - raw/tutorial-ltx-2-5-local-vram-quantization-guide-2026-08.md
 tags:
   - ltx-video
   - fp8
   - quantization
   - optimization
   - vram
+  - nvfp4
+  - mxfp8
+  - ltx-2-5
 ---
 # FP8 Quantization for LTX-Video
 
@@ -69,9 +73,57 @@ FP8 is one layer in a hierarchy of optimization strategies available for LTX-Vid
 - Up to 60% VRAM reduction, up to 3x speed improvement
 - More aggressive quality tradeoff than FP8
 
+## FP8 in LTX-2.5 (the 22B model)
+
+FP8 is **the only quantization natively supported in the LTX-2.5 codebase**, cutting VRAM by approximately **40%** with minimal quality loss. Two distinct policies exist:
+
+| Policy | FP8 Cast | FP8 Scaled MM |
+|---|---|---|
+| CLI flag | `--quantization fp8-cast` | `--quantization fp8-scaled-mm` |
+| Dependencies | None (built in) | TensorRT-LLM, `uv sync --frozen --extra fp8-trtllm` |
+| GPU requirement | Any FP8-capable GPU (Ada Lovelace, Hopper, Blackwell) | **Hopper only** (H100, H200) |
+| Memory savings | Weight storage only, ~40% | Weight storage **+ compute**, ~40% |
+| Speed benefit | Moderate | Higher (native FP8 math) |
+| Checkpoint | Use with **bf16** checkpoints (downcast on the fly) | Use with **fp8** checkpoints |
+
+Both require `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True`. Programmatically:
+
+```python
+from ltx_core.quantization.policy import QuantizationPolicy
+
+pipeline = DistilledPipeline.from_config(
+    "path/to/config.yaml",
+    quantization=QuantizationPolicy.fp8_cast(),
+)
+```
+
+`QuantizationPolicy.fp8_scaled_mm()` selects the Hopper backend.
+
+### E4M3 vs E5M2
+
+**E4M3** (4 exponent, 3 mantissa bits) is the inference-relevant FP8 variant; **E5M2** targets gradients.
+
+## MXFP8 and NVFP4 (Blackwell)
+
+| Format | Bits | Scaling | GPU requirement |
+|---|---|---|---|
+| FP8 (E4M3) | 8 | Per-tensor or per-channel | Ada Lovelace, Hopper, Blackwell |
+| MXFP8 | 8 | Block-level (32 elements) | Blackwell |
+| NVFP4 | 4 | Block-level microscaling | Blackwell |
+
+- **MXFP8** -- 8-bit with block-level scaling over groups of 32 elements, per the Open Compute Project Microscaling Formats Spec. Preserves more dynamic range than per-tensor FP8; matters most in **cross-attention layers**, where video and audio weight distributions differ. Hardware support: **B100, B200, GB200**.
+- **NVFP4** -- 4 bits with block-level microscaling. For the **22B LTX-2.5 transformer: ~22 GB in FP8 vs ~11 GB in NVFP4.** Only 16 discrete values per weight, so temporal consistency and fine texture can show artifacts. LTX-2.5 ships `ltx-2.5-22b-distilled-transformer-nvfp4.safetensors`, usable via `--quantization nvfp4-prequant` (Blackwell + `ltx-kernels`) -- but **the ComfyUI loader for it was reported broken in the first 24 hours after launch** ([[ltx-2.5-comfyui-integration]]).
+
+> **CUDA version discrepancy:** the LTX quantization blog states **CUDA 13.2+** as a hard prerequisite for its quantization walkthrough, while docs.ltx.io system requirements and the model card state **CUDA 12.7+**. Both figures are recorded; neither has been reconciled.
+
 ## Relationship to Early Versions
 
 FP8 quantization was not available during the [[ltx-video-early-versions-overview|early version era]] (0.9.0-0.9.6). The [[ltx-video-096]] distilled models were the primary optimization path for the 2B architecture. FP8 became significant starting with the 13B models in v0.9.7, where memory savings were essential to making the larger models practical on consumer hardware.
+
+## See Also
+
+- [[ltx-2.5-local-inference]] -- full LTX-2.5 VRAM and OOM guide
+- [[gguf-quantizations]] · [[ltxv-memory-optimization]] · [[hardware-requirements]]
 
 ## References
 

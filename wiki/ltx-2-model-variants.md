@@ -2,13 +2,16 @@
 title: LTX-2 Model Variants and Quantizations
 type: reference
 created: 2026-04-13
-updated: 2026-06-01
+updated: 2026-08-24
 sources:
   - raw/ltx2-model-variants-quantizations.md
   - raw/ltx2-capabilities-and-specifications.md
   - raw/ltx-news-ltx23-model-variants-may27-2026.md
+  - raw/ltx-news-ltx-2-5-release-2026-08-11.md
+  - raw/ltx-news-ltx-2-5-api-pricing-and-benchmarks-2026-08.md
 tags:
   - ltx-2
+  - ltx-2.5
   - model-variants
   - quantization
   - gguf
@@ -41,6 +44,40 @@ Official and community weight variants for the [[ltx-2-overview|LTX-2]] model fa
 | ltx-2.3-22b-distilled-mxfp8 | MXFP8 | Distilled + Microscaling FP8 (Kijai, May 2026) |
 | ltx-2.3-22b-dev-nvfp4 | NVFP4 | Official Lightricks; 21.7 GB; RTX 50xx (Blackwell) only |
 
+## LTX-2.5 (22B) Weight Checkpoints
+
+Released August 11, 2026 on Hugging Face as `Lightricks/LTX-2.5` (collection `Lightricks/ltx-25`). See [[ltx-2.5-model]].
+
+| Checkpoint | Precision | Description |
+|-----------|-----------|-------------|
+| `ltx-2.5-22b-dev-transformer-bf16.safetensors` | BF16 | Base transformer, for fine-tuning |
+| `ltx-2.5-22b-distilled-transformer-bf16.safetensors` | BF16 | Distilled transformer, substantially improved over 2.3 |
+| distilled transformer, int8 convrot | INT8 | ComfyUI-ready quantization |
+| distilled transformer, NVFP4 | NVFP4 | ComfyUI-ready; Blackwell/RTX 50xx |
+| `gemma4-12b-with-proj-ltx-2.5` | BF16 / int8 convrot | Text encoder with learned projection (replaces the 2.3 text connector) |
+| Video VAE | BF16 | Separate checkpoint |
+| Audio VAE | BF16 | Separate checkpoint |
+| 2x latent spatial upscaler | -- | Two-stage pipeline |
+| 2x latent temporal upscaler | -- | Frame rate doubling |
+| Distilled LoRA (450) | -- | Add-on |
+| Duration-head model patch | -- | Powers automatic duration |
+| Pretrained (non-SFT) checkpoint | BF16 | Tuned for physical AI / robotics domain fine-tuning |
+
+**Minimum VRAM: 16GB** on any GPU -- data-center hardware down to a Mac. The distilled model was optimized with [[nvidia-ltx-partnership|NVIDIA]] for local inference on RTX GPUs and DGX Spark.
+
+## LTX-2.5 API Variants
+
+| Model ID | Max Resolution | Duration Support | Notes |
+|----------|----------------|------------------|-------|
+| `ltx-2-5-fast` | 4K | 720p/1080p @ 24/25 fps: 6-20 s; 720p/1080p @ 48/50 fps: 6/8/10 s; 1440p/4K @ 24/25/48/50 fps: 6/8/10 s | Speed and low cost |
+| `ltx-2-5-pro` | 1080p | 720p/1080p @ 24/25/50 fps: 6/8/10 s only | Higher fidelity |
+
+Both support text-to-video, image-to-video and audio-to-video, portrait and landscape, camera motion, `last_frame_uri` on image-to-video, and `"duration": null` for automatic duration (cannot be combined with `last_frame_uri`). **Neither supports retake, extend or reframe** -- those remain `ltx-2-3-pro` only.
+
+Resolutions: 720p `1280x720`/`720x1280`; 1080p `1920x1080`/`1080x1920`; 1440p `2560x1440`/`1440x2560`; 4K `3840x2160`/`2160x3840`. Prepaid accounts have credits held against the maximum duration for the chosen resolution/fps when using automatic duration, released on completion. Pricing in [[ltx-video-api-pricing]].
+
+The legacy `ltx-2-fast` and `ltx-2-pro` API IDs were **removed on August 16, 2026** and now return an error -- see [[ltx-video-changelog]].
+
 ## Upscalers
 
 Operate entirely in latent space (before VAE decode), used in the recommended two-stage pipeline for production quality.
@@ -49,7 +86,7 @@ Operate entirely in latent space (before VAE decode), used in the recommended tw
 |----------|----------|---------|
 | Spatial upscaler (1.5x) | Resolution upscaling | LTX-2 and LTX-2.3 |
 | Spatial upscaler (2x) v1.1 | Resolution upscaling (updated May 2026) | LTX-2.3 |
-| Temporal upscaler | Frame rate doubling | LTX-2.3 only |
+| Temporal upscaler | Frame rate doubling | LTX-2.3 and LTX-2.5 |
 
 Example workflow: Generate at 512x768, upscale to 1024x1536. Generate at 24 FPS, temporal upscale to 48 FPS.
 
@@ -108,6 +145,8 @@ MXFP8 is a newer quantization format (MX-format) offering better accuracy than s
 ## Related Pages
 
 - [[ltx-2-overview]] -- Model overview
+- [[ltx-2.5-model]] -- Current flagship
+- [[ltx-2.5-technical]] -- LTX-2.5 architecture
 - [[ltx-2-huggingface-ecosystem]] -- Where to download
 - [[ltx-2-nvidia-optimization]] -- GPU-specific acceleration
 - [[ltx-2-capabilities]] -- What each variant can do

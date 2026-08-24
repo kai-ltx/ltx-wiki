@@ -43,7 +43,7 @@ FP8 quantized version of the 13B v0.9.7 model, optimized for lower memory usage.
 
 ## Community Articles
 
-Notable tutorials include achieving character consistency using 360-degree viewers with LTX Video 2.3 in [[comfyui-integration\|ComfyUI]] without any LoRA training.
+Notable tutorials include achieving character consistency using 360-degree viewers with LTX Video 2.3 in [[comfyui-ltx-integration-overview\|ComfyUI]] without any LoRA training.
 
 ## Community Trends
 

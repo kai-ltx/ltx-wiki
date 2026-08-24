@@ -2,12 +2,12 @@
 title: Wiki Index
 type: overview
 created: 2026-04-13
-updated: 2026-07-21
+updated: 2026-08-24
 ---
 
 # Wiki Index
 
-Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2026-04-13.
+Content catalog for the LTX wiki. 228 pages across 315 raw sources. Last weekly update: 2026-08-24.
 
 ## Overviews
 
@@ -52,10 +52,12 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 - [[ltxv-model-variants]] — Variant reference (dev, distilled, FP8, mix)
 - [[ltx-video-huggingface]] — All HuggingFace repositories and weights
 
-## LTX-2 & LTX-2.3
+## LTX-2, LTX-2.3 & LTX-2.5
 
 - [[ltx-2-architecture]] — Asymmetric dual-stream DiT (14B video + 5B audio)
 - [[ltx-2.3-model]] — LTX-2.3 (22B): rebuilt VAE, improved quality
+- [[ltx-2.5-model]] — LTX-2.5 (22B, Aug 2026): current flagship — DFR, diffusion decoder, Gemma 4 12B encoder, 4K HDR
+- [[ltx-2.5-community-reception]] — First genuinely split LTX release: speed praised, i2v identity + lip-sync regressions reported
 - [[ltx-2-version-history]] — Release timeline (Oct 2025 → Mar 2026)
 - [[ltx-2-capabilities]] — Native 4K, 50fps, 20s clips, 7 generation modes
 - [[ltx-2-model-variants]] — Weights, distilled, GGUF, FP8, NVFP4
@@ -100,6 +102,7 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 - [[paper-ltx-video]] — "LTX-Video: Realtime Video Latent Diffusion" (arXiv:2501.00103)
 - [[paper-ltx-2]] — "LTX-2: Efficient Joint Audio-Visual Foundation Model" (arXiv:2601.03233)
 - [[ltx-2.3-technical]] — LTX-2.3 technical improvements
+- [[ltx-2.5-technical]] — LTX-2.5 architecture deep dive: Diffusion Fidelity Rendering, new video decoder
 - [[paper-avcontrol]] — "AVControl" — 13 control modalities via LoRA (arXiv:2603.24793)
 - [[paper-cafa]] — "CAFA: Controllable Automatic Foley Artist" (arXiv:2504.06778)
 - [[paper-just-dub-it]] — "JUST-DUB-IT: Video Dubbing" (arXiv:2601.22143)
@@ -151,6 +154,7 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 - [[python-performance-speed]] — torch.compile, FP8, attention backends
 - [[python-performance-memory]] — Group offloading, GGUF, tiling, multi-GPU
 - [[ltxv-memory-optimization]] — Complete ~10GB VRAM recipe
+- [[ltx-2.5-local-inference]] — LTX-2.5 VRAM baselines, FP8/MXFP8/NVFP4, tiled VAE decode, GGUF quants
 - [[python-batch-generation]] — Batch processing patterns
 - [[python-long-video-generation]] — Temporal tiling, multi-prompt
 - [[python-guidance-parameters]] — CFG, STG, MultiModalGuiderParams
@@ -180,6 +184,7 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 - [[comfyui-manager-ltx-setup]] — Manager installation and setup
 - [[ltx2-comfyui-integration]] — LTX-2 specific ComfyUI guide
 - [[ltx2-comfyui-nodes-reference]] — LTX-2 custom nodes reference
+- [[ltx-2.5-comfyui-integration]] — LTX-2.5 in ComfyUI core (PR #15499, v0.32.0+), three templates, launch bugs
 
 ## Training & Fine-Tuning
 
@@ -244,6 +249,8 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 ## Model Competitors
 
 - [[wan-video]] — Alibaba Wan 2.1/2.2: best motion realism, Apache 2.0, but slower
+- [[competitor-minimax-hailuo]] — MiniMax H3 / Hailuo 3.0 (33B omni-modal): top open-weights model on all four AA video boards
+- [[competitor-magi-sandai]] — Sand.ai MAGI-2 Preview: 114B MoE, Apache 2.0, 10s A/V, 8x Hopper required
 - [[hunyuan-video]] — Tencent HunyuanVideo: 13B, best multi-person scenes
 - [[hunyuan-world]] — Tencent HY-World-2.0 + HunyuanWorld-Voyager: 3D world generation from single photo (April 2026)
 - [[cogvideo]] — Zhipu CogVideoX: strong text-video alignment, slower
@@ -257,8 +264,8 @@ Content catalog for the LTX wiki. 206 pages across 236 raw sources ingested on 2
 
 - [[competitor-runway]] — Gen-3/Gen-4: industry standard, $12–76/mo
 - [[competitor-pika]] — Pika Labs: social media focus, Pikaffects/Pikaswaps
-- [[competitor-kling]]
-- [[competitor-seedance]] — Kling AI: 22M users, $240M ARR, 3-min duration
+- [[competitor-kling]] — Kling AI (Kuaishou): Kling 3.0, $18B valuation, >RMB 850M Q2 revenue
+- [[competitor-seedance]] — Seedance 2.0/2.5 (ByteDance): native 30s, 50 multimodal refs, 4K 10-bit
 - [[competitor-sora]] — Sora (OpenAI): SHUTTING DOWN Apr 2026
 - [[competitor-luma]] — Luma Dream Machine: reasoning-based, native HDR/EXR
 - [[competitor-grok-imagine-video]] — Grok Imagine Video 1.5 (xAI): #1 I2V leaderboard (Elo 1404), native audio, API preview June 2026

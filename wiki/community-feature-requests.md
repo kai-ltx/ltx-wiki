@@ -22,7 +22,7 @@ The [[ltx-video-overview\|LTX Video]] community has expressed a consistent set o
 
 ### 1. Diffusers Support for LTX-2.3
 - **Status:** Pending PR (huggingface/diffusers#13217)
-- **Impact:** Currently blocks Python-first users who do not use [[comfyui-integration\|ComfyUI]]
+- **Impact:** Currently blocks Python-first users who do not use [[comfyui-ltx-integration-overview\|ComfyUI]]
 - Missing `model_index.json` files prevent loading
 - Most discussed issue across all LTX-2.3 discussions
 
