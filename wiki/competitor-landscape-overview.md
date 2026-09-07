@@ -2,8 +2,9 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-08-24
+updated: 2026-09-07
 sources:
+  - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-kling-30-official-launch-june-2026.md
   - raw/community-video-leaderboard-june-2026.md
   - raw/competitor-ai-video-landscape-june-2026.md
@@ -31,7 +32,7 @@ tags:
 ---
 # Competitor Landscape Overview
 
-This page summarizes the product-level competitive landscape for [[ltx-studio]] and [[ltx-desktop]] in the AI video generation market. Leaderboard and market-dynamics sections updated **2026-08-24**; product feature tables below reflect June-July 2026 unless noted.
+This page summarizes the product-level competitive landscape for [[ltx-studio]] and [[ltx-desktop]] in the AI video generation market. Leaderboard and market-dynamics sections updated **2026-09-07** (incremental refresh over the 2026-08-24 snapshot); product feature tables below reflect June-July 2026 unless noted.
 
 ## Cloud Platform Competitors
 
@@ -48,14 +49,14 @@ This page summarizes the product-level competitive landscape for [[ltx-studio]] 
 | [[competitor-grok-imagine-video\|Grok Imagine Video 1.5 (xAI)]] | Native 1080p (Aug 1, 2026) | ~6s | Yes | Preserves source image (7 image + 3 audio refs) | $0.08/s (API only) |
 | [[competitor-minimax-hailuo\|MiniMax H3 / Hailuo 3.0]] | 2K (2560x1440) | 4–15s | Yes (stereo) | 9 image + 3 video + 3 audio refs | $0.13/s reported; $7.80/min (AA) |
 | [[competitor-magi-sandai\|MAGI-2 Preview (Sand.ai)]] | 1088x1920 | 10s fixed | Yes | I2V only | Pricing "coming soon" |
-| [[wan-video\|Wan 3.0]] (Alibaba, closed beta) | 1080p | 30s single shot | Unresolved | Multi-dimensional feature alignment | ¥0.3/0.6/1.2 per s at 480/720/1080P |
+| [[wan-video\|Wan 3.0]] (Alibaba, closed beta) | 1080p | 30s single shot | Unresolved | Multi-dimensional feature alignment | ¥0.3/0.6/1.2 per s at 480/720/1080P; AA now lists $12.00/min |
 
 ### Discontinued
 | Platform | Status | Key Legacy |
 |----------|--------|-----------|
 | [[competitor-sora\|Sora (OpenAI)]] | Shutting down April/September 2026 | Best physics simulation; shutdown creates market opportunity |
 
-## Artificial Analysis Video Arena — Standings (retrieved 2026-08-24)
+## Artificial Analysis Video Arena — Standings (retrieved 2026-09-07, refreshed from 2026-08-24)
 
 AA methodology: Elo from blind pairwise user votes; **Seedance 1.5 pro is the 1,000 anchor**; API pricing reflects the cost to generate 1 minute of 1080p at default settings.
 
@@ -63,22 +64,24 @@ AA methodology: Elo from blind pairwise user votes; **Seedance 1.5 pro is the 1,
 
 | # | Creator | Model | Elo | Released | API $/min 1080p |
 |---|---|---|---|---|---|
-| 1 | Alibaba | [[wan-video\|Wan 3.0]] | **1,244** (-10/10, 5,679) | Aug 2026 | Coming soon |
-| 2 | Google | Gemini Omni Flash | 1,238 (-6/6, 16,181) | May 2026 | $6.00 |
-| 3 | MiniMax | [[competitor-minimax-hailuo\|MiniMax H3]] (open weights) | 1,228 (-8/8, 8,316) | Jul 2026 | $7.80 |
-| 4 | ByteDance Seed | [[competitor-seedance\|Dreamina Seedance 2.0 720p]] | 1,221 | Mar 2026 | $9.07 |
-| 5 | Alibaba | Wan2.7-260612 | 1,156 | Jun 2026 | $9.00 |
-| 6 | Alibaba-ATH | HappyHorse-1.1 | 1,145 | Jun 2026 | $9.90 |
-| 7 | Alibaba-ATH | HappyHorse-1.0 | 1,121 | Apr 2026 | $13.20 |
-| 8 | Alibaba | Wan 2.7 | 1,107 | Apr 2026 | $9.00 |
-| 9 | KlingAI | [[competitor-kling\|Kling 3.0 1080p (Pro)]] | 1,106 | Feb 2026 | $20.16 |
-| 10 | Skywork AI | SkyReels V4 | 1,101 | Mar 2026 | $21.00 |
+| 1 | Alibaba | [[wan-video\|Wan 3.0]] | **1,239** (-10/10, 5,590) | Aug 2026 | **$12.00** (was "Coming soon") |
+| 2 | Google | Gemini Omni Flash | 1,238 (-6/6, 18,132) | May 2026 | $6.00 |
+| 3 | Fal | **Minimax H3 Max (post-trained by fal)** *(new)* | **1,235** (-10/10, 5,451) | Aug 2026 | $2.40 |
+| 4 | MiniMax | [[competitor-minimax-hailuo\|MiniMax H3]] (open weights) | 1,227 (-7/7, 8,991) | Jul 2026 | $7.80 |
+| 5 | ByteDance Seed | [[competitor-seedance\|Dreamina Seedance 2.0 720p]] | 1,222 | Mar 2026 | $9.07 |
+| 6 | Alibaba | Wan2.7-260612 | 1,157 | Jun 2026 | $9.00 |
+| 7 | Alibaba-ATH | HappyHorse-1.1 | 1,146 | Jun 2026 | $9.90 |
+| 8 | Alibaba-ATH | HappyHorse-1.0 | 1,122 | Apr 2026 | $13.20 |
+| 9 | Sand.ai | [[competitor-magi-sandai\|MAGI-2 Preview]] (open weights) | 1,113 | Aug 2026 | Coming soon |
+| 10 | KlingAI | [[competitor-kling\|Kling 3.0 1080p (Pro)]] | 1,108 | Feb 2026 | $20.16 |
+
+*Minimax H3 Max (post-trained by fal) is a new, separate leaderboard entry from the base MiniMax H3 above -- a fal-hosted post-trained variant that out-scores the vendor-hosted checkpoint at roughly a third of the API cost. MAGI-2 Preview moved into the top 10 as other entries shifted down.*
 
 Positions 11-18: Kling 3.0 720p 1,098 · [[competitor-veo\|Veo 3.1 Lite]] 1,090 · Veo 3.1 1,089 · Kling 3.0 Omni 720p 1,089 · Kling 3.0 Omni 1080p 1,088 · Veo 3.1 Fast 1,087 · Vidu Q3 Pro 1,075 · PixVerse V6 1,072.
 
-**Where LTX lands:** **[[ltx-2.5-model|LTX-2.5 Pro]] #19 at Elo 1,063** (-10/10, 2,443 samples, $10.20/min) and **LTX-2.5 Fast #20 at Elo 1,063** (-10/10, 2,365 samples, $7.80/min) — a statistical tie with each other. Below them: [[competitor-grok-imagine-video|grok-imagine-video]] 1,062 (#21), Vidu Q3 Turbo 1,032, Wan 2.6 1,025, Seedance 1.5 pro 1,000 (anchor), Kling 2.6 Pro 982, **LTX-2.3 Fast 975 (#26)**, **LTX-2.3 Pro 958 (#27)**, PixVerse V5.6 949, **LTX-2 Fast 942 (#29)**, Agnes-Video-V2.0 916, **LTX-2 Pro 915 (#31)**.
+**Where LTX lands:** **[[ltx-2.5-model|LTX-2.5 Fast]] #22 at Elo 1,062** (-9/9, 2,789 samples, $7.80/min) and **LTX-2.5 Pro #24 at Elo 1,061** (-9/9, 2,840 samples, $10.20/min) -- Elo essentially unchanged from the 2026-08-24 reading (1,063/1,063), but rank dropped from #19-20 to #22/#24 purely because three new models (Minimax H3 Max fal, Agnes-Video-2.5, and MAGI-2 Preview's continued climb) now sit above them. New entrant **Agnes-Video-2.5 (Sapiens AI) debuts at #19, Elo 1,080** ($1.50/min, cheapest in the top 20) -- a large jump over the previously-tracked Agnes-Video-V2.0 (~916-920). Below LTX: [[competitor-grok-imagine-video|grok-imagine-video]] 1,062, Vidu Q3 Turbo 1,028, Wan 2.6 1,028, Seedance 1.5 pro 1,000 (anchor), Kling 2.6 Pro 984, **LTX-2.3 Fast 978 (#29)**, **LTX-2.3 Pro 960 (#30)**, PixVerse V5.6 949, **LTX-2 Fast 941 (#32)**, **LTX-2 Pro 920 (#34)**.
 
-**T2V without audio (top 5):** Gemini Omni Flash 1,322 · MiniMax H3 1,303 · HappyHorse-1.0 1,284 · Dreamina Seedance 2.0 720p 1,267 · HappyHorse-1.1 1,261. Best open weights: MiniMax H3 1,303, then **LTX-2.5 Fast 1,211, LTX-2.5 Pro 1,205**.
+**T2V without audio (top 5, 2026-09-07):** Wan 3.0 1,332 (now #1) · Gemini Omni Flash 1,324 · MiniMax H3 1,302 · HappyHorse-1.0 1,282 · Dreamina Seedance 2.0 720p 1,267. Best open weights: MiniMax H3 1,302, then **LTX-2.5 Fast 1,213, LTX-2.5 Pro 1,205** (both essentially unchanged).
 
 ### Image-to-video WITH audio (retrieved 2026-08-24)
 
@@ -103,6 +106,13 @@ Positions 11-18: Kling 3.0 720p 1,098 · [[competitor-veo\|Veo 3.1 Lite]] 1,090 
 - **LTX-2.5 Pro/Fast entered at #19-20 T2V-with-audio (both 1,063)** and #20/#22 I2V-with-audio (1,043 / 1,016) — a **~100-148 point improvement over LTX-2.3**, but leaving LTX **third among open-weights families** behind MiniMax H3 and MAGI-2 / NVIDIA Cosmos 3.
 - **[[competitor-runway|Runway]] has no model in the top 31** of either the T2V or I2V with-audio leaderboards.
 - Models flagged by AA as added in the last month: LTX-2.5 Fast, LTX-2.5 Pro, Wan 3.0, Vidu Q3 Turbo, MiniMax H3, MAGI-2 Preview.
+
+### Key Elo shifts, 2026-08-24 to 2026-09-07
+
+- **Wan 3.0 API pricing published**: $12.00/min, resolving the prior "Coming soon" placeholder. Still no Hugging Face open-weights badge -- consistent with the wiki's standing read that Wan 3.0 is closed.
+- **Two new leaderboard entrants**: Minimax H3 Max (post-trained by fal), debuting at #3 T2V-with-audio (1,235) at roughly a third of base MiniMax H3's API cost; and Agnes-Video-2.5 (Sapiens AI), debuting at #19 (1,080, $1.50/min) -- a large jump over the prior Agnes-Video-V2.0.
+- **LTX-2.5 Elo essentially flat** (1,062/1,061 vs 1,063/1,063) but rank slipped from #19-20 to #22/#24 T2V-with-audio purely due to new entrants, not a quality regression.
+- No new frontier model releases from Runway, Veo, Kling, Sora, or HunyuanVideo in this window.
 
 ## Key Competitive Dimensions
 
