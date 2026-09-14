@@ -2,7 +2,7 @@
 title: Wan Video
 type: concept
 created: 2026-04-13
-updated: 2026-09-07
+updated: 2026-09-14
 sources:
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-model-wan-video.md
@@ -12,6 +12,7 @@ sources:
   - raw/competitor-ai-video-landscape-june-2026.md
   - raw/competitor-wan-30-confirmed-release.md
   - raw/competitor-wan3-public-beta-and-video-arena-elo-august-2026.md
+  - raw/competitor-wan3-modelstudio-pricing-2026-09.md
 tags:
   - competitor
   - alibaba
@@ -83,7 +84,8 @@ Wan Video is Alibaba's video generation model family, developed by the Tongyi La
 - **Extras:** smart duration recommendation, video extension.
 - **Inputs:** text / image / audio / video / document.
 - **API pricing: ¥0.3 / ¥0.6 / ¥1.2 per second at 480P / 720P / 1080P** (~$0.04 / $0.08 / $0.17 per second). A 30-second 1080P clip runs ~¥36 (~$5).
-- **Update (2026-09-07):** Artificial Analysis now lists Wan 3.0's API price at **$12.00/min** (up from "Coming soon" on 2026-08-24), and Wan 3.0 still carries **no Hugging Face open-weights badge** on AA -- both facts corroborate this page's standing read that Wan 3.0 is a closed, paid API rather than an open-weights release. Wan 3.0 remains #1 on both AA text-to-video boards (with-audio: Elo 1,239; without-audio: Elo 1,332).
+- **Update (2026-09-07):** Artificial Analysis was listing Wan 3.0's API price at **$12.00/min** (up from "Coming soon" on 2026-08-24), and Wan 3.0 still carried **no Hugging Face open-weights badge** on AA -- both facts corroborated this page's standing read that Wan 3.0 is a closed, paid API rather than an open-weights release. Wan 3.0 remains #1 on both AA text-to-video boards (with-audio: Elo 1,239; without-audio: Elo 1,332).
+- **Update (2026-09-14):** Alibaba Cloud's own Model Studio documentation now publishes primary-source, tiered per-second pricing for Wan 3.0 Standard, superseding the AA-reported "$12.00/min" figure: **list price $0.05/$0.10/$0.20 per second at 480P/720P/1080P**, with **promotional pricing of $0.035/$0.07/$0.14 per second (30% off) through 2026-09-24 00:00 UTC+8**. Billing is per successfully generated second only. Note $12.00/min = $0.20/sec, matching the top of the 1080P list price -- so AA's figure was an approximation of the 1080P rate, not a blended price. Access remains China-region Alibaba channels only; still no Hugging Face weights, GitHub repo, or ComfyUI node -- the closed-API read stands. Separate low-quality SEO blogs this week reported Wan 3.0 Elo figures ranging 1242-1335, inconsistent with each other and with this page's Aug-2026 AA figures; these are not reliable enough to act on and are flagged here rather than used to overwrite the existing numbers.
 - **Access channels are China-region Alibaba products:** Alibaba Cloud Model Studio (百炼), tongyi.aliyun.com/wan, 千问创作 / create.qianwen.com, 万镜一刻, IF STUDIO, 堆友, and a grayscale rollout inside the Qwen app.
 - **Audio:** Pexo's comparison table states Wan 3.0 produces **visual only — no generated soundtrack**. This conflicts with Artificial Analysis listing Wan 3.0 in the *text-to-video with audio* leaderboard; treat as unresolved.
 - **Benchmark:** Wan 3.0 took **#1 in AA text-to-video-with-audio at Elo 1,244** (-10/+10, 5,679 samples, Aug 2026), displacing Gemini Omni Flash (1,238) — a 6-point margin against a ±10 CI, so effectively a statistical tie. AA lists API pricing as "Coming soon" and shows **no Hugging Face open-weights badge**.
