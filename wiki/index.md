@@ -7,7 +7,7 @@ updated: 2026-09-28
 
 # Wiki Index
 
-Content catalog for the LTX wiki. 228 pages across 325 raw sources. Last weekly update: 2026-09-28.
+Content catalog for the LTX wiki. 228 pages across 326 raw sources. Last weekly update: 2026-09-28.
 
 ## Overviews
 
