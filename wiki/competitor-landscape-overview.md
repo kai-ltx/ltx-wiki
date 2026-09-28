@@ -2,7 +2,7 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-09-07
+updated: 2026-09-28
 sources:
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-kling-30-official-launch-june-2026.md
@@ -23,6 +23,9 @@ sources:
   - raw/competitor-sandai-magi2-preview-114b-open-weights-august-2026.md
   - raw/competitor-wan3-public-beta-and-video-arena-elo-august-2026.md
   - raw/competitor-runway-media-router-orchestration-pivot-july-2026.md
+  - raw/competitor-artificial-analysis-leaderboard-snapshot-2026-09.md
+  - raw/competitor-runway-september-2026-feature-blitz.md
+  - raw/competitor-kling-4-teaser-2026-09.md
   - raw/competitor-grok-imagine-1080p-update-and-kling-q2-revenue-august-2026.md
 tags:
   - competitor
@@ -113,6 +116,16 @@ Positions 11-18: Kling 3.0 720p 1,098 · [[competitor-veo\|Veo 3.1 Lite]] 1,090 
 - **Two new leaderboard entrants**: Minimax H3 Max (post-trained by fal), debuting at #3 T2V-with-audio (1,235) at roughly a third of base MiniMax H3's API cost; and Agnes-Video-2.5 (Sapiens AI), debuting at #19 (1,080, $1.50/min) -- a large jump over the prior Agnes-Video-V2.0.
 - **LTX-2.5 Elo essentially flat** (1,062/1,061 vs 1,063/1,063) but rank slipped from #19-20 to #22/#24 T2V-with-audio purely due to new entrants, not a quality regression.
 - No new frontier model releases from Runway, Veo, Kling, Sora, or HunyuanVideo in this window.
+
+### Key Elo shifts, 2026-09-07 to 2026-09-28
+
+Snapshot retrieved 2026-09-26. Absolute Elo values shifted modestly across the board (within CI noise, consistent with more votes accumulating), but two structural changes stand out:
+
+- **Sand.ai pushed an updated MAGI-2 Preview checkpoint tagged "0912"** (i.e. dated ~Sept 12, 2026), which entered the T2V-with-audio board directly at **#6, Elo 1,156** — MAGI-2's continued open-weights push (original preview released Aug 5, 2026).
+- **LTX-2.5 rank slipped again, to #25 (Fast, Elo 1,055) / #26 (Pro, Elo 1,053)** in T2V-with-audio, from #22/#24 on 2026-09-07 and #19-20 on 2026-08-24. As with the prior two snapshots, this is **rank drift from new/repriced entrants** (Wan 3.0 now fully priced and ranked #2; the new MAGI-2 checkpoint entering above it), not an LTX-2.5 quality regression — its own Elo (1,055/1,053) is within noise of the 2026-09-07 reading (1,062/1,061).
+- Among **open-weights models specifically** (T2V-with-audio), LTX-2.5 Fast/Pro are now clearly **#2 and #3** behind MiniMax H3 (#1, Elo 1,220) — a more favorable framing than the all-models rank suggests.
+- Kling 3.0's four variants (Pro/Standard/Omni-Pro/Omni-Standard) now cluster at Elo 1,075-1,095, a further step down from both prior snapshots — see [[competitor-kling]] for the per-variant breakdown and the Kling 4.0 teaser (announced but unreleased as of 2026-09-27).
+- No new frontier model releases from Veo, Sora, HunyuanVideo, or Seedance in this window. Runway shipped a dense run of integration/tooling updates (Adobe/DaVinci Resolve plugins, MCP expansion) but no new frontier video model — see [[competitor-runway]].
 
 ## Key Competitive Dimensions
 

@@ -2,10 +2,11 @@
 title: Python Guidance Parameters
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-09-28
 sources:
   - https://huggingface.co/docs/diffusers/api/pipelines/ltx_video
   - https://github.com/Lightricks/LTX-2/blob/main/packages/ltx-pipelines/README.md
+  - raw/tutorial-ltx-2-5-guidance-steps-samplers-2026-09.md
 tags:
   - python
   - guidance
@@ -76,6 +77,18 @@ audio_guider_params = MultiModalGuiderParams(
 | `rescale_scale` | 0.5-0.7 | Rescales guided prediction to prevent over-saturation |
 | `modality_scale` | 1.0-3.0 | Audio-visual sync strength |
 | `skip_step` | 0+ | Skip guidance every N steps for speed |
+
+## LTX-2.5: Three Guidance Strategies, and a Fixed Schedule on Distilled
+
+Per the official LTX blog (2026-09-08), `ltx-core`'s `components/guiders.py` ships **three** guidance strategies, not just CFG: **CFG**, **STG**, and **APG**. STG works by selectively disabling attention operations via a perturbation system, with documented perturbation types `SKIP_VIDEO_SELF_ATTN`, `SKIP_AUDIO_SELF_ATTN`, `SKIP_A2V_CROSS_ATTN`, and `SKIP_V2A_CROSS_ATTN` — the last two apply guidance to the cross-modal audio/video link specifically, unique to joint audio-video models like [[ltx-2.5-model|LTX-2.5]].
+
+**Distilled checkpoints have no tunable step count.** `DistilledPipeline` runs a fixed schedule of 8 predefined sigmas (8 steps stage 1, 4 steps stage 2) — guidance/step values tuned on a dev-checkpoint run do not transfer to the distilled pipeline and vice versa; treat them as separate configurations.
+
+**Gradient estimation** reduces dev-checkpoint inference from 40 steps to 20-30 while maintaining quality — a 25-50% step-count cut for no pipeline/checkpoint change.
+
+**Samplers:** production pipelines use Euler (first-order, default) and `res_2s` (second-order). `TI2VidTwoStagesHQPipeline` uses `res_2s` specifically for fewer steps at better quality than the standard two-stage flow's Euler default.
+
+**Frame-count constraint:** the Video VAE requires `(F-1) % 8 == 0`, so valid frame counts run 9, 17, 25, 33, 41, 49, 57... (at 25fps, 49 frames = 1.96s; a literal "2 seconds" is not an achievable frame count).
 
 ## Sampling Recommendations
 

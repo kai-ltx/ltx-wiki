@@ -2,7 +2,7 @@
 title: LTX Video API Endpoints
 type: reference
 created: 2026-04-13
-updated: 2026-08-24
+updated: 2026-09-28
 sources:
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/text-to-video
   - https://docs.ltx.video/api-documentation/api-reference/video-generation/image-to-video
@@ -12,6 +12,8 @@ sources:
   - https://docs.ltx.video/api-documentation/api-reference/upload/create-upload
   - raw/ltx-news-video-outpainting-api-july13-2026.md
   - raw/tutorial-ltx-2-5-api-v2-integration-and-model-matrix-2026-08.md
+  - raw/ltx-news-api-v1-deprecation-and-retirement-2026-09.md
+  - raw/ltx-news-api-video-reframe-model-autoselect-2026-09.md
 tags:
   - api
   - endpoints
@@ -33,6 +35,8 @@ There are now **two surfaces**:
 | v1 (sync) | `https://api.ltx.video/v1/...` | Single call returns binary MP4. |
 
 The `/v1/` sync equivalents documented below still exist. The **new `api.ltx.io` domain and the `/v2` async surface** arrived with LTX-2.5 on 2026-08-11.
+
+**V1 retirement (announced 2026-09-07, date confirmed 2026-09-24):** the `/v1/` video-generation endpoints (`text-to-video`, `image-to-video`, `audio-to-video`, `retake`, `extend`) stop working after **October 26, 2026, 11:59 PM UTC**. Migrate to the `/v2` equivalents before then; `/v1/upload` is unaffected. See [Migrate from V1 to V2](https://docs.ltx.io/migrate-v1-to-v2).
 
 ## The /v2 Async Surface (api.ltx.io)
 
@@ -237,6 +241,8 @@ Expands a video's canvas to a new aspect ratio by generating only the newly expo
 | 16:9 | 1280x720, 1920x1080 |
 
 Uses two-stage generation internally: a coarse pass fills the newly exposed canvas, followed by a seam-refinement pass for artifact-free blending at the original-frame boundary. Designed for repurposing one source video across multiple platform aspect ratios without reshooting.
+
+**Update (2026-09-23):** Reframe now auto-selects its own model, so the `model` parameter no longer needs to be sent. If sent anyway, it is ignored (no error) — existing integrations keep working unchanged.
 
 ## Upload
 

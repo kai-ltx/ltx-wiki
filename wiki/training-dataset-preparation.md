@@ -2,11 +2,12 @@
 title: Training Dataset Preparation
 type: guide
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-09-28
 sources:
   - raw/training-fine-tuning.md
   - raw/python-lora-training-guide.md
   - raw/community-project-lora-training-tools.md
+  - raw/tutorial-ltx-2-5-training-data-guide-2026-09.md
 tags:
   - training
   - dataset
@@ -95,6 +96,15 @@ dreamy, ethereal quality with soft focus in the background.
 - Trigger word patterns:
   - **Squish:** `SQUISH two hands squeezing a squeezable object that is shaped like [object]`
   - **Cakeify:** `CAKEIFY a person using a knife to cut a cake shaped like [object]`
+
+## LTX-2.5 Specifics (per official LTX blog, 2026-09-07)
+
+- **Choosing an approach:** standard LoRA (lightweight adapters, frozen base, single-GPU-capable) is the default for a focused style/subject/effect. Full fine-tuning updates all parameters and needs multiple high-end GPUs (documented FSDP setups: 4-8x H100 80GB). IC-LoRA needs **paired reference + target data** and is for transformations (depth/pose control, style transfer, deblurring, colorization) — see [[python-ic-lora]].
+- **Sequence length formula:** `(H/32) * (W/32) * ((F-1)/8 + 1)` — e.g. a 768x448x89 clip works out to 4,032 tokens. The documented guideline: larger spatial dimensions + fewer frames for detailed clips (e.g. 768x448 at 89 frames); smaller spatial dimensions + more frames for motion-heavy clips (e.g. 512x512 at 121 frames).
+- **Text encoder compatibility is a hard requirement:** LTX-2.5 must use the LTX-specific fine-tuned Gemma 4 12B encoder, not Google's vanilla Gemma 4 — the pipeline validates encoder version against the checkpoint and will fail the compatibility check otherwise. Older LTX-2/LTX-2.3 checkpoints use a matching Gemma 3 encoder instead. **Migrating a dataset from LTX-2.3 to LTX-2.5 requires reprocessing text features** with the new Gemma 4 encoder (Gemma 3 and Gemma 4 embeddings are not interchangeable) — use a fresh `.precomputed` output directory or pass `--overwrite`.
+- **Auto-captioning:** the current LTX Trainer's `caption_videos.py` supports a local `qwen_omni` captioner or the `gemini_flash` API captioner, and can describe both visual content and audio (speech, music, ambient sound). Auto-captions can hallucinate and should be manually reviewed before preprocessing.
+- **3-step preprocessing workflow:** (1) optional scene-splitting via `scripts/split_scenes.py input.mp4 scenes_output_dir/ --filter-shorter-than 5s`; (2) optional captioning into a `dataset.json` (CSV/JSON/JSONL accepted; `caption`/`video` columns, `media_path` is a legacy alias for `video`); (3) `scripts/process_dataset.py dataset.json --resolution-buckets "960x544x49" --model-path ... --text-encoder-path ...` to compute and cache latents and text embeddings. Audio latents are extracted automatically unless `--skip-audio` is passed. For IC-LoRA, add a `reference_video` column — `process_dataset.py` auto-detects it.
+- **Mixed image+video datasets** need separate resolution buckets per frame count and a training batch size of 1 (images use frame count 1 in the bucket, e.g. `960x544x1`).
 
 ## Dataset Size Guidelines
 

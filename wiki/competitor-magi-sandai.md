@@ -2,10 +2,11 @@
 title: MAGI-2 Preview (Sand.ai)
 type: competitor
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-09-28
 sources:
   - raw/competitor-sandai-magi2-preview-114b-open-weights-august-2026.md
   - raw/competitor-wan3-public-beta-and-video-arena-elo-august-2026.md
+  - raw/competitor-artificial-analysis-leaderboard-snapshot-2026-09.md
 tags:
   - competitor
   - video-generation
@@ -72,6 +73,10 @@ Listed as **MAGI-2 Preview, released Aug 2026, API pricing "Coming soon."**
 - **#2 open-weights I2V-with-audio model**, behind [[competitor-minimax-hailuo|MiniMax H3]] (1,184) and **ahead of LTX-2.5 Fast (1,043) and LTX-2.5 Pro (1,016)**
 - Flagged by AA as "added to the leaderboard in the last month"
 - **Not present in the text-to-video top-31** at time of retrieval
+
+## Updated Checkpoint Enters T2V Leaderboard (September 2026)
+
+A refreshed MAGI-2 Preview checkpoint, tagged **"0912"** (consistent with a ~2026-09-12 build), appeared on the Artificial Analysis **text-to-video-with-audio** leaderboard for the first time, entering directly at **#6, Elo 1,156** (snapshot retrieved 2026-09-26; API pricing still "Coming soon"). This is the model's first appearance in the T2V-with-audio category — previously it was tracked only in image-to-video-with-audio (see below). No detailed changelog was found describing what changed in the "0912" build; the entry itself, sourced from the AA leaderboard, is the primary evidence of an update.
 
 ## Strengths
 

@@ -2,7 +2,7 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-08-24
+updated: 2026-09-28
 sources:
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
@@ -11,6 +11,8 @@ sources:
   - raw/community-video-leaderboard-june-2026.md
   - raw/competitor-kling-funding-july-2026.md
   - raw/competitor-grok-imagine-1080p-update-and-kling-q2-revenue-august-2026.md
+  - raw/competitor-kling-4-teaser-2026-09.md
+  - raw/competitor-artificial-analysis-leaderboard-snapshot-2026-09.md
 tags:
   - competitor
   - video-generation
@@ -127,6 +129,12 @@ Advertising and livestreaming revenue are both under pressure, which makes Kling
 **Benchmark note:** the Elo 2031 figure cited above comes from the June 2026 community leaderboard and is on a different scale from Artificial Analysis. On the AA text-to-video-with-audio board as of 2026-08-24, Kling 3.0 1080p (Pro) sits at **#9, Elo 1,106**, with Kling 3.0 720p at 1,098 and the Omni variants at 1,089/1,088 — behind [[wan-video|Wan 3.0]] (1,244), Gemini Omni Flash (1,238) and [[competitor-minimax-hailuo|MiniMax H3]] (1,228).
 
 **No new Kling model release** was found between 2026-07-21 and 2026-08-24. "Kling 3.0 Turbo" and "Kling 3.0 Omni / native 4K" both launched **2026-06-17**, outside this window. The in-window Kling news is financial.
+
+## Kling 4.0 Teaser (September 2026) — Not Yet Released
+
+On **2026-09-27**, Kling AI's official X account posted a teaser ("CLING ON! We've got news."), widely read by the community as hinting at **"Kling 4.0" / "Kling V4"**, positioned as Kuaishou's next flagship video model succeeding the Kling 3.0 line. **This is a rumor/teaser, not a confirmed release**: a 2026-09-21 explainer reviewing a third-party multimodal API catalog (Atlas Cloud) found only Kling V3.0 listed, and explicitly warned against treating V3.0 capabilities as confirmed V4 capabilities pending an official announcement. No Kling changelog, model card, or pricing page for a 4.0/V4 release existed as of 2026-09-28. **Track for confirmation in the next research cycle.**
+
+**AA leaderboard update (snapshot 2026-09-26):** Kling 3.0's four variants now cluster at Elo 1075-1095 in the AA text-to-video-with-audio arena (Pro 1080p #12-13 at 1095, Standard 720p #13-16 at 1089, Omni Standard #18-22 at 1082, Omni Pro #18-22 at 1075) — a modest decline from the 2026-08-24 snapshot (1,106/1,098/1,089/1,088) as new entrants (Wan 3.0, MiniMax H3 Max, MAGI-2 Preview) pushed the whole board down in relative rank, not necessarily reflecting a quality change in Kling itself.
 
 ## Strengths
 - **#1 AI video leaderboard** (Elo 2031 with Kling 3.0 as of June 2026)

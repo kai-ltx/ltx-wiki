@@ -2,7 +2,7 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-08-24
+updated: 2026-09-28
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
@@ -10,6 +10,7 @@ sources:
   - raw/competitor-runway-june-2026.md
   - raw/competitor-runway-api-additions-july-2026.md
   - raw/competitor-runway-media-router-orchestration-pivot-july-2026.md
+  - raw/competitor-runway-september-2026-feature-blitz.md
 tags:
   - competitor
   - video-generation
@@ -113,6 +114,17 @@ Runway's **last dedicated frontier video model release remains Gen-4.5, from Dec
 Per Artificial Analysis, Aleph 2.0 still ranks among leading **video editing** models, but Runway's text-to-video and image-to-video models no longer lead the rankings. **As of 2026-08-24 Runway appears nowhere in the Artificial Analysis top-31 for either text-to-video-with-audio or image-to-video-with-audio.** The top 20 T2V spots are held by Google, ByteDance and Alibaba. For reference, Gen-4.5 topped the AA Text-to-Video Arena at **1,247 Elo** at launch in December 2025 — a figure this page previously cited as a current standing; it is now a historical launch number, not a live ranking.
 
 **Strategic read.** Media Router "assumes that the best model will continue to change" rather than asking developers to bet on one model staying ahead. Runway is repositioning from AI video startup to **infrastructure/orchestration layer for generative media** — if not as the best new AI model, then as the best orchestration layer. Runway valuation: **$3.55B** per PitchBook. Gen-4.5 was internally codenamed "David," trained and served entirely on Nvidia Hopper and Blackwell GPUs; CEO Cristóbal Valenzuela at the time: *"We managed to out-compete trillion-dollar companies with a team of 100 people."*
+
+### September 2026 Feature Blitz — editorial plugins and MCP/agent expansion
+
+No new flagship Runway-trained video model shipped in September 2026 — Gen-4.5 (Dec 2025) remains the last frontier release, extending the gap noted above. Instead, Runway shipped a dense run of integration and tooling updates, continuing its "orchestration layer" strategy:
+
+- **Editorial-suite plugins:** Runway now runs as a native panel inside **Adobe Premiere Pro and After Effects** (Sep 8) and inside **DaVinci Resolve** (Sep 23) — generate, restyle (via Aleph 2), and place results directly into a timeline/comp without leaving the editor.
+- **Agent/MCP ecosystem growth:** Runway MCP listed on **Cursor's Marketplace** (Sep 23) and shipped as a plugin for **Grok Bot** (Sep 17); **Kling models** (Kling O3 4K, Kling 3.0 Standard, Kling O3 Standard, Kling 3.0 Motion Control) added to Runway MCP (Sep 18); Brand Kits made available (read-only) to MCP agents (Sep 22).
+- **New commercial tier:** **Team Plan** (Sep 4), a self-serve plan for small teams — 6,900 credits/seat/month to a shared pool, up to 9 seats, 1TB shared storage.
+- **Incremental model/tool polish:** Ruby (HDR/color model) now preserves alpha channel (Sep 11); `/v1/video_to_hdr`'s ACEScg output now derives from the source plate for better consistency (Sep 12); Enhance Frame Rate tool added, converting any video to standard frame rates up to 4K/5 min (Sep 17).
+
+Runway is doubling down on being the **integration and orchestration hub** across creative tools and third-party models — including direct integration of competitor models like Kling — rather than competing purely on its own model quality. Runway hosted an "AI Summit" in San Francisco on 2026-09-30 (just after this window) with speakers from DeepMind, NVIDIA, and Physical Intelligence.
 
 ## Key Features
 
