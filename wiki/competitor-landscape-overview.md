@@ -2,7 +2,7 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-09-28
+updated: 2026-10-05
 sources:
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-kling-30-official-launch-june-2026.md
@@ -26,6 +26,8 @@ sources:
   - raw/competitor-artificial-analysis-leaderboard-snapshot-2026-09.md
   - raw/competitor-runway-september-2026-feature-blitz.md
   - raw/competitor-kling-4-teaser-2026-09.md
+  - raw/competitor-kling-4-early-access-sep2026.md
+  - raw/competitor-runway-integrations-late-sep-oct-2026.md
   - raw/competitor-grok-imagine-1080p-update-and-kling-q2-revenue-august-2026.md
 tags:
   - competitor
@@ -188,6 +190,13 @@ See [[mcp-video-integrations]] for detailed coverage. LTX MCP is the only open-s
 - Maximum single-clip duration trails [[competitor-veo|Veo]] (140s+ chained); Kling 3.0 Video is now 15s (down from prior 3-minute cap in 2.x)
 - Physics simulation trails historical [[competitor-sora|Sora 2]] (now discontinued)
 - **No longer the leading open-weights model.** As of 2026-08-24 LTX-2.5 ranks **third among open-weights families** on AA, behind [[competitor-minimax-hailuo|MiniMax H3]] and [[competitor-magi-sandai|MAGI-2 Preview]] / NVIDIA Cosmos 3. LTX-2.5 sits at #19-20 in T2V-with-audio (1,063) and #20/#22 in I2V-with-audio (1,043 / 1,016).
+
+## Market Dynamics (October 2026)
+
+- **Kling 4.0 moved from teaser to early access.** On 2026-09-28, [[competitor-kling|Kling AI]] began rolling out early access (Kling Ultra subscribers only) to Kling 4.0 and Kling 4.0 Flash, with full public launch slated for October 2026. Confirmed specs: native 3-30s single-pass generation, 10 keyframes, 15-asset Omni Reference, 4K/21:9, stereo audio, 10-bit HDR "coming soon." If specs hold at full launch, this widens Kling's lead over [[ltx-2.5-model|LTX-2.5]] in both native duration and reference-based consistency.
+- **[[competitor-runway|Runway]] continued its aggregator strategy, no new frontier model.** Late-Sep/early-Oct additions: Runway inside OpenAI's "Dots" (Oct 1), Ideogram 4.5 and Seedance 2.5 Draft Mode in Agent (Oct 2), ElevenLabs V4 (Sep 29). Gen-4.5 (Dec 2025) remains Runway's last in-house model.
+- **LTX itself shipped only post-production/editing capabilities, not a new base model.** The Sep 29-Oct 2 "LTX for Post-Production" wave (Native Resolution, Refine, Restore, HDR Native, SDR-to-HDR upgrade, Layout to Render, Alpha Gen) adds VFX/compositing tooling on top of the existing LTX-2.5 base rather than a quality refresh — see [[ltx-2.5-model]].
+- **Negative findings:** no new releases found in-window from [[competitor-sora|Sora/OpenAI]] (API already fully retired Sep 24), [[competitor-veo|Google Veo]], [[hunyuan-video|HunyuanVideo]]/Tencent, [[wan-video|Wan]], [[competitor-seedance|Seedance]]/ByteDance, or [[competitor-minimax-hailuo|MiniMax]].
 
 ## Market Dynamics (August 2026)
 

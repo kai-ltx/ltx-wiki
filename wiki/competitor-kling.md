@@ -2,7 +2,7 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-09-28
+updated: 2026-10-05
 sources:
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
@@ -13,6 +13,7 @@ sources:
   - raw/competitor-grok-imagine-1080p-update-and-kling-q2-revenue-august-2026.md
   - raw/competitor-kling-4-teaser-2026-09.md
   - raw/competitor-artificial-analysis-leaderboard-snapshot-2026-09.md
+  - raw/competitor-kling-4-early-access-sep2026.md
 tags:
   - competitor
   - video-generation
@@ -130,7 +131,24 @@ Advertising and livestreaming revenue are both under pressure, which makes Kling
 
 **No new Kling model release** was found between 2026-07-21 and 2026-08-24. "Kling 3.0 Turbo" and "Kling 3.0 Omni / native 4K" both launched **2026-06-17**, outside this window. The in-window Kling news is financial.
 
-## Kling 4.0 Teaser (September 2026) — Not Yet Released
+## Kling 4.0 Early Access (September 28, 2026) — Full Launch Pending
+
+The September 27 X teaser (below) was followed four days later by the real thing: on **2026-09-28**, Kling AI began rolling out **early access** to Kling 4.0 and a faster **Kling 4.0 Flash** variant, limited initially to **Kling Ultra subscribers**. Per the official blog (published 2026-09-30), the **full Kling 4.0 model is scheduled to launch in October 2026** — still not a full public release as of this retrieval, but a firm step past the September teaser.
+
+**Confirmed specs (official blog, Sep 30, 2026):**
+- **Native 3-30 second** single-pass generation, with up to **10 flexible keyframes**.
+- **Omni Reference**: up to **15 combined reference assets** per generation — up to 10 images, up to 5 videos (≤30s combined, including white-model/depth-map video), and up to 7 subject references (incl. up to 3 video-based + voice references for vocal identity).
+- **4K output, 21:9 ultrawide**; **10-bit HDR at 1080p/4K is "coming soon"** (not yet shipped).
+- Two-channel stereo audio with improved lip-sync accuracy.
+- Improved stability for large-scale/fast motion and complex camera work (orbits, tracking shots).
+- Multimodal video editing: up to 5 video inputs per edit task, add/replace/remove elements while preserving kept scene parts.
+- Prompts up to 8,000 tokens; improved multilingual on-screen text/logo/emoji legibility (10+ languages).
+- Redesigned creation page: unified multimodal input, Grid/List views, timeline editing, plus "Canvas" and "Agent" (conversational assist).
+- **Kling 4.0 Flash**: lighter/faster sibling, up to 20s single-pass at up to 720p, also in early access since Sep 28.
+
+**Competitive read:** if the October full launch matches these early-access specs, Kling 4.0 would widen Kuaishou's lead in native duration (30s vs LTX-2.5's shorter ceiling) and reference-based consistency (15-asset Omni Reference has no LTX equivalent) — two areas where [[ltx-2.5-model|LTX-2.5]] currently trails. Track for the full public launch and independent benchmarking in the next research cycle.
+
+### Original Teaser (September 27, 2026)
 
 On **2026-09-27**, Kling AI's official X account posted a teaser ("CLING ON! We've got news."), widely read by the community as hinting at **"Kling 4.0" / "Kling V4"**, positioned as Kuaishou's next flagship video model succeeding the Kling 3.0 line. **This is a rumor/teaser, not a confirmed release**: a 2026-09-21 explainer reviewing a third-party multimodal API catalog (Atlas Cloud) found only Kling V3.0 listed, and explicitly warned against treating V3.0 capabilities as confirmed V4 capabilities pending an official announcement. No Kling changelog, model card, or pricing page for a 4.0/V4 release existed as of 2026-09-28. **Track for confirmation in the next research cycle.**
 

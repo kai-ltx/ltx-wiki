@@ -2,11 +2,12 @@
 title: LTX-2.5 ComfyUI Integration
 type: technical
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-10-05
 sources:
   - raw/tutorial-comfyui-ltx-2-5-nodes-workflows-2026-08.md
   - raw/tutorial-ltx-2-5-local-vram-quantization-guide-2026-08.md
   - raw/tutorial-ltx-2-5-python-ltx-pipelines-and-diffusers-2026-08.md
+  - raw/tutorial-ltx-25-native-resolution-tiled-fusion-sep2026.md
 tags:
   - ltx-2-5
   - comfyui
@@ -117,6 +118,18 @@ HF discussions logged 19 threads in 15 hours:
 | RTX 4080 | 5-second 1080p clip in **226 seconds** |
 | r/comfyui tester, T2V | LTX-2.5 **"400% faster"** than LTX-2.3 |
 | LTX launch benchmark, 2× NVIDIA GB200 | 10-second 720p clip in **6.8 seconds** |
+
+## Native Resolution / Tiled Fusion Workflows (Sep 29, 2026)
+
+`Lightricks/ComfyUI-LTXVideo` PR #570 (merged 2026-09-29) added two example graphs under `example_workflows/2.5/`: `LTX-2.5_V2V_TiledFusion_Native_4K_8K.json` and `LTX-2.5_V2V_TiledFusion_Upscale.json`, implementing the Native Resolution capability from the [[ltx-2.5-model|Oct 2026 post-production release wave]].
+
+- **Two-stage ladder:** a composition pass at `initial_canvas_size` (full-frame context), then a refine pass that upscales the latent (via `ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors`, applied twice for 8K) and runs **Tiled Fusion** with the **Refine Details** IC-LoRA.
+- **`LTXVTiledFusionSampler` is not a drop-in replacement for `LTXVTiledSampler`:** Tiled Fusion keeps one shared latent canvas and noise field across overlapping tiles at every denoise step (reducing but not eliminating seams); the older sampler blends finished tiles more independently. Tiled Fusion addresses sampling memory only -- use separate tiled VAE decode nodes for decode-time memory pressure.
+- **Get Tiling Sizes** node emits model-legal canvases (multiples of 32, `8n+1` frames) from `tile_size`, `initial_canvas_size`, and `output_size` (FullHD/4K/8K) -- these are presets, not a VRAM guarantee.
+- **Refine Details** IC-LoRA (trained at 1024x576 tiles) rebuilds texture/edges/grain on soft or upscaled footage; **Restore** IC-LoRA cleans/colorizes archival footage. Workflow order for archive material: **Restore first, then Refine** -- refining first can sharpen existing damage and mute inferred color. Both adapters are generative/interpretive, not pixel-recovery tools.
+- For 8K, Lightricks recommends a progressive path (refine to 4K, Lanczos-resize toward 8K, optional gentle second pass) rather than a direct 8K refine, which risks inventing texture beyond the adapter's trained scale.
+- Source audio is held fixed during generation and muxed back into the output unchanged.
+- Model access remains gated on Hugging Face (see community friction noted in [[ltx-2.5-community-reception]]).
 
 ## See Also
 

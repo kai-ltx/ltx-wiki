@@ -2,7 +2,7 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-09-28
+updated: 2026-10-05
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
@@ -11,6 +11,7 @@ sources:
   - raw/competitor-runway-api-additions-july-2026.md
   - raw/competitor-runway-media-router-orchestration-pivot-july-2026.md
   - raw/competitor-runway-september-2026-feature-blitz.md
+  - raw/competitor-runway-integrations-late-sep-oct-2026.md
 tags:
   - competitor
   - video-generation
@@ -155,6 +156,16 @@ Reference image system maintains exact character appearance (face, clothing, phy
 | **Enterprise** | Custom | Custom |
 
 Credit costs: Gen-4 ~12 credits/s, Gen-4 Turbo ~5 credits/s. Credits do NOT roll over between months.
+
+## Late September / Early October 2026 Integration Updates
+
+Runway's changelog cadence continued at the same pace as the September "feature blitz," but **no new frontier video model shipped** -- Gen-4.5 (Dec 2025) remains Runway's last in-house flagship release.
+
+- **Oct 2, 2026** -- Seedance 2.5 Draft Mode added to Agent (fast 480p drafts with post-generation enhancement); Ideogram 4.5 image generation added to Runway MCP.
+- **Oct 1, 2026** -- Runway now available inside OpenAI's "Dots" product (plan shots via a Dots agent, Runway renders them asynchronously).
+- **Sep 29, 2026** -- ElevenLabs V4 added for in-app audio generation.
+
+This keeps Runway's strategic shape unchanged: a **model-agnostic aggregation/orchestration layer** (Model Router, MCP marketplace, Agent, now Dots) rather than a single-model competitor -- continuing to converge with [[ltx-studio]]'s own multi-model marketplace approach, but without a first-party frontier model refresh to match [[ltx-2.5-model|LTX-2.5]] or [[competitor-kling|Kling 4.0]]'s pace.
 
 ## Strengths
 - Industry-standard status with proven enterprise adoption

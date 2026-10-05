@@ -2,12 +2,13 @@
 title: LTX-2.5 Model
 type: product
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-10-05
 sources:
   - raw/ltx-news-ltx-2-5-release-2026-08-11.md
   - raw/ltx-news-ltx-2-5-api-pricing-and-benchmarks-2026-08.md
   - raw/ltx-news-api-changelog-jul21-aug19-2026.md
   - raw/ltx-news-sdr-to-hdr-conversion-ltx-2-5-2026-08-09.md
+  - raw/ltx-news-post-production-suite-oct2026.md
 tags:
   - ltx-2
   - ltx-2.5
@@ -92,6 +93,18 @@ Official ComfyUI templates cover T2V, I2V and first/last-frame-to-video; `Lightr
 ## Licensing
 
 Ships under the **LTX-2.x Community License**: free for organizations under **$10M annual recurring revenue**, negotiated terms above that. It is **not OSI open source** -- it discriminates by revenue and field of use, bans military/warfare/weapons uses outright, requires derivatives (fine-tunes, LoRAs, distillations, and models trained on LTX-2.5 outputs or synthetic data) to be redistributed under the same license, and bars commercial users from training competing AI systems. Details in [[ltx-video-licensing]].
+
+## Post-Production Suite (Sep 29 - Oct 2, 2026)
+
+Lightricks shipped six open-source "Built for Post-Production" capabilities across four consecutive release-notes entries, bundled Oct 2 under the umbrella title "LTX for Post-Production":
+
+- **Native Resolution** (Sep 29) -- processes footage at full delivery resolution on a single GPU; VRAM consumption increases only slightly as resolution climbs. See the Tiled Fusion ComfyUI workflow in [[ltx-2.5-comfyui-integration]].
+- **Refine** and **Restore** (Sep 29) -- IC-LoRAs for sharpening soft/compressed footage and colorizing/cleaning archival footage, respectively. Combine with Native Resolution to reach 8K.
+- **HDR Native** and **SDR to HDR (Upgraded)** (Sep 30) -- 16-bit EXR in/out through an ACES workflow; SDR to HDR now expands 8-bit footage into scene-linear ACEScg EXR.
+- **Layout to Render** (Oct 1) -- generates a polished render from 3D blocking given a prompt or reference image, preserving camera, composition, and frame alignment.
+- **Alpha Gen** (Oct 2) -- generates alpha mattes with soft edges and fine detail, preserving hair, smoke, and partial transparency for compositing.
+
+All six ship as open-source weights/IC-LoRAs (not API-exclusive), continuing LTX-2.5's post-launch pattern of shipping new capabilities as adapters on the existing 22B base rather than new model versions.
 
 ## Launch Partners
 

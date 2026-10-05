@@ -2,7 +2,7 @@
 title: LTX-2.5 Community Reception
 type: analysis
 created: 2026-08-24
-updated: 2026-09-28
+updated: 2026-10-05
 sources:
   - raw/community-reddit-stablediffusion-ltx-2-5-launch-hands-on-2026-08.md
   - raw/community-reddit-ltx-2-5-vs-minimax-h3-speed-quality-debate-2026-08.md
@@ -11,6 +11,7 @@ sources:
   - raw/community-ltx-2-5-consumer-gpu-vram-local-setup-reports-2026-08.md
   - raw/community-ltx-2-5-text-artifacts-github-issue-2026-09.md
   - raw/community-ltx-2-5-mac-app-syntaxerror-crash-2026-09.md
+  - raw/community-ltx-25-gated-template-swap-sep2026.md
 tags:
   - ltx-2.5
   - community
@@ -121,10 +122,12 @@ The clearest unambiguous positive in the record.
 - On GitHub, `michaellightricks` and `art-alex` replied to essentially every substantive LTX-2.5 issue, typically within 2-6 days.
 - **The counterweight:** the diffusion VAE decoder defect family (#277, #288 and the intermittent Blackwell variant) was **still open at window close**, and HF #38 — the harshest thread — had **no reply at all**. See [[github-issues-known-limitations]].
 
-## New Issues Reported (September 2026)
+## New Issues Reported (September-October 2026)
 
 - **Text/caption artifacts (GitHub #319, 2026-09-23).** A recurring, generation-breaking complaint distinct from the two regressions above: LTX-2.5 produces unwanted on-screen text/subtitle-like artifacts even when no text, captions, or overlays are requested. The reporter speculates the cause is subtitle-burned video in the training data and asks whether Lightricks filters for this during dataset preparation. **No official response recorded at retrieval.** This is a third named LTX-2.5-specific quality complaint alongside i2v identity drift and external-audio lip-sync.
 - **Ecosystem integration friction, resolved quickly.** A popular community macOS app (`ltx-video-mac`, Apple Silicon local inference) shipped LTX-2.5 support that crashed unconditionally with a Python `SyntaxError` (GitHub #88, 2026-09-20) due to an escaping bug in a dynamically generated script. Fixed same-day (PR #89). Illustrates continued fast-but-imperfect third-party wrapper support as new LTX releases land.
+
+- **Gating friction spills into tooling (GitHub, Comfy-Org/workflow_templates #1300, 2026-09-30).** A maintainer replaced LTX-2.5 with HunyuanVideo 1.5 in Comfy-Org's shared benchmark-workflow templates, citing LTX-2.5's gated Hugging Face repository as unsuitable for automated/CI-style benchmarking that needs to pull weights without a human approving access. This is a distinct complaint category from the quality regressions above: not "does it generate well" but "can it be dropped into an automated pipeline at all" -- a friction point specific to LTX-2.5 among LTX releases, since earlier LTX-Video and LTX-2.3 weights were ungated.
 
 ## Open Demand Signals
 
