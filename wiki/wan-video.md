@@ -2,7 +2,7 @@
 title: Wan Video
 type: concept
 created: 2026-04-13
-updated: 2026-09-14
+updated: 2026-10-12
 sources:
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-model-wan-video.md
@@ -13,6 +13,7 @@ sources:
   - raw/competitor-wan-30-confirmed-release.md
   - raw/competitor-wan3-public-beta-and-video-arena-elo-august-2026.md
   - raw/competitor-wan3-modelstudio-pricing-2026-09.md
+  - raw/competitor-artificial-analysis-t2v-v2-reset-wan-3-seedance-2-5-2026-10.md
 tags:
   - competitor
   - alibaba
@@ -89,6 +90,8 @@ Wan Video is Alibaba's video generation model family, developed by the Tongyi La
 - **Access channels are China-region Alibaba products:** Alibaba Cloud Model Studio (百炼), tongyi.aliyun.com/wan, 千问创作 / create.qianwen.com, 万镜一刻, IF STUDIO, 堆友, and a grayscale rollout inside the Qwen app.
 - **Audio:** Pexo's comparison table states Wan 3.0 produces **visual only — no generated soundtrack**. This conflicts with Artificial Analysis listing Wan 3.0 in the *text-to-video with audio* leaderboard; treat as unresolved.
 - **Benchmark:** Wan 3.0 took **#1 in AA text-to-video-with-audio at Elo 1,244** (-10/+10, 5,679 samples, Aug 2026), displacing Gemini Omni Flash (1,238) — a 6-point margin against a ±10 CI, so effectively a statistical tie. AA lists API pricing as "Coming soon" and shows **no Hugging Face open-weights badge**.
+
+- **Update (2026-10-12):** a third-party report (RizzGen, 2026-10-08) says AA reset its T2V benchmark to v2.0 and that Wan 3.0 still ranks **#1 at Elo 1,156** on the new scale (Kling 3.0 anchored at 1,000), with Wan 2.7 at 1,030 (#13). The v2.0 figures replace, and are not comparable to, the 1,239/1,244 values above. Unverified against AA directly. RizzGen also lists Wan 3.0 as GA on Alibaba Cloud since 2026-08-24; still no open weights.
 
 #### Correction (2026-08-24)
 

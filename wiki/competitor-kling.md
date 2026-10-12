@@ -2,7 +2,7 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-10-05
+updated: 2026-10-12
 sources:
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
@@ -14,6 +14,7 @@ sources:
   - raw/competitor-kling-4-teaser-2026-09.md
   - raw/competitor-artificial-analysis-leaderboard-snapshot-2026-09.md
   - raw/competitor-kling-4-early-access-sep2026.md
+  - raw/competitor-kling-4-0-fal-prelaunch-guide-2026-09-29.md
 tags:
   - competitor
   - video-generation
@@ -147,6 +148,10 @@ The September 27 X teaser (below) was followed four days later by the real thing
 - **Kling 4.0 Flash**: lighter/faster sibling, up to 20s single-pass at up to 720p, also in early access since Sep 28.
 
 **Competitive read:** if the October full launch matches these early-access specs, Kling 4.0 would widen Kuaishou's lead in native duration (30s vs LTX-2.5's shorter ceiling) and reference-based consistency (15-asset Omni Reference has no LTX equivalent) — two areas where [[ltx-2.5-model|LTX-2.5]] currently trails. Track for the full public launch and independent benchmarking in the next research cycle.
+
+### fal.ai Pre-Launch Guide and Open Items (retrieved 2026-10-12)
+
+fal.ai's 2026-09-29 explainer (built from Kling's release notes, no independent testing) adds details not captured above: **10-bit HDR and video extension (up to 2 minutes) are both still labelled "coming soon"**, text-to-video supports 8,000-token prompts, and reference clips share a 30-second combined budget (so a one-supporting-clip edit caps the primary video at about 27 s). Kling 4.0 is "coming to fal soon" next to Kling O3 and 3.0; fal's own LTX listing is still LTX 2.3. **As of 2026-10-12 no dated full public launch was found**, only the "October 2026" commitment, so the full-launch and benchmark follow-up remains open for next cycle. Flash is first-frame image-to-video only, 8-bit SDR, 720p.
 
 ### Original Teaser (September 27, 2026)
 

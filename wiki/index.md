@@ -2,12 +2,12 @@
 title: Wiki Index
 type: overview
 created: 2026-04-13
-updated: 2026-10-05
+updated: 2026-10-12
 ---
 
 # Wiki Index
 
-Content catalog for the LTX wiki. 228 pages across 331 raw sources. Last weekly update: 2026-10-05.
+Content catalog for the LTX wiki. 229 pages across 336 raw sources. Last weekly update: 2026-10-12.
 
 ## Overviews
 
@@ -58,6 +58,7 @@ Content catalog for the LTX wiki. 228 pages across 331 raw sources. Last weekly 
 - [[ltx-2.3-model]] — LTX-2.3 (22B): rebuilt VAE, improved quality
 - [[ltx-2.5-model]] — LTX-2.5 (22B, Aug 2026): current flagship — DFR, diffusion decoder, Gemma 4 12B encoder, 4K HDR
 - [[ltx-2.5-community-reception]] — First genuinely split LTX release: speed praised, i2v identity + lip-sync regressions reported
+- [[ltx-2.5-ic-lora-catalog]] — Official LTX-2.5 IC-LoRA catalog (Ingredients, Colorization, Day-to-Night, restoration/VFX) with trained buckets and prompt recipes
 - [[ltx-2-version-history]] — Release timeline (Oct 2025 → Mar 2026)
 - [[ltx-2-capabilities]] — Native 4K, 50fps, 20s clips, 7 generation modes
 - [[ltx-2-model-variants]] — Weights, distilled, GGUF, FP8, NVFP4

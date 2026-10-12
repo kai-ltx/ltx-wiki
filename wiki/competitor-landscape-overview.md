@@ -2,7 +2,7 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-10-05
+updated: 2026-10-12
 sources:
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-kling-30-official-launch-june-2026.md
@@ -29,6 +29,7 @@ sources:
   - raw/competitor-kling-4-early-access-sep2026.md
   - raw/competitor-runway-integrations-late-sep-oct-2026.md
   - raw/competitor-grok-imagine-1080p-update-and-kling-q2-revenue-august-2026.md
+  - raw/competitor-artificial-analysis-t2v-v2-reset-wan-3-seedance-2-5-2026-10.md
 tags:
   - competitor
   - video-generation
@@ -118,6 +119,26 @@ Positions 11-18: Kling 3.0 720p 1,098 · [[competitor-veo\|Veo 3.1 Lite]] 1,090 
 - **Two new leaderboard entrants**: Minimax H3 Max (post-trained by fal), debuting at #3 T2V-with-audio (1,235) at roughly a third of base MiniMax H3's API cost; and Agnes-Video-2.5 (Sapiens AI), debuting at #19 (1,080, $1.50/min) -- a large jump over the prior Agnes-Video-V2.0.
 - **LTX-2.5 Elo essentially flat** (1,062/1,061 vs 1,063/1,063) but rank slipped from #19-20 to #22/#24 T2V-with-audio purely due to new entrants, not a quality regression.
 - No new frontier model releases from Runway, Veo, Kling, Sora, or HunyuanVideo in this window.
+
+### AA text-to-video benchmark reset to v2.0 (reported 2026-10-08, unverified)
+
+**Scale warning:** a third-party comparison (RizzGen, updated 2026-10-08) reports that Artificial Analysis rebuilt its text-to-video board as **AA-Video-T2V v2.0** -- new prompt set, 1080p judging, synchronized audio, all earlier votes discarded, and Elo re-anchored with **Kling 3.0 (1080p Pro) = 1,000**. If correct, every Elo figure in the snapshots above (anchored on Seedance 1.5 pro = 1,000) is on a retired scale and must not be compared with the numbers below. I could not load artificialanalysis.ai directly this run, so treat these as reported, not verified.
+
+| Reported v2.0 T2V (with audio) | Elo |
+|---|---|
+| [[wan-video\|Wan 3.0]] | 1,156 (#1) |
+| Utopai X | 1,149 (#2) |
+| [[competitor-seedance\|Seedance 2.5]] | 1,143 (#3) |
+| [[competitor-minimax-hailuo\|MiniMax H3]] / H3 Max | 1,137 / 1,130 |
+| FLUX 3 (Black Forest Labs) | 1,128 |
+| Seedance 2.0 / Gemini Omni Flash 1.1 | 1,116 / 1,113 (tied #7-8) |
+| Wan 2.7 | 1,030 (#13) |
+| Kling 3.0 Pro (anchor) | 1,000 |
+| [[competitor-veo\|Veo 3.1]] | 962 |
+| **[[ltx-2.5-model\|LTX-2.5]] Fast / Pro** | **946 / 943** |
+| LTX-2.3 Pro / Fast | 892 / 855 |
+
+Takeaways: LTX-2.5 sits about 55 points above LTX-2.3 Pro and roughly 210 below the leader on the new scale, and two new names (Utopai X, FLUX 3) entered the top six. [[competitor-runway|Runway Gen-4.5]] is reported absent from both live AA boards, with its launch-day 1,247 stuck on the retired scale. Seedance 2.5 has no official ByteDance per-second price (resellers about $0.20-$0.47/s at 720p) and two guides say shipped output is 720p max despite the announced 4K.
 
 ### Key Elo shifts, 2026-09-07 to 2026-09-28
 

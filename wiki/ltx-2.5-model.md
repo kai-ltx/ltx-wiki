@@ -2,13 +2,14 @@
 title: LTX-2.5 Model
 type: product
 created: 2026-08-24
-updated: 2026-10-05
+updated: 2026-10-12
 sources:
   - raw/ltx-news-ltx-2-5-release-2026-08-11.md
   - raw/ltx-news-ltx-2-5-api-pricing-and-benchmarks-2026-08.md
   - raw/ltx-news-api-changelog-jul21-aug19-2026.md
   - raw/ltx-news-sdr-to-hdr-conversion-ltx-2-5-2026-08-09.md
   - raw/ltx-news-post-production-suite-oct2026.md
+  - raw/ltx-news-ltx-2-5-ic-lora-catalog-official-docs-2026-10.md
 tags:
   - ltx-2
   - ltx-2.5
@@ -126,6 +127,7 @@ LTX says the model line has passed **33 million downloads**, which it claims mak
 
 - [[ltx-2-overview]] -- Model family overview
 - [[ltx-2.5-technical]] -- Architecture deep dive
+- [[ltx-2.5-ic-lora-catalog]] -- Official IC-LoRA adapter catalog for LTX-2.5
 - [[ltx-2.3-model]] -- Previous flagship
 - [[ltx-2-version-history]] -- Release timeline
 - [[ltx-video-changelog]] -- API changelog entries

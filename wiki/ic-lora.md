@@ -2,7 +2,7 @@
 title: IC-LoRA (In-Context LoRA)
 type: concept
 created: 2026-04-13
-updated: 2026-06-08
+updated: 2026-10-12
 sources:
   - https://huggingface.co/Lightricks/LTX-Video
   - https://huggingface.co/Lightricks/LTX-Video-0.9.7-dev
@@ -21,6 +21,8 @@ sources:
   - raw/ltx-news-ic-lora-hdr-lipdub-nvfp4-june2026.md
   - raw/ltx-news-ic-lora-union-motion-track-2026-06.md
   - raw/tutorial-comfyui-ic-lora-motion-track-june-2026.md
+  - raw/ltx-news-ltx-2-5-ic-lora-catalog-official-docs-2026-10.md
+  - raw/tutorial-ltx-2-5-ic-lora-ingredients-colorization-day-to-night-recipes-2026-10.md
 tags:
   - ltx-video
   - ic-lora
@@ -88,6 +90,10 @@ Unlike spatial concatenation approaches (which fail for structural controls in v
 | LTX-2.3-22b-IC-LoRA-LipDub | Official (Lightricks, Jun 2026) | Joint audio-visual lip-dubbing (JustDubIt) |
 | LTX2.3-22B_IC-LoRA-Cameraman_v1 | Community (Cseti, May 2026) | Cinematic camera motion transfer |
 | LTX-2.3 ID LoRA | Community (May 2026) | Character identity + LipSync |
+
+### For LTX-2.5 (22B base)
+
+LTX-2.5 now has an official adapter catalog of 16+ IC-LoRAs (Ingredients, Colorization, Day to Night, Water Simulation, Clean Plate, Deblur, Decompression, SDR to HDR, Layout to Render, Refine Details, Restore, Pixel Spatial Upscaler, Alpha Gen, plus LTX-2.3-trained Union and Motion Control carried over). Some LTX-2.5 workflows intentionally load LTX-2.3-trained checkpoints, so always follow the model card. Details, trained buckets and prompt conventions: [[ltx-2.5-ic-lora-catalog]].
 
 ## Full Modality List (from AVControl Paper)
 
@@ -239,6 +245,7 @@ See [[lora-ecosystem]] for the full inventory of official and community LoRA ada
 
 ## See Also
 
+- [[ltx-2.5-ic-lora-catalog]] -- LTX-2.5 adapter catalog and recipes
 - [[ltx-video-097]] -- release that introduced IC-LoRA adapters
 - [[ltx-video-098]] -- updated IC-LoRA adapters
 - [[ltxv-13b]] -- the base model IC-LoRA operates on
