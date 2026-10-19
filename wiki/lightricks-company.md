@@ -2,8 +2,9 @@
 title: Lightricks
 type: company
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-10-19
 sources:
+  - raw/ltx-news-lightricks-business-and-ces-2026.md
   - https://en.wikipedia.org/wiki/Lightricks
   - https://www.lightricks.com
   - https://www.crunchbase.com/organization/lightricks
@@ -82,6 +83,15 @@ In summer 2022, Lightricks began incorporating generative AI into its apps, beco
 - **ltx.io** - Central hub for platform, models, API, developer tools, enterprise
 - **ltx.studio** - Commercial video creation platform
 - **ltx.dev** - Developer-focused model access
+
+## 2026 Business Developments
+
+- **June 2026 (secondary reporting):** Yespress attributes about $150M invested in the AI business to co-founder Zeev Farbman. CTech reported plans to separate Facetune from the LTX video business, alongside 75 job cuts.
+- **CES 2026:** Lightricks and NVIDIA unveiled [[ltx-2-overview|LTX-2]] as an on-device model (up to 20 s, 4K, 50 fps on RTX AI PCs).
+- **License conflict:** one secondary source says LTX-2 weights, code, and docs are Apache 2.0; the Diffusers card cites the LTX-2.x Community License (commercial use free, fine-tune transfer may need a paid license). Verify the repo LICENSE before citing either.
+- **Release date conflict:** SiliconANGLE dates the original LTX-2 launch to 2025-10-23; MindStudio and the Diffusers card cite January 2026.
+
+Source: [raw/ltx-news-lightricks-business-and-ces-2026.md](raw/ltx-news-lightricks-business-and-ces-2026.md)
 
 ## Key Milestones
 

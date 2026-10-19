@@ -2,8 +2,9 @@
 title: Diffusers Integration
 type: reference
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-10-19
 sources:
+  - raw/tutorial-diffusers-mirror-security-flags-2026-10.md
   - https://huggingface.co/docs/diffusers/api/pipelines/ltx_video
   - https://huggingface.co/docs/diffusers/api/pipelines/ltx2
   - https://huggingface.co/Lightricks/LTX-Video
@@ -108,6 +109,12 @@ All LTX pipelines use `FlowMatchEulerDiscreteScheduler` by default. See [[python
 ## LTX-2.3 Status
 
 As of the research date, LTX-2.3 Diffusers support is listed as "coming soon" on the HuggingFace model card. Use the [[sdk-ltx-2]] native API for LTX-2.3.
+
+## Supply-Chain Cautions
+
+Search results for LTX Diffusers usage surfaced third-party mirrors (for example Resgard/LTX-Video, Hussi/LTX-2, liltyn/LTX-2.3) and a LoRA loaded from a different repo. Load models only from the Lightricks org, pin a commit with `revision=`, accept `.safetensors` only, and verify hashes (CWE-494, CWE-502). If a service accepts image URLs as pipeline input, allowlist hosts and block private and link-local ranges (CWE-918). These are review observations, not advisory findings.
+
+Source: [raw/tutorial-diffusers-mirror-security-flags-2026-10.md](raw/tutorial-diffusers-mirror-security-flags-2026-10.md)
 
 ## See Also
 

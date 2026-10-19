@@ -2,8 +2,9 @@
 title: fal.ai
 type: entity
 created: 2026-04-13
-updated: 2026-08-24
+updated: 2026-10-19
 sources:
+  - raw/tutorial-fal-ltx-quality-sku-pricing-2026-06.md
   - raw/api-fal-ai-ltx-video.md
   - raw/api-fal-ai-ltx.md
   - raw/inference-providers-overview.md
@@ -247,6 +248,12 @@ For LTX-2.5 pricing see the endpoint section above.
 - Training completes in approximately 30 minutes
 
 Pay-per-second with no minimums.
+
+### Quality SKU and Matrix Check (June 2026)
+
+A third-party matrix (source-stated verification date 2026-06-05) lists a separate quality SKU billed per megapixel at 0.0024075 USD, or 0.0027075 USD with LoRA fine-tuning. The same matrix confirms all tiers include native audio and that 1080p is the floor. Not checked against fal.ai's own pricing page. Replicate's comparison (0.05 USD/s for LTX 2.0 vs 0.04 USD/s on fal) is undated and predates these LTX-2.3 rates.
+
+Source: [raw/tutorial-fal-ltx-quality-sku-pricing-2026-06.md](raw/tutorial-fal-ltx-quality-sku-pricing-2026-06.md)
 
 ## LoRA Training API
 

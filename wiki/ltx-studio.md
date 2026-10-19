@@ -2,8 +2,9 @@
 title: LTX Studio
 type: product
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-10-19
 sources:
+  - raw/ltx-news-ltx-studio-release-notes-2026-h1.md
   - https://ltx.studio
   - https://ltx.studio/pricing
   - https://ltx.studio/blog/ltx-studio-plans
@@ -147,6 +148,20 @@ Launched April 2026, Enterprise plan only.
 - Pitch deck generation
 - Multiple resolution options
 - Commercial-use licensing (Standard tier and above)
+
+## Official Release Timeline, Jan to Apr 2026
+
+Dates from LTX Studio's release-notes snapshots (verify against the live page before citing):
+
+- **2026-01-06:** Storyboard Builder released.
+- **2026-02-22:** Kling 3.0 Pro added.
+- **March 2026:** LTX-2.3 announced; Motion Control adds reference-based motion transfer in the Gen Space.
+- **2026-03-03:** Dubbing and Captions released, Enterprise-only per the source.
+- **2026-04-15:** Video Editor upgrade adds eight native controls (transitions, blending modes, speed, reverse, layer opacity, and others).
+- **2026-04-24:** Seedance 2.0 available in LTX Studio.
+- **2026-04-27:** Canvas collaborative workspace launched.
+
+Source: [raw/ltx-news-ltx-studio-release-notes-2026-h1.md](raw/ltx-news-ltx-studio-release-notes-2026-h1.md)
 
 ## Pricing (as of 2026)
 

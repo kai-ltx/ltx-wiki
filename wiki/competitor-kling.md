@@ -2,8 +2,9 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-10-12
+updated: 2026-10-19
 sources:
+  - raw/competitor-kling-4-0-status-2026-10.md
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
   - raw/competitor-kling-3-updates-2026.md
@@ -175,6 +176,12 @@ On **2026-09-27**, Kling AI's official X account posted a teaser ("CLING ON! We'
 - Data privacy concerns (Chinese company, data processing in China)
 - Early access to 3.0 limited to Ultra subscribers at launch
 - Daily credit expiry on free tier
+
+## Kling 4.0 Status Conflict (Checked 2026-10-19)
+
+Secondary sources disagree on whether the Kling 4.0 flagship is generally available. Wikipedia's Kling AI entry lists 4.0 as stable and says the full flagship went global in October 2026. Gradually.ai (research date 2026-10-03/04) still treats 4.0 as a preview with only the creation experience rolling out to a limited group. Neither is a Kuaishou or kling.ai primary source. Kling 3.0 Turbo (2026-06-17) remains the last confirmed general-availability model in the sources reviewed. See [[ltx-studio]] for LTX Studio's Kling 3.0 Pro integration.
+
+Source: [raw/competitor-kling-4-0-status-2026-10.md](raw/competitor-kling-4-0-status-2026-10.md)
 
 ## Comparison to LTX Studio
 

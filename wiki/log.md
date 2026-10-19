@@ -226,3 +226,17 @@ Key findings:
 
 ## [2026-10-12] lint | Weekly health check
 Broken links: 0 (2,598 wikilinks across 229 pages outside log.md; same-page anchor link syntax removed from the new page). Index drift: 0 (all 229 wiki files in index.md, zero dangling entries; [[ltx-2.5-ic-lora-catalog]] added under LTX-2, LTX-2.3 & LTX-2.5). Format issues: 0 (new page has all frontmatter fields; 5 updated pages carry updated: 2026-10-12 and new sources). Line counts: all touched pages under 300 (82-284). Pre-existing pages over 300 lines, untouched and still pending a split: installation-quickstart.md (321), python-performance-memory.md (321). Note: index header previously said 331 raw sources; actual raw/ count is 336, corrected.
+
+## [2026-10-19] ingest | Weekly update
+Sources added: 5 files (Area1/LTX news: 2, Area2/Community: 0, Area3/Competitors: 1, Area4/Tutorials: 2). Research window: 2026-10-12 to 2026-10-19. Pages created: none. Pages updated: [[competitor-kling]], [[lightricks-company]], [[ltx-studio]], [[fal-ai]], [[diffusers-integration]].
+
+Key findings:
+(1) **LTX Studio release timeline, Jan to Apr 2026.** Official release-notes snapshot gives dates for Storyboard Builder (2026-01-06), Kling 3.0 Pro (2026-02-22), Dubbing and Captions (2026-03-03, Enterprise-only), Video Editor upgrade (2026-04-15). Added to [[ltx-studio]]. No October 2026 entries found in the index.
+(2) **Kling 4.0 status unresolved.** Wikipedia says the full flagship went global in October 2026; Gradually.ai (research date 2026-10-03/04) still shows preview-only access. Neither is a primary source. Added to [[competitor-kling]]. Verify at kling.ai before stating general availability.
+(3) **Lightricks business context (June 2026, secondary).** Yespress cites about $150M invested in the AI business (Farbman). CTech reports Facetune separation plans and 75 job cuts. Also flagged a license conflict: Apache 2.0 claim vs LTX-2.x Community License on the Diffusers card. Added to [[lightricks-company]].
+(4) **fal.ai quality SKU.** Third-party matrix (source date 2026-06-05) lists a per-megapixel quality SKU at 0.0024075 USD (0.0027075 with LoRA). Added to [[fal-ai]]. Not checked against fal.ai's pricing page.
+(5) **Supply-chain cautions for LTX Diffusers.** Search surfaced non-Lightricks mirrors and a third-party LoRA loaded from another repo. Mapped to CWE-494, CWE-502, CWE-918 with mitigations. Added to [[diffusers-integration]].
+(6) **No new releases found** from Runway (Gen-4.5 remains Dec 2025), Wan (Wan 2.7 remains Apr 2026), HunyuanVideo (1.5 remains Nov 2025), or Sora (April 2026 discontinuation notice). A single Oct 12 Sora aggregator item is unverified and not ingested. Community area skipped: sentiment results were undated and already covered by [[community-sentiment-overview]] and [[ltx-studio-platform-reviews]].
+
+## [2026-10-19] lint | Weekly health check
+Broken links: 0 in wiki content pages introduced this week (47 pre-existing escaped-pipe or historical references inside log.md, unchanged from HEAD). Index drift: 0 (all wiki files present in index.md, no dangling entries). Format issues: 0 (touched pages keep full frontmatter; updated: 2026-10-19 and new sources added). Line counts: all touched pages under 300 (111 to 215). Pre-existing pages over 300 lines still pending a split: installation-quickstart.md, python-performance-memory.md.
