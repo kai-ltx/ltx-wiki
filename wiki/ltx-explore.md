@@ -2,10 +2,11 @@
 title: LTX Explore
 type: product
 created: 2026-07-21
-updated: 2026-08-24
+updated: 2026-10-26
 sources:
   - raw/ltx-news-ltx-explore-launch-july20-2026.md
   - raw/ltx-news-sdr-to-hdr-conversion-ltx-2-5-2026-08-09.md
+  - raw/ltx-news-ltx-trainer-in-explore-2026-10-13.md
 tags:
   - ltx-explore
   - hdr
@@ -47,6 +48,19 @@ Announced August 9, 2026, two days before the [[ltx-2.5-model|LTX-2.5]] launch, 
 - Target users: post-production teams wanting grading headroom, teams upgrading large libraries, studios and developers building HDR delivery into their own pipelines, and creators improving AI-generated video.
 
 Lineage: the API-side equivalent is the `/v2/video-to-video-hdr` async endpoint (beta since April 23, 2026, still billed on `ltx-2-3-pro` at $0.20 / $0.40 / $0.80 per second of input by resolution tier as of 2026-08-24 -- see [[ltx-api-async-hdr]]). The underlying research was an HDR IC-LoRA on LTX-2.3-22b (April 15, 2026), backed by the paper *LumiVid: HDR Video Generation via Latent Alignment with Logarithmic Encoding*. The August 9 post moves the capability onto LTX-2.5 and into the self-service Explore surface.
+
+## LTX Trainer in Explore (October 13, 2026)
+
+Per the official [release notes](https://ltx.io/release-notes), [[ltx-video-trainer|LTX Trainer]] now runs inside LTX Explore as a no-code flow: train a custom **Character** or **Style** LoRA with "no GPU setup or development work required."
+
+- Pick Character or Style, upload assets.
+- Automatic quality checks flag weak clips for review before training starts.
+- Training runs in the background; an email arrives when the LoRA is ready.
+- Test the LoRA in Explore or download it for your own pipeline (e.g. [[comfyui-ltx-integration-overview|ComfyUI]]).
+
+The self-hosted open-source trainer is unchanged. The release notes do not state per-job pricing, step limits, or how long uploaded training assets are retained. Before uploading client or unreleased footage, check the current LTX platform terms for training-data use (see [[ltx-video-licensing]]).
+
+Source: [raw/ltx-news-ltx-trainer-in-explore-2026-10-13.md](raw/ltx-news-ltx-trainer-in-explore-2026-10-13.md)
 
 ## Strategic Context
 

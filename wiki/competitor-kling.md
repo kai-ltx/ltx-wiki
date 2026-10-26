@@ -2,7 +2,7 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-10-19
+updated: 2026-10-26
 sources:
   - raw/competitor-kling-4-0-status-2026-10.md
   - raw/competitor-product-kling.md
@@ -16,6 +16,7 @@ sources:
   - raw/competitor-artificial-analysis-leaderboard-snapshot-2026-09.md
   - raw/competitor-kling-4-early-access-sep2026.md
   - raw/competitor-kling-4-0-fal-prelaunch-guide-2026-09-29.md
+  - raw/competitor-kling-4-0-full-launch-and-api-2026-10.md
 tags:
   - competitor
   - video-generation
@@ -182,6 +183,30 @@ On **2026-09-27**, Kling AI's official X account posted a teaser ("CLING ON! We'
 Secondary sources disagree on whether the Kling 4.0 flagship is generally available. Wikipedia's Kling AI entry lists 4.0 as stable and says the full flagship went global in October 2026. Gradually.ai (research date 2026-10-03/04) still treats 4.0 as a preview with only the creation experience rolling out to a limited group. Neither is a Kuaishou or kling.ai primary source. Kling 3.0 Turbo (2026-06-17) remains the last confirmed general-availability model in the sources reviewed. See [[ltx-studio]] for LTX Studio's Kling 3.0 Pro integration.
 
 Source: [raw/competitor-kling-4-0-status-2026-10.md](raw/competitor-kling-4-0-status-2026-10.md)
+
+## Kling 4.0 Full Launch (Oct 15) and API (Oct 21), 2026
+
+The open GA question from the last two cycles is resolved: Kuaishou's press release (GlobeNewswire via Yahoo Finance, a paid release) dates the **full launch for all users to 2026-10-15**, and the **API began gradual global rollout on 2026-10-21** (Longbridge/Wallstreetcn, TokenPost). shattered.io (2026-10-25) corroborates Oct 15 and reports a launch promo to Oct 29 and an Ultra-to-**Ultra+** plan swap around Oct 17.
+
+**Claimed vs. callable** (SandBase API tests, 2026-10-23; SandBase resells Kling, so treat as an interested party):
+
+| Capability | Kuaishou claim | Via API (Oct 23) |
+|---|---|---|
+| 30 s single pass | Yes | Yes (30.04 s clip, $4.71 at 720p) |
+| 1080p / 21:9 | "Will also support" | Yes |
+| 4K | "Will also support" | No (720p/1080p only) |
+| 10-bit HDR | "Supports up to" | No (8-bit H.264) |
+| 10 keyframes / multi-shot | Yes | No (start/end frame only) |
+| Omni Reference (15 assets) | Yes | Partial (10 images + 5 videos) |
+| Native audio | Stereo | Always on, no toggle |
+
+Launch-week latency was high (339 s for a 5 s T2V call). SandBase lists Kling V4 T2V/I2V/Reference at $1.18 per run and Video Edit at $8.46. Third-party consumer pricing: 15 credits/s at 1080p.
+
+**Finance (36Kr, 2026-10-16):** Kling's ~$18B private valuation now exceeds Kuaishou's ~$15.6B market cap (Oct 13 low). Kling 2025 revenue ~CNY 1.1B, loss-making; IPO prep reported with CICC, Goldman Sachs, UBS.
+
+**LTX read:** 30 s is no longer a moat (Seedance 2.5 and Wan 3.0 also do 30 s). Kling's differentiators are directing controls that are not yet in its API. [[ltx-2.5-model|LTX-2.5]] Native Multishot and open weights remain the counter-position; LTX Studio still integrates Kling 3.0 Pro, not 4.0.
+
+Source: [raw/competitor-kling-4-0-full-launch-and-api-2026-10.md](raw/competitor-kling-4-0-full-launch-and-api-2026-10.md)
 
 ## Comparison to LTX Studio
 

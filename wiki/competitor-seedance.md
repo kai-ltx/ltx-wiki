@@ -2,9 +2,11 @@
 title: Seedance (ByteDance)
 type: competitor
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-10-26
 sources:
   - raw/competitor-seedance-25-july-2026.md
+  - raw/competitor-video-market-snapshot-2026-10-25.md
+  - raw/competitor-kling-4-0-full-launch-and-api-2026-10.md
 tags:
   - competitor
   - video-generation
@@ -36,6 +38,12 @@ Seedance 2.5 is ByteDance's most capable video generation model, announced June 
 - **Multiple pipelines:** T2V (text-to-video), I2V (image-to-video), V2V (video-to-video)
 
 **Caveats:** All specifications are ByteDance stated claims as of early July 2026. No independent benchmarks have been published.
+
+### Seedance 2.5 4K Enterprise Trial (October 23, 2026)
+
+A 4K version of Seedance 2.5 entered selected enterprise trials through Volcano Engine on 2026-10-23, reaching about 20 studios and directors by Oct 24-25 (shattered.io, secondary). Invite-only; the public API still tops out at 1080p. SandBase lists Seedance 2.5 at 4-30 s per clip, priced above [[competitor-kling|Kling 4.0]] per second.
+
+Sources: [raw/competitor-video-market-snapshot-2026-10-25.md](raw/competitor-video-market-snapshot-2026-10-25.md), [raw/competitor-kling-4-0-full-launch-and-api-2026-10.md](raw/competitor-kling-4-0-full-launch-and-api-2026-10.md)
 
 ## Competitive Position
 

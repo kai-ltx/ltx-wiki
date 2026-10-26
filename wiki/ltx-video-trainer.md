@@ -2,12 +2,13 @@
 title: LTX Video Trainer
 type: tool
 created: 2026-04-13
-updated: 2026-06-30
+updated: 2026-10-26
 sources:
   - raw/ltx-video-trainer.md
   - raw/training-fine-tuning.md
   - raw/community-project-lora-training-tools.md
   - raw/ltx-news-trainer-unified-june-2026.md
+  - raw/ltx-news-ltx-trainer-in-explore-2026-10-13.md
 tags:
   - trainer
   - tool
@@ -75,6 +76,12 @@ Training can complete in **less than an hour** for motion, style, or likeness Lo
 | Depth control IC-LoRA | IC-LoRA |
 | Edge detection IC-LoRA | IC-LoRA |
 | Detailer IC-LoRA | IC-LoRA |
+
+## Hosted Training in LTX Explore (October 13, 2026)
+
+A no-code path now sits beside the open-source framework: [[ltx-explore]] can train Character or Style LoRAs with automatic clip quality checks, background training, email notification, and a downloadable LoRA file. The open-source workflow above "is still available for those who prefer to run it themselves." See [[ltx-explore]] for details and open questions (pricing, data retention).
+
+Source: [raw/ltx-news-ltx-trainer-in-explore-2026-10-13.md](raw/ltx-news-ltx-trainer-in-explore-2026-10-13.md)
 
 ## LTX-Video-Trainer (Legacy Community Trainer)
 

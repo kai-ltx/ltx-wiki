@@ -240,3 +240,18 @@ Key findings:
 
 ## [2026-10-19] lint | Weekly health check
 Broken links: 0 in wiki content pages introduced this week (47 pre-existing escaped-pipe or historical references inside log.md, unchanged from HEAD). Index drift: 0 (all wiki files present in index.md, no dangling entries). Format issues: 0 (touched pages keep full frontmatter; updated: 2026-10-19 and new sources added). Line counts: all touched pages under 300 (111 to 215). Pre-existing pages over 300 lines still pending a split: installation-quickstart.md, python-performance-memory.md.
+
+## [2026-10-26] ingest | Weekly update
+Sources added: 6 files (Area1/LTX news: 2, Area2/Community: 1, Area3/Competitors: 2, Area4/Tutorials: 1). Research window: 2026-10-19 to 2026-10-26. Pages created: none. Pages updated: [[ltx-explore]], [[ltx-video-trainer]], [[ltx-desktop]], [[community-sentiment-overview]], [[competitor-kling]], [[competitor-seedance]], [[competitor-runway]], [[competitor-veo]], [[fal-ai]].
+
+Key findings:
+(1) **LTX Trainer in LTX Explore (2026-10-13, official release notes).** No-code Character/Style LoRA training with automatic clip quality checks, background jobs, email notice, downloadable LoRA. Pricing and training-data retention not stated.
+(2) **LTX Desktop v1.3 (2026-10-09, official).** 13 built-in LoRAs plus 9 IC-LoRAs, Retake/Extend, seed control, batch queue, LAN remote generation, redesigned UI and installer. Remote-generation auth model undocumented (flagged CWE-306/CWE-284 as a check, not a confirmed issue). v1.3.1 (Oct 19) unverified.
+(3) **Community.** No dated Reddit LTX threads found for the window. GitHub issues show 1.3.0 streaming-load failures on 16 GB cards and RAM saturation with LTX 2.5 BF16 on 24 GB cards.
+(4) **Kling 4.0 GA resolved.** Full launch 2026-10-15, API rollout 2026-10-21. API lacks 4K, 10-bit HDR, keyframes and multi-shot per SandBase tests (reseller, secondary).
+(5) **Other competitors.** Seedance 2.5 4K enterprise trial (Oct 23); Runway joined Claude Marketplace (Oct 20); conflicting reports on a Veo 3.1 shutdown (Oct 22), left unconfirmed.
+(6) **fal.ai pricing churn.** Two GPU hikes (Oct 2, Oct 5), Flux 3 edit price doubled, FLUX 3 Max video added at $0.085/s (Oct 20). No LTX price change.
+Not ingested: LTX V1 API retirement date (2026-10-26, noted last cycle) could not be reconfirmed by search; re-check docs.ltx.io next run.
+
+## [2026-10-26] lint | Weekly health check
+Broken links: 0 (2,575 wikilinks across 229 pages outside log.md). Index drift: 0 (all 229 wiki files in index.md, no dangling entries; index header raw count updated to 347; ltx-explore, ltx-desktop, competitor-kling summaries refreshed). Format issues: 0 on touched pages (all frontmatter fields present, updated: 2026-10-26, new sources listed). Line counts: fal-ai.md now 301 (just over the ~300 target; candidate for a pricing split). Pre-existing over 300: installation-quickstart.md, python-performance-memory.md. Note: ltx-video-trainer.md uses type "tool", outside the template enum (pre-existing).

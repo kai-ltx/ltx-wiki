@@ -2,7 +2,7 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-10-05
+updated: 2026-10-26
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
@@ -12,6 +12,7 @@ sources:
   - raw/competitor-runway-media-router-orchestration-pivot-july-2026.md
   - raw/competitor-runway-september-2026-feature-blitz.md
   - raw/competitor-runway-integrations-late-sep-oct-2026.md
+  - raw/competitor-video-market-snapshot-2026-10-25.md
 tags:
   - competitor
   - video-generation
@@ -166,6 +167,14 @@ Runway's changelog cadence continued at the same pace as the September "feature 
 - **Sep 29, 2026** -- ElevenLabs V4 added for in-app audio generation.
 
 This keeps Runway's strategic shape unchanged: a **model-agnostic aggregation/orchestration layer** (Model Router, MCP marketplace, Agent, now Dots) rather than a single-model competitor -- continuing to converge with [[ltx-studio]]'s own multi-model marketplace approach, but without a first-party frontier model refresh to match [[ltx-2.5-model|LTX-2.5]] or [[competitor-kling|Kling 4.0]]'s pace.
+
+## Late October 2026 Updates
+
+- **Claude Marketplace:** on 2026-10-20 Runway announced it joined the Claude Marketplace (shattered.io, secondary). Relevant to [[ltx-mcp-integration]], since agent-marketplace distribution is a channel LTX has not announced.
+- **Pricing:** PricingSaaS (Oct 20) reports the Max plan's expired "Unlimited Wan 3.0" promo was removed; prices unchanged. Runway resells Kling 3.0 4K at $0.43/s.
+- **Models:** still no new in-house model; Gen-4.5 (Dec 2025), Gen-4 Turbo and Aleph 2.0 remain the lineup.
+
+Source: [raw/competitor-video-market-snapshot-2026-10-25.md](raw/competitor-video-market-snapshot-2026-10-25.md)
 
 ## Strengths
 - Industry-standard status with proven enterprise adoption

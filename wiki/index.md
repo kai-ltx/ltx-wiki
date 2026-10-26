@@ -2,12 +2,12 @@
 title: Wiki Index
 type: overview
 created: 2026-04-13
-updated: 2026-10-12
+updated: 2026-10-26
 ---
 
 # Wiki Index
 
-Content catalog for the LTX wiki. 229 pages across 336 raw sources. Last weekly update: 2026-10-12.
+Content catalog for the LTX wiki. 229 pages across 347 raw sources. Last weekly update: 2026-10-26.
 
 ## Overviews
 
@@ -26,11 +26,11 @@ Content catalog for the LTX wiki. 229 pages across 336 raw sources. Last weekly 
 
 - [[lightricks-company]] — Founded 2013, $1.8B valuation, 600 employees, 730M+ downloads
 - [[ltx-studio]] — Web-based AI video production platform (5 pricing tiers)
-- [[ltx-explore]] — No-code self-service tier, 30+ capabilities, no API/setup (July 2026)
+- [[ltx-explore]] — No-code self-service tier, 30+ capabilities, no API/setup (July 2026); hosted LoRA training (Oct 2026)
 - [[ltx-studio-canvas]] — Collaborative infinite workspace for multi-user production (April 2026)
 - [[ltx-studio-flows]] — Node-based workflow automation: chain prompt/image/video/upscaling nodes (May 2026)
 - [[ltx-studio-apr-may-2026-updates]] — Full changelog: Editing Space, Kling 3.0 Pro, Veo 3.1 Lite, Seedance 2.0, ChatGPT Image 2.0
-- [[ltx-desktop]] — Free open-source desktop app (Apache 2.0), LTX-2.3 powered
+- [[ltx-desktop]] — Free open-source desktop app (Apache 2.0), LTX-2.3/2.5; v1.3 batch queue + remote generation (Oct 2026)
 - [[ltx-api]] — LTX developer API (5 endpoints, per-second billing)
 - [[ltx-mcp-integration]] — MCP/agent integration status (AGENTS.md, no dedicated server yet)
 - [[ltx-builders-program]] — Invite-only developer program
@@ -265,7 +265,7 @@ Content catalog for the LTX wiki. 229 pages across 336 raw sources. Last weekly 
 
 - [[competitor-runway]] — Gen-3/Gen-4: industry standard, $12–76/mo
 - [[competitor-pika]] — Pika Labs: social media focus, Pikaffects/Pikaswaps
-- [[competitor-kling]] — Kling AI (Kuaishou): Kling 3.0, $18B valuation, >RMB 850M Q2 revenue
+- [[competitor-kling]] — Kling AI (Kuaishou): Kling 4.0 GA Oct 15 / API Oct 21 2026, $18B valuation, >RMB 850M Q2 revenue
 - [[competitor-seedance]] — Seedance 2.0/2.5 (ByteDance): native 30s, 50 multimodal refs, 4K 10-bit
 - [[competitor-sora]] — Sora (OpenAI): SHUTTING DOWN Apr 2026
 - [[competitor-luma]] — Luma Dream Machine: reasoning-based, native HDR/EXR

@@ -2,7 +2,7 @@
 title: LTX Desktop
 type: product
 created: 2026-04-13
-updated: 2026-05-19
+updated: 2026-10-26
 sources:
   - https://github.com/Lightricks/LTX-Desktop
   - https://github.com/Lightricks/ltx-desktop/releases
@@ -13,6 +13,8 @@ sources:
   - raw/ltx2-nvidia-optimization-and-desktop.md
   - raw/ltx-news-ltx-desktop-v1-0-5-april-2026.md
   - raw/ltx-news-ltx-studio-api-async-hdr-may-2026.md
+  - raw/ltx-news-ltx-desktop-1-3-update-2026-10-09.md
+  - raw/community-ltx-desktop-1-3-user-feedback-2026-10.md
 tags:
   - ltx-desktop
   - open-source
@@ -158,6 +160,37 @@ See [[ltx-2-community-reception]] for broader reception context.
 
 - Significantly reduced VRAM usage, enabling 12 GB+ VRAM GPUs (previously required 16 GB+).
 - Materially expanded addressable consumer hardware base for local LTX-2.3 inference.
+
+## v1.3 Major Update (October 9, 2026)
+
+Official [release notes](https://ltx.io/release-notes) (Open source, 2026-10-09). GitHub issues reference the build as **1.3.0**.
+
+| Area | What shipped |
+|---|---|
+| Creative | 13 built-in LoRAs; IC-LoRAs for AlphaGen, Deblur, Colorization, Clean Plate, Decompression, Water Simulation, Day to Night, Restore, Layout to Render (see [[ltx-2.5-ic-lora-catalog]]); Retake, Extend, better prompt enhancement |
+| Control | Fast-preview resolutions; seed control |
+| Remote generation | Run on the desktop, monitor from a phone or another browser on the same Wi-Fi |
+| Batch generation | Background queue; reorder or cancel jobs |
+| UX | New homepage, quick search, gallery cards, asset library |
+| Setup | Better installer and onboarding, clearer system requirements, model-management settings |
+
+A v1.3.1 bug-fix build (2026-10-19) is reported by a search summary but was not visible on the fetched GitHub releases page, so treat it as unverified.
+
+**Security note (remote generation).** The release notes do not document how other LAN devices authenticate. If the remote endpoint accepted unauthenticated requests, it would match CWE-306 (Missing Authentication for Critical Function) and CWE-284 (Improper Access Control) per MITRE CWE. v1.0.2 moved the backend to "listen on free port and require auth" (PR #35), so auth likely exists, but confirm it. Use remote generation only on a trusted network and turn it off when idle.
+
+### Late 2.5-era releases (August 2026)
+
+- 1.2.0 (Aug 14): local LTX 2.5 Fast; 2.5 Fast/Pro via API; Hugging Face sign-in for gated downloads.
+- 1.2.4 (Aug 19): opt-in updates; Stop for local jobs.
+- 1.2.5 (Aug 20): local 2.5 Retake/Extend; API LTX-2.5 Pro limited to 720p/1080p.
+- 1.2.6 (Aug 23): optional last-frame image; Gemini 3.5 Flash-Lite default for API Enhance.
+- 1.2.7 (Aug 26): Apple Silicon 2.5 Fast memory-spike fix; AMD ROCm no longer treated as CUDA.
+
+### Known issues after 1.3 (GitHub, Oct 2026)
+
+57 open issues on 2026-10-26. October reports: streaming-load INTERRUPTED failures on a 16 GB RTX 5060 Ti (#181), gap-fill ignoring the start frame (#179), LTX 2.5 BF16 streaming saturating system RAM on an RTX 3090 (#176), and a request for rented-GPU backends (#174). Host RAM pressure during weight streaming on 16-24 GB GPUs remains the top theme. See [[community-sentiment-overview]].
+
+Sources: [raw/ltx-news-ltx-desktop-1-3-update-2026-10-09.md](raw/ltx-news-ltx-desktop-1-3-update-2026-10-09.md), [raw/community-ltx-desktop-1-3-user-feedback-2026-10.md](raw/community-ltx-desktop-1-3-user-feedback-2026-10.md)
 
 ## Roadmap
 

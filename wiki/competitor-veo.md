@@ -2,9 +2,10 @@
 title: Veo (Google DeepMind)
 type: competitor
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-10-26
 sources:
   - raw/competitor-product-veo.md
+  - raw/competitor-video-market-snapshot-2026-10-25.md
 tags:
   - competitor
   - video-generation
@@ -98,6 +99,15 @@ Third-party providers (fal.ai, Replicate) offer rates starting at $0.10/s for Ve
 - No local deployment (cloud-only)
 - No production workflow (generation tool only, no storyboarding or timeline)
 - Subject to Google's platform decisions and API quotas
+
+## Status Check (October 25, 2026)
+
+- shattered.io (2026-10-25) still ranks Veo 3.1 first for cinematic realism and audio sync and lists it as "Active, API preview names retired." Google's MovieGenBench preference tests behind that claim were last updated October 2025.
+- A separate secondary summary reported Veo 3.1 / Fast / Lite were scheduled to shut down on 2026-10-22 in favor of Gemini Omni Flash. This conflicts with the Oct 25 "Active" status; **unconfirmed**, verify on Google's Vertex AI model lifecycle page before migrating anything.
+- Google Vids gives personal accounts 10 free Veo 3.1 generations per month (announcement updated Oct 22).
+- [[ltx-studio]] still offers Veo 3.1, Veo 3.1 Fast and Veo 3.1 Lite (April 2026); a Veo retirement would affect that integration.
+
+Source: [raw/competitor-video-market-snapshot-2026-10-25.md](raw/competitor-video-market-snapshot-2026-10-25.md)
 
 ## Comparison to LTX Studio
 

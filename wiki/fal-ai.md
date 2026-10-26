@@ -2,7 +2,7 @@
 title: fal.ai
 type: entity
 created: 2026-04-13
-updated: 2026-10-19
+updated: 2026-10-26
 sources:
   - raw/tutorial-fal-ltx-quality-sku-pricing-2026-06.md
   - raw/api-fal-ai-ltx-video.md
@@ -12,6 +12,7 @@ sources:
   - raw/tutorial-ltx-video-replicate-fal-pricing-may-2026.md
   - raw/ltx-news-ltxv-13b-distilled-0-9-8-may-2026.md
   - raw/tutorial-ltx-2-5-fal-six-endpoints-pricing-2026-08.md
+  - raw/tutorial-fal-pricing-changes-oct-2026.md
 tags:
   - inference
   - cloud
@@ -278,6 +279,22 @@ result = fal_client.subscribe("fal-ai/ltx2-video-trainer", arguments={
 Training guides:
 - https://fal.ai/learn/devs/ltx-2-video-trainer-user-guide
 - https://fal.ai/learn/devs/ltx-2-video-trainer-prompt-guide
+
+## October 2026 Pricing Changes
+
+Third-party captures of fal's pricing page (PricingSaaS Pulse, not a fal announcement):
+
+| Date | Change |
+|---|---|
+| Oct 2 | H100 to $2.49/hr; GB200 added; MiniMax video price doubled |
+| Oct 5 | GPU rates up to +33% |
+| Oct 9-12 | Flux 3 Image edit added at $0.024/MP |
+| Oct 16-19 | Flux 3 Image edit doubled to $0.048/MP |
+| Oct 20 | FLUX 3 Max **video** added at $0.085/s |
+
+Oct 20 snapshot: H200 $6/GPU-hr, RTX PRO 6000 $4/GPU-hr. No LTX endpoint price change was recorded. Two GPU hikes in one week matter for anyone self-hosting LTX on fal serverless; re-check rates before budgeting. Black Forest Labs' FLUX 3 Max video gives fal a new hosted competitor priced near [[ltx-video-api-pricing|LTX-2.x Pro]] tiers.
+
+Source: [raw/tutorial-fal-pricing-changes-oct-2026.md](raw/tutorial-fal-pricing-changes-oct-2026.md)
 
 ## Hugging Face Integration
 
