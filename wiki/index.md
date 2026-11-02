@@ -2,12 +2,12 @@
 title: Wiki Index
 type: overview
 created: 2026-04-13
-updated: 2026-10-26
+updated: 2026-11-02
 ---
 
 # Wiki Index
 
-Content catalog for the LTX wiki. 229 pages across 347 raw sources. Last weekly update: 2026-10-26.
+Content catalog for the LTX wiki. 229 pages across 354 raw sources. Last weekly update: 2026-11-02.
 
 ## Overviews
 
@@ -30,7 +30,7 @@ Content catalog for the LTX wiki. 229 pages across 347 raw sources. Last weekly 
 - [[ltx-studio-canvas]] — Collaborative infinite workspace for multi-user production (April 2026)
 - [[ltx-studio-flows]] — Node-based workflow automation: chain prompt/image/video/upscaling nodes (May 2026)
 - [[ltx-studio-apr-may-2026-updates]] — Full changelog: Editing Space, Kling 3.0 Pro, Veo 3.1 Lite, Seedance 2.0, ChatGPT Image 2.0
-- [[ltx-desktop]] — Free open-source desktop app (Apache 2.0), LTX-2.3/2.5; v1.3 batch queue + remote generation (Oct 2026)
+- [[ltx-desktop]] — Free open-source desktop app (Apache 2.0), LTX-2.3/2.5; v1.3 batch queue + remote generation; v1.3.1 adds 1440p/4K, Assistant, new IC-LoRAs (Oct 2026)
 - [[ltx-api]] — LTX developer API (5 endpoints, per-second billing)
 - [[ltx-mcp-integration]] — MCP/agent integration status (AGENTS.md, no dedicated server yet)
 - [[ltx-builders-program]] — Invite-only developer program
@@ -185,7 +185,7 @@ Content catalog for the LTX wiki. 229 pages across 347 raw sources. Last weekly 
 - [[comfyui-manager-ltx-setup]] — Manager installation and setup
 - [[ltx2-comfyui-integration]] — LTX-2 specific ComfyUI guide
 - [[ltx2-comfyui-nodes-reference]] — LTX-2 custom nodes reference
-- [[ltx-2.5-comfyui-integration]] — LTX-2.5 in ComfyUI core (PR #15499, v0.32.0+), three templates, launch bugs
+- [[ltx-2.5-comfyui-integration]] — LTX-2.5 in ComfyUI core (PR #15499, v0.32.0+), four native templates incl. DFR (Oct 2026 docs), launch bugs
 
 ## Training & Fine-Tuning
 
@@ -249,7 +249,7 @@ Content catalog for the LTX wiki. 229 pages across 347 raw sources. Last weekly 
 
 ## Model Competitors
 
-- [[wan-video]] — Alibaba Wan 2.1/2.2: best motion realism, Apache 2.0, but slower
+- [[wan-video]] — Alibaba Wan 2.1/2.2: best motion realism, Apache 2.0, but slower; Wan 2.2 derivatives (TBC Mischief 1) on fal
 - [[competitor-minimax-hailuo]] — MiniMax H3 / Hailuo 3.0 (33B omni-modal): top open-weights model on all four AA video boards
 - [[competitor-magi-sandai]] — Sand.ai MAGI-2 Preview: 114B MoE, Apache 2.0, 10s A/V, 8x Hopper required
 - [[hunyuan-video]] — Tencent HunyuanVideo: 13B, best multi-person scenes
@@ -263,14 +263,14 @@ Content catalog for the LTX wiki. 229 pages across 347 raw sources. Last weekly 
 
 ## Product Competitors
 
-- [[competitor-runway]] — Gen-3/Gen-4: industry standard, $12–76/mo
+- [[competitor-runway]] — Gen-3/Gen-4: industry standard, $12–76/mo; App Studio no-code apps (Oct 26, 2026)
 - [[competitor-pika]] — Pika Labs: social media focus, Pikaffects/Pikaswaps
 - [[competitor-kling]] — Kling AI (Kuaishou): Kling 4.0 GA Oct 15 / API Oct 21 2026, $18B valuation, >RMB 850M Q2 revenue
 - [[competitor-seedance]] — Seedance 2.0/2.5 (ByteDance): native 30s, 50 multimodal refs, 4K 10-bit
 - [[competitor-sora]] — Sora (OpenAI): SHUTTING DOWN Apr 2026
 - [[competitor-luma]] — Luma Dream Machine: reasoning-based, native HDR/EXR
 - [[competitor-grok-imagine-video]] — Grok Imagine Video 1.5 (xAI): #1 I2V leaderboard (Elo 1404), native audio, API preview June 2026
-- [[competitor-veo]] — Veo 3.1 (Google): strongest closed-source, native 4K
+- [[competitor-veo]] — Veo 3.1 (Google): strongest closed-source, native 4K; Gemini Omni Flash replaced it in consumer apps, GA API remains
 - [[desktop-video-tools]] — ComfyUI, A1111, Martini, Fooocus vs LTX Desktop
 - [[mcp-video-integrations]] — Pictory, Veo2, MiniMax MCP vs LTX MCP
 

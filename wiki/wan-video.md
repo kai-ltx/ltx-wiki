@@ -2,7 +2,7 @@
 title: Wan Video
 type: concept
 created: 2026-04-13
-updated: 2026-10-12
+updated: 2026-11-02
 sources:
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-model-wan-video.md
@@ -14,6 +14,7 @@ sources:
   - raw/competitor-wan3-public-beta-and-video-arena-elo-august-2026.md
   - raw/competitor-wan3-modelstudio-pricing-2026-09.md
   - raw/competitor-artificial-analysis-t2v-v2-reset-wan-3-seedance-2-5-2026-10.md
+  - raw/competitor-tbc-mischief-1-wan-2-2-derivative-2026-10-30.md
 tags:
   - competitor
   - alibaba
@@ -100,6 +101,12 @@ Wan Video is Alibaba's video generation model family, developed by the Tongyi La
 **What the new evidence says:** Pexo's 2026-08-07 writeup, sourced to Chinese tech press (IT之家, 第一财经, ITBear) dated 2026-08-06, describes Wan 3.0 as a **closed public beta and paid API** with no downloadable weights, no Hugging Face checkpoint, no GitHub repo and no ComfyUI node, and states that **Alibaba's openly released Wan weights stop at Wan 2.2**. It explicitly says claims of open weights, a specific open-source license, or a parameter count for Wan 3.0 "come from unofficial lookalike sites and are unverified." Corroborating signal: the Artificial Analysis leaderboard lists Wan 3.0 (Aug 2026) with API pricing "Coming soon" and **no open-weights badge**, unlike [[competitor-minimax-hailuo|MiniMax H3]], [[competitor-magi-sandai|MAGI-2 Preview]] and every LTX entry, all of which do carry it.
 
 **Status:** the "60B MoE / Apache 2.0 / native 4K / 40% faster" figures have been removed from the Wan 3.0 section above as unverified. **Primary confirmation from Alibaba is still outstanding** — no Alibaba statement, model card or license text has been located either confirming or denying an open Wan 3.0 release. If Alibaba does publish 3.0 weights, this section should be revised again against that primary source.
+
+### Derivative: TBC Mischief 1 (Oct 30, 2026)
+
+The Biological Computing Co. released **TBC Mischief 1**, an image-to-video model built on open Wan 2.2, on fal and OpenRouter. TBC claims about 5x faster than Wan 2.2 at equal quality, using a software add-on derived from lab neuron research (runs on standard chips). No independent benchmarks. Price reports conflict: $0.005/s (TNW) vs $0.02/s (Unite.AI). Either is well below [[fal-ai]]'s LTX-2.5 Fast rate ($0.09/s at 720p), which shows how Apache-2.0 Wan 2.2 derivatives keep compressing open-model pricing.
+
+Source: [raw/competitor-tbc-mischief-1-wan-2-2-derivative-2026-10-30.md](raw/competitor-tbc-mischief-1-wan-2-2-derivative-2026-10-30.md)
 
 ## Capabilities
 

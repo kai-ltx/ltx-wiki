@@ -2,10 +2,11 @@
 title: Veo (Google DeepMind)
 type: competitor
 created: 2026-04-13
-updated: 2026-10-26
+updated: 2026-11-02
 sources:
   - raw/competitor-product-veo.md
   - raw/competitor-video-market-snapshot-2026-10-25.md
+  - raw/competitor-veo-gemini-omni-status-clarification-2026-10.md
 tags:
   - competitor
   - video-generation
@@ -108,6 +109,17 @@ Third-party providers (fal.ai, Replicate) offer rates starting at $0.10/s for Ve
 - [[ltx-studio]] still offers Veo 3.1, Veo 3.1 Fast and Veo 3.1 Lite (April 2026); a Veo retirement would affect that integration.
 
 Source: [raw/competitor-video-market-snapshot-2026-10-25.md](raw/competitor-video-market-snapshot-2026-10-25.md)
+
+## Status Clarification (November 2, 2026)
+
+The Oct 22 "shutdown" conflict above is mostly resolved, though still on secondary sources:
+
+- **Gemini Omni Flash** launched 2026-05-19 and replaced Veo inside the Gemini app and Google Flow in June 2026. Flow prices it at 12 credits per 8 s 720p clip (40 credits to edit).
+- **Veo 3.1 GA models stay available** to developers on the Gemini API and Vertex AI (Quality, Fast, Lite), about $0.15/s Fast to $0.40/s Standard.
+- What changed on **2026-10-21/22** was the **Veo 3.1 Preview endpoints** in the Gemini API, which now point to Gemini Omni Flash. Integrations pinned to preview model IDs need to migrate. Confirm on Google's model lifecycle page.
+- Impact on [[ltx-studio]]: no evidence its Veo 3.1 integration is affected.
+
+Source: [raw/competitor-veo-gemini-omni-status-clarification-2026-10.md](raw/competitor-veo-gemini-omni-status-clarification-2026-10.md)
 
 ## Comparison to LTX Studio
 

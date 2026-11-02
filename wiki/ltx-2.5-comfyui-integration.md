@@ -2,12 +2,13 @@
 title: LTX-2.5 ComfyUI Integration
 type: technical
 created: 2026-08-24
-updated: 2026-10-05
+updated: 2026-11-02
 sources:
   - raw/tutorial-comfyui-ltx-2-5-nodes-workflows-2026-08.md
   - raw/tutorial-ltx-2-5-local-vram-quantization-guide-2026-08.md
   - raw/tutorial-ltx-2-5-python-ltx-pipelines-and-diffusers-2026-08.md
   - raw/tutorial-ltx-25-native-resolution-tiled-fusion-sep2026.md
+  - raw/tutorial-comfyui-docs-ltx-2-5-native-workflows-2026-10.md
 tags:
   - ltx-2-5
   - comfyui
@@ -130,6 +131,18 @@ HF discussions logged 19 threads in 15 hours:
 - For 8K, Lightricks recommends a progressive path (refine to 4K, Lanczos-resize toward 8K, optional gentle second pass) rather than a direct 8K refine, which risks inventing texture beyond the adapter's trained scale.
 - Source audio is held fixed during generation and muxed back into the output unchanged.
 - Model access remains gated on Hugging Face (see community friction noted in [[ltx-2.5-community-reception]]).
+
+## Official ComfyUI Docs Page: Four Native Workflows (late Oct 2026)
+
+The ComfyUI docs page "LTX-2.5 in ComfyUI: Video, Audio, and Multishot Workflows" (docs.comfy.org/tutorials/video/ltx/ltx-2-5, about Oct 27) now lists **four** native templates: T2V, I2V, FLF2V and a new **DFR** (Diffusion Fidelity Rendering) workflow. DFR pairs the distilled transformer with a detailing IC-LoRA and reuses in-clip keyframes as guides for later passes, from an image or from text ("Switch to T2V"). This supersedes the three-template list above.
+
+- Default files match the int8 pack above (`ltx-2.5-22b-distilled-transformer-comfy-int8-convrot`, `gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot`, bf16 video/audio VAEs, x2 latent upscaler). FLF2V skips the upscaler.
+- Prompt enhancer is off by default; enabling `prompt_enhance` needs `gemma4_e2b_it_int8_convrot` (~5 GB, from Comfy-Org/gemma-4) and adds about 1 to 2 minutes.
+- Access to **Lightricks/LTX-2.5** and **Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler** must be approved on Hugging Face before downloads work.
+- The page's Resources link points to Lightricks/LTX-Video; LTX-2.x code is in Lightricks/LTX-2.
+- **Supply-chain note:** download only from the Lightricks and Comfy-Org repos named in the docs and keep the `.safetensors` format. Pickle-based checkpoints from mirrors can execute code on load (CWE-502, Deserialization of Untrusted Data, per MITRE CWE; see also [[diffusers-integration]]).
+
+Source: [raw/tutorial-comfyui-docs-ltx-2-5-native-workflows-2026-10.md](raw/tutorial-comfyui-docs-ltx-2-5-native-workflows-2026-10.md)
 
 ## See Also
 

@@ -255,3 +255,17 @@ Not ingested: LTX V1 API retirement date (2026-10-26, noted last cycle) could no
 
 ## [2026-10-26] lint | Weekly health check
 Broken links: 0 (2,575 wikilinks across 229 pages outside log.md). Index drift: 0 (all 229 wiki files in index.md, no dangling entries; index header raw count updated to 347; ltx-explore, ltx-desktop, competitor-kling summaries refreshed). Format issues: 0 on touched pages (all frontmatter fields present, updated: 2026-10-26, new sources listed). Line counts: fal-ai.md now 301 (just over the ~300 target; candidate for a pricing split). Pre-existing over 300: installation-quickstart.md, python-performance-memory.md. Note: ltx-video-trainer.md uses type "tool", outside the template enum (pre-existing).
+
+## [2026-11-02] ingest | Weekly update
+Sources added: 7 files (Area1/LTX news: 2, Area2/Community: 1, Area3/Competitors: 3, Area4/Tutorials: 1). Research window: 2026-10-26 to 2026-11-02. Pages created: none. Pages updated: [[ltx-desktop]], [[ltx-desktop-community-reception]], [[community-sentiment-overview]], [[ltx-2.5-ic-lora-catalog]], [[ltx-2.5-comfyui-integration]], [[competitor-runway]], [[competitor-veo]], [[wan-video]].
+
+Key findings:
+(1) **No new LTX model, adapter or release-notes entry in-window.** ltx.io/release-notes still tops out at 2026-10-13. The only in-window LTX item is the 2026-10-26 blog video (Doug Hogan with Mohamed Oumoumad) demoing the September/October post-production tools, including an HD plate taken to 8K HDR with Native Resolution tiling.
+(2) **LTX Desktop v1.3.1 verified (open item from last run).** GitHub release dated 2026-10-19: AlphaGen, Motion Track Control, Video Guide and Ingredients IC-LoRAs; 1440p (20 s) and 4K (10 s); an Assistant backed by Gemini or a local model; 9 GB VRAM floor on Windows with fp8; macOS 26+ for local generation. Flagged CWE-522 for the Gemini API key handling as a check.
+(3) **Community.** Still no dated Reddit/X threads. GitHub #183 (Oct 22, macOS) moves the complaint from memory to long-form editing: no project export, weak timeline, Extend not chainable.
+(4) **Competitors.** Runway App Studio (Oct 26, official) and Runway Ads GA (Oct 27), still no new Runway model. Veo conflict mostly resolved: Gemini Omni Flash replaced Veo in consumer apps in June; GA Veo 3.1 remains on Gemini API/Vertex; only the preview endpoints moved on Oct 21/22 (secondary sources). TBC Mischief 1 (Oct 30), a Wan 2.2 derivative on fal at a claimed $0.005 to $0.02/s.
+(5) **Tutorials.** ComfyUI docs now list four native LTX-2.5 templates, adding DFR (Diffusion Fidelity Rendering) to T2V/I2V/FLF2V.
+(6) No new releases found from Kling (4.0 user guide dated Oct 26 adds nothing beyond the existing page), Sora (discontinued), HunyuanVideo, Seedance or MiniMax. No LTX pricing change found on fal.ai or Replicate.
+
+## [2026-11-02] lint | Weekly health check
+Broken links: 0 (full wikilink scan across 229 pages excluding log.md, escaped-pipe and anchor syntax handled). Index drift: 0 (all content pages in index.md, no dangling entries; log.md is not indexed, as in earlier runs; index header raw count updated to 354; ltx-desktop, ltx-2.5-comfyui-integration, wan-video, competitor-runway and competitor-veo summaries refreshed). Format issues: 0 on the 8 touched pages (all frontmatter fields present, updated: 2026-11-02, new raw sources listed). Line counts: touched pages 83 to 234 lines. Still over 300 and pending a split: fal-ai.md (301), installation-quickstart.md, python-performance-memory.md.

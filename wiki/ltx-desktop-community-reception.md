@@ -2,9 +2,10 @@
 title: LTX Desktop Community Reception
 type: analysis
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-11-02
 sources:
   - raw/social-ltx-desktop-community-reception.md
+  - raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md
 tags:
   - ltx-desktop
   - community
@@ -61,6 +62,12 @@ An active community discussion compares the two approaches:
 - **[[comfyui-ltx-workflows|ComfyUI]]:** More flexibility, deeper customization, established workflow ecosystem
 
 Community consensus: both have a place. Desktop suits quick results and editor integration. ComfyUI suits advanced workflows and maximum control.
+
+## October 2026: Long-Form Workflow Gaps (v1.3)
+
+GitHub issue #183 (2026-10-22, macOS, M4 Max 128 GB, local LTX 2.5 Fast) is the most detailed 1.3-era report. Praise: quick setup, no Comfy backend, generation plus editing in one app, reliable First/Last-Frame for short clips. Gaps for 1 to 5 minute projects: no project management or export, Gen Space retiring without replacement, timeline lacks snapping and working crossfades, coarse duration steps, Extend not producing chainable clips and running out of memory on repeat use, gap fill ignoring context. The user gets past one minute by supplying their own audio (A2V) rather than relying on Extend. Several fixes shipped in [[ltx-desktop|v1.3.1]] (Oct 19), which the reporter had not yet tested. Broader context: [[community-sentiment-overview]].
+
+Source: [raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md](raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md)
 
 ## Sentiment Summary
 

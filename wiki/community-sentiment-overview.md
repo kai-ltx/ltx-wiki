@@ -2,7 +2,7 @@
 title: Community Sentiment Overview for LTX Video
 type: analysis
 created: 2026-04-13
-updated: 2026-10-26
+updated: 2026-11-02
 sources:
   - raw/social-general-sentiment-consensus.md
   - raw/social-reddit-stablediffusion-discussions.md
@@ -14,6 +14,7 @@ sources:
   - raw/community-reddit-ltx-2-5-vs-minimax-h3-speed-quality-debate-2026-08.md
   - raw/community-reddit-stablediffusion-ltx-2-5-launch-hands-on-2026-08.md
   - raw/community-ltx-desktop-1-3-user-feedback-2026-10.md
+  - raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md
 tags:
   - sentiment
   - community
@@ -134,6 +135,12 @@ Harsh verdicts such as "no visible improvement" over 2.3 and "the current archit
 No dated Reddit threads about LTX surfaced for Oct 19-26. The clearest signal is the [[ltx-desktop]] GitHub tracker: two general feedback threads for 1.3 (#183 macOS, #184) and bug reports on streaming-load failures with 16 GB cards, RAM saturation on a 24 GB RTX 3090 with LTX 2.5 BF16, and gap-fill ignoring the start frame. Users welcome the feature jump (built-in LoRAs, batch queue) but memory behavior on consumer hardware is still the main complaint, consistent with the weaknesses above.
 
 Source: [raw/community-ltx-desktop-1-3-user-feedback-2026-10.md](raw/community-ltx-desktop-1-3-user-feedback-2026-10.md)
+
+### Update (2026-11-02)
+
+Still no dated Reddit or X threads about LTX for Oct 26 to Nov 2. Issue #183 was read in full: the complaint shifts from memory to **long-form editing workflow** (project export, timeline, Extend chaining). Details in [[ltx-desktop-community-reception]].
+
+Source: [raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md](raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md)
 
 ## Overall Verdict
 

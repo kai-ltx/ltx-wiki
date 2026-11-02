@@ -2,7 +2,7 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-10-26
+updated: 2026-11-02
 sources:
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
@@ -13,6 +13,7 @@ sources:
   - raw/competitor-runway-september-2026-feature-blitz.md
   - raw/competitor-runway-integrations-late-sep-oct-2026.md
   - raw/competitor-video-market-snapshot-2026-10-25.md
+  - raw/competitor-runway-app-studio-and-ads-ga-2026-10.md
 tags:
   - competitor
   - video-generation
@@ -175,6 +176,15 @@ This keeps Runway's strategic shape unchanged: a **model-agnostic aggregation/or
 - **Models:** still no new in-house model; Gen-4.5 (Dec 2025), Gen-4 Turbo and Aleph 2.0 remain the lineup.
 
 Source: [raw/competitor-video-market-snapshot-2026-10-25.md](raw/competitor-video-market-snapshot-2026-10-25.md)
+
+## App Studio and Runway Ads GA (Oct 26-27, 2026)
+
+- **App Studio (2026-10-26, official):** describe a creative tool in plain language; Runway writes, tests and deploys an app with its own UI that runs Runway image/video/audio models plus the workspace's Brand Kits, Workflows, Assets and References. Agent sessions or Workflows convert to apps in one click. Built-in apps include Character Swap, AutoComp, Product Portfolio, 3D Camera Control and Precise Edit. Early-access customer KPF is named. Included in all paid plans; building, running and hosting use existing credits; public-link visitors pay with their own credits.
+- **Enterprise controls:** apps inherit admin model restrictions, admins can disable App Studio and public links per workspace, Enterprise app links require Runway sign-in, per-app usage is visible. Custom code, webhooks and external APIs are not documented.
+- **Runway Ads GA (2026-10-27, via ScriptByAI timeline):** connect ad accounts, generate variants, publish approved ads.
+- **Read for LTX:** Runway keeps building workflow layers around third-party and older first-party models rather than shipping a new model. The nearest LTX equivalents are [[ltx-explore]] and [[ltx-studio]]'s Elements and Brand Kit; LTX has no user-built app layer.
+
+Source: [raw/competitor-runway-app-studio-and-ads-ga-2026-10.md](raw/competitor-runway-app-studio-and-ads-ga-2026-10.md)
 
 ## Strengths
 - Industry-standard status with proven enterprise adoption

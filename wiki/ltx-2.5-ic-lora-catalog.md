@@ -2,10 +2,12 @@
 title: LTX-2.5 IC-LoRA Catalog
 type: technical
 created: 2026-10-12
-updated: 2026-10-12
+updated: 2026-11-02
 sources:
   - raw/ltx-news-ltx-2-5-ic-lora-catalog-official-docs-2026-10.md
   - raw/tutorial-ltx-2-5-ic-lora-ingredients-colorization-day-to-night-recipes-2026-10.md
+  - raw/ltx-news-vfx-tools-production-pipeline-blog-2026-10-26.md
+  - raw/ltx-news-ltx-desktop-1-3-1-release-verified-2026-10-19.md
 tags:
   - ltx-2-5
   - ic-lora
@@ -73,6 +75,14 @@ The post-production subset (SDR to HDR, Layout to Render, Alpha Gen, Refine/Rest
 - **2026-06-17:** [[ltx-video-trainer|LTX Trainer]] launched with ten demo IC-LoRAs (LTX-2.3 era) and a first-party agentic skill that lets an agent run the training loop. Training a custom LoRA on a ~19B base was estimated at hundreds to thousands of dollars in GPU time by one reviewer.
 - **~2026-09-08 to 09-10:** per a search-engine summary (not confirmed on a primary page), LTX-2.5 ports of the V2V IC-LoRAs shipped. Treat the exact dates as unverified; the adapters were a wiki coverage gap rather than a new release in the 2026-10-05 to 10-12 window.
 - No community reaction threads specific to these adapters were found this cycle.
+
+## VFX Walkthrough and Desktop Availability (Oct 2026)
+
+- **2026-10-19:** [[ltx-desktop]] v1.3.1 added AlphaGen, Motion Track Control, Video Guide (Pose/Depth/Canny) and Ingredients (up to 10 references) as built-in tools.
+- **2026-10-26:** the LTX blog posted a video walkthrough with compositor Doug Hogan and Mohamed Oumoumad covering Alpha Gen, Refine/Restore, upgraded SDR-to-HDR (16-bit EXR) and Native HDR. Demo: an HD plate taken to 8K HDR with Native Resolution tiling (overlapping tiles blended at every denoise step), checked in Nuke. Oumoumad points out Alpha Gen is an IC-LoRA trained on rendered footage with clean alpha, so studios can train their own for their data. No new adapters announced.
+- As of 2026-11-02 the official release notes have no entries after 2026-10-13.
+
+Sources: [raw/ltx-news-vfx-tools-production-pipeline-blog-2026-10-26.md](raw/ltx-news-vfx-tools-production-pipeline-blog-2026-10-26.md), [raw/ltx-news-ltx-desktop-1-3-1-release-verified-2026-10-19.md](raw/ltx-news-ltx-desktop-1-3-1-release-verified-2026-10-19.md)
 
 ## See Also
 

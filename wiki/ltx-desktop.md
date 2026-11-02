@@ -2,7 +2,7 @@
 title: LTX Desktop
 type: product
 created: 2026-04-13
-updated: 2026-10-26
+updated: 2026-11-02
 sources:
   - https://github.com/Lightricks/LTX-Desktop
   - https://github.com/Lightricks/ltx-desktop/releases
@@ -15,6 +15,8 @@ sources:
   - raw/ltx-news-ltx-studio-api-async-hdr-may-2026.md
   - raw/ltx-news-ltx-desktop-1-3-update-2026-10-09.md
   - raw/community-ltx-desktop-1-3-user-feedback-2026-10.md
+  - raw/ltx-news-ltx-desktop-1-3-1-release-verified-2026-10-19.md
+  - raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md
 tags:
   - ltx-desktop
   - open-source
@@ -174,9 +176,33 @@ Official [release notes](https://ltx.io/release-notes) (Open source, 2026-10-09)
 | UX | New homepage, quick search, gallery cards, asset library |
 | Setup | Better installer and onboarding, clearer system requirements, model-management settings |
 
-A v1.3.1 bug-fix build (2026-10-19) is reported by a search summary but was not visible on the fetched GitHub releases page, so treat it as unverified.
+A v1.3.1 build (2026-10-19) is now verified; see the v1.3.1 section below.
 
 **Security note (remote generation).** The release notes do not document how other LAN devices authenticate. If the remote endpoint accepted unauthenticated requests, it would match CWE-306 (Missing Authentication for Critical Function) and CWE-284 (Improper Access Control) per MITRE CWE. v1.0.2 moved the backend to "listen on free port and require auth" (PR #35), so auth likely exists, but confirm it. Use remote generation only on a trusted network and turn it off when idle.
+
+### v1.3.1 (2026-10-19, verified)
+
+Confirmed on the [GitHub release page](https://github.com/Lightricks/LTX-Desktop/releases/tag/v1.3.1) (bot release, GPG-signed commit 8ffed88, marked Latest).
+
+| Area | What shipped |
+|---|---|
+| New IC-LoRAs | AlphaGen (cutout WebM + matte MP4, no green screen or prompt), Motion Track Control (up to 3 paths), Video Guide (Pose/Depth/Canny), Ingredients (up to 10 reference images, new Marketing section). "Source" audio mode keeps original audio. See [[ltx-2.5-ic-lora-catalog]] |
+| Resolution | 1440p (up to 20 s) and 4K (up to 10 s, no 21:9) for T2V, I2V, A2V; long clips run in overlapping time windows; 20 s 1080p now fits 32 GB GPUs |
+| Assistant | Plans and queues jobs from plain language on desktop or phone; backend is Gemini (API key) or a downloadable local model |
+| Enhance | Reads the source video for IC-LoRA, Extend, Retake; works with empty prompt |
+| Requirements | Windows: 9 GB+ VRAM with fp8 support for reduced local settings. macOS 14+ for the app, macOS 26+ for local generation |
+| Privacy | Anonymous analytics now include OS version / Linux distribution |
+| Fixes | Windows decode memory refusal, Mac long 1080p T2V, Linux "Cannot allocate memory", 2.3 Retake/Extend while 2.5 active |
+
+**Security notes.** (1) The Assistant's Gemini option sends prompts and attached asset context to a third-party API with a user-supplied key; store the key in the OS keychain if the app supports it and treat it as a secret (CWE-522, Insufficiently Protected Credentials, per MITRE CWE). (2) Phone access to the Assistant extends the LAN remote-generation surface noted below; the same CWE-306/CWE-284 check applies.
+
+Source: [raw/ltx-news-ltx-desktop-1-3-1-release-verified-2026-10-19.md](raw/ltx-news-ltx-desktop-1-3-1-release-verified-2026-10-19.md)
+
+### Long-form workflow feedback (#183, 2026-10-22)
+
+A detailed macOS report (M4 Max 128 GB, local LTX 2.5 Fast) praises the all-in-one app and First/Last-Frame, but lists gaps for 1 to 5 minute projects: Gen Space marked "retiring" with no replacement for clip management, no project export/import (only a ~3 KB Final Cut XML or a rendered movie), no timeline snapping, unreliable audio-track placement and crossfades, coarse durations (5/6/8/10/20 s for 2.5 Fast 720p), Extend that grows the clip instead of producing a chainable follow-up and exhausts memory on re-extend, gap fill ignoring the start frame (#179), and split audio segments read from file start in A2V. See [[ltx-desktop-community-reception]].
+
+Source: [raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md](raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md)
 
 ### Late 2.5-era releases (August 2026)
 
