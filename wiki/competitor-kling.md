@@ -2,8 +2,9 @@
 title: Kling AI (Kuaishou)
 type: competitor
 created: 2026-04-13
-updated: 2026-10-26
+updated: 2026-11-09
 sources:
+  - raw/competitor-felo-adds-seedance-2-5-wan-3-prime-kling-4-2026-11-05.md
   - raw/competitor-kling-4-0-status-2026-10.md
   - raw/competitor-product-kling.md
   - raw/competitor-kling-3-o3-release-feb-2026.md
@@ -207,6 +208,11 @@ Launch-week latency was high (339 s for a 5 s T2V call). SandBase lists Kling V4
 **LTX read:** 30 s is no longer a moat (Seedance 2.5 and Wan 3.0 also do 30 s). Kling's differentiators are directing controls that are not yet in its API. [[ltx-2.5-model|LTX-2.5]] Native Multishot and open weights remain the counter-position; LTX Studio still integrates Kling 3.0 Pro, not 4.0.
 
 Source: [raw/competitor-kling-4-0-full-launch-and-api-2026-10.md](raw/competitor-kling-4-0-full-launch-and-api-2026-10.md)
+
+## Third-Party Rollout: Felo (2026-11-05)
+
+- Felo exposes Kling 4.0 at 3-30 s, 720P or 1080P, with reference images and videos plus first, middle and last frames. Felo's integration has **no soundtrack**.
+- Kling's own Oct 26 post (via the Magic Hour tracker) lists up to 15 combined reference assets and up to 10 keyframes, so hosts expose a subset. Same pattern as the API gaps noted above.
 
 ## Comparison to LTX Studio
 

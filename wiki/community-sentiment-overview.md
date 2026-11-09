@@ -2,8 +2,9 @@
 title: Community Sentiment Overview for LTX Video
 type: analysis
 created: 2026-04-13
-updated: 2026-11-02
+updated: 2026-11-09
 sources:
+  - raw/community-llm-stats-video-arena-snapshot-2026-11-09.md
   - raw/social-general-sentiment-consensus.md
   - raw/social-reddit-stablediffusion-discussions.md
   - raw/social-reddit-aivideo-localllama.md
@@ -141,6 +142,12 @@ Source: [raw/community-ltx-desktop-1-3-user-feedback-2026-10.md](raw/community-l
 Still no dated Reddit or X threads about LTX for Oct 26 to Nov 2. Issue #183 was read in full: the complaint shifts from memory to **long-form editing workflow** (project export, timeline, Extend chaining). Details in [[ltx-desktop-community-reception]].
 
 Source: [raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md](raw/community-ltx-desktop-1-3-macos-longform-feedback-issue-183-2026-10-22.md)
+
+## Third-Party Arena Signal (2026-11-09)
+
+- The llm-stats Video Arena (1,450 blind votes, 13 models, TrueSkill) ranks Kling v3 first on text-to-video (1934), then Happy Horse 1.0 (1816) and Seedance 2.0 Fast (1747). No LTX model appears in the visible top entries. See [[competitor-landscape-overview]].
+- Small vote pool, and the model pool appears to lag recent releases (no [[competitor-kling|Kling 4.0]], Seedance 2.5 or [[ltx-2.5-model|LTX-2.5]] in the top 3).
+- Searches again found no dated Reddit or X threads about LTX for 2026-11-02 to 2026-11-09. This is the fourth straight week without a findable dated community thread.
 
 ## Overall Verdict
 

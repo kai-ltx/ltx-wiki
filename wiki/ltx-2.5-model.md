@@ -2,8 +2,9 @@
 title: LTX-2.5 Model
 type: product
 created: 2026-08-24
-updated: 2026-10-12
+updated: 2026-11-09
 sources:
+  - raw/ltx-news-release-notes-status-check-2026-11-09.md
   - raw/ltx-news-ltx-2-5-release-2026-08-11.md
   - raw/ltx-news-ltx-2-5-api-pricing-and-benchmarks-2026-08.md
   - raw/ltx-news-api-changelog-jul21-aug19-2026.md
@@ -106,6 +107,12 @@ Lightricks shipped six open-source "Built for Post-Production" capabilities acro
 - **Alpha Gen** (Oct 2) -- generates alpha mattes with soft edges and fine detail, preserving hair, smoke, and partial transparency for compositing.
 
 All six ship as open-source weights/IC-LoRAs (not API-exclusive), continuing LTX-2.5's post-launch pattern of shipping new capabilities as adapters on the existing 22B base rather than new model versions.
+
+## Release Status Check (2026-11-09)
+
+- No new LTX-2.5 checkpoint, adapter or release-notes entry between 2026-11-02 and 2026-11-09. ltx.io/release-notes still tops out at the 2026-10-13 [[ltx-explore]] Trainer entry; the last open-source item is the 2026-10-09 [[ltx-desktop]] update.
+- Third-party tracker (Magic Hour) dates LTX-2.5 to LTX-2 repo release v1.2.0 on 2026-08-11 and recommends recording checkpoint, Fast/Pro variant, resolution and local vs API for any comparison.
+- Not verified this run: GitHub release tags for LTX-2 and LTX-Desktop (pages not fetchable), and the V1 API retirement on docs.ltx.io. Re-check next run.
 
 ## Launch Partners
 

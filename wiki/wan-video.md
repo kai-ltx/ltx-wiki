@@ -2,8 +2,10 @@
 title: Wan Video
 type: concept
 created: 2026-04-13
-updated: 2026-11-02
+updated: 2026-11-09
 sources:
+  - raw/competitor-felo-adds-seedance-2-5-wan-3-prime-kling-4-2026-11-05.md
+  - raw/competitor-runway-changelog-quiet-and-wan3-promo-end-2026-11.md
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-model-wan-video.md
   - raw/open-source-comparison.md
@@ -145,6 +147,12 @@ The 2026-08 correction changes the strategic read materially: **Wan 3.0 is not a
 Community consensus (open checkpoints): LTX for speed/social/iteration; Wan for cinematic/high-detail longer-form work.
 
 For a detailed community benchmark comparison, see [[ltx-model-comparisons]].
+
+## November 2026 Distribution Notes
+
+- **Felo (Nov 5):** "Wan 3.0 Prime" at 2-30 s up to 1080P, optional generated audio, text or first+last frame input (no reference video, no 21:9). "Prime" is Felo's tier label and has not been seen in Alibaba Cloud materials.
+- **Runway (Oct 26, secondary):** PricingSaaS reports Runway ended the Max plan's unlimited Wan 3.0 promo. Runway's changelog does not mention it.
+- Open-weights status unchanged: Wan 2.2 is the newest Wan release with downloadable weights confirmed by skeptical sources. Wan 2.7 Apache 2.0 claims still conflict across SEO pages.
 
 ## See Also
 

@@ -2,8 +2,9 @@
 title: fal.ai
 type: entity
 created: 2026-04-13
-updated: 2026-10-26
+updated: 2026-11-09
 sources:
+  - raw/tutorial-fal-pricing-snapshot-and-ltx-hub-status-2026-11-09.md
   - raw/tutorial-fal-ltx-quality-sku-pricing-2026-06.md
   - raw/api-fal-ai-ltx-video.md
   - raw/api-fal-ai-ltx.md
@@ -295,6 +296,9 @@ Third-party captures of fal's pricing page (PricingSaaS Pulse, not a fal announc
 Oct 20 snapshot: H200 $6/GPU-hr, RTX PRO 6000 $4/GPU-hr. No LTX endpoint price change was recorded. Two GPU hikes in one week matter for anyone self-hosting LTX on fal serverless; re-check rates before budgeting. Black Forest Labs' FLUX 3 Max video gives fal a new hosted competitor priced near [[ltx-video-api-pricing|LTX-2.x Pro]] tiers.
 
 Source: [raw/tutorial-fal-pricing-changes-oct-2026.md](raw/tutorial-fal-pricing-changes-oct-2026.md)
+
+### Status as of 2026-11-09
+- No fal pricing change after Oct 26 (latest Pulse capture Nov 9). No LTX price change. See [[ltx-2.5-comfyui-integration]] for local alternatives.
 
 ## Hugging Face Integration
 

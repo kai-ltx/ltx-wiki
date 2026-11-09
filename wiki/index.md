@@ -2,12 +2,12 @@
 title: Wiki Index
 type: overview
 created: 2026-04-13
-updated: 2026-11-02
+updated: 2026-11-09
 ---
 
 # Wiki Index
 
-Content catalog for the LTX wiki. 229 pages across 354 raw sources. Last weekly update: 2026-11-02.
+Content catalog for the LTX wiki. 229 pages across 359 raw sources. Last weekly update: 2026-11-09.
 
 ## Overviews
 
@@ -15,7 +15,7 @@ Content catalog for the LTX wiki. 229 pages across 354 raw sources. Last weekly 
 - [[ltx-2-overview]] — LTX-2 (19B) joint audio-video foundation model
 - [[ltx-ecosystem]] — Map of all LTX products, URLs, and how they relate
 - [[ltx-video-early-versions-overview]] — Timeline from 0.9.0 through 0.9.6
-- [[competitor-landscape-overview]] — Full competitive landscape (model + product)
+- [[competitor-landscape-overview]] — Full competitive landscape (model + product); llm-stats arena + Felo rollouts (Nov 9, 2026)
 - [[open-source-video-generation-landscape]] — All open-source video gen models compared
 - [[video-generation-architectures]] — Taxonomy of video generation architecture families
 - [[comfyui-ltx-integration-overview]] — ComfyUI + LTX Video integration overview
@@ -249,7 +249,7 @@ Content catalog for the LTX wiki. 229 pages across 354 raw sources. Last weekly 
 
 ## Model Competitors
 
-- [[wan-video]] — Alibaba Wan 2.1/2.2: best motion realism, Apache 2.0, but slower; Wan 2.2 derivatives (TBC Mischief 1) on fal
+- [[wan-video]] — Alibaba Wan 2.1/2.2: best motion realism, Apache 2.0, but slower; Wan 2.2 derivatives (TBC Mischief 1) on fal; Wan 3.0 Prime on Felo (Nov 5, 2026)
 - [[competitor-minimax-hailuo]] — MiniMax H3 / Hailuo 3.0 (33B omni-modal): top open-weights model on all four AA video boards
 - [[competitor-magi-sandai]] — Sand.ai MAGI-2 Preview: 114B MoE, Apache 2.0, 10s A/V, 8x Hopper required
 - [[hunyuan-video]] — Tencent HunyuanVideo: 13B, best multi-person scenes
@@ -263,7 +263,7 @@ Content catalog for the LTX wiki. 229 pages across 354 raw sources. Last weekly 
 
 ## Product Competitors
 
-- [[competitor-runway]] — Gen-3/Gen-4: industry standard, $12–76/mo; App Studio no-code apps (Oct 26, 2026)
+- [[competitor-runway]] — Gen-3/Gen-4: industry standard, $12–76/mo; App Studio no-code apps (Oct 26, 2026); no new model as of Nov 9
 - [[competitor-pika]] — Pika Labs: social media focus, Pikaffects/Pikaswaps
 - [[competitor-kling]] — Kling AI (Kuaishou): Kling 4.0 GA Oct 15 / API Oct 21 2026, $18B valuation, >RMB 850M Q2 revenue
 - [[competitor-seedance]] — Seedance 2.0/2.5 (ByteDance): native 30s, 50 multimodal refs, 4K 10-bit

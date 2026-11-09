@@ -269,3 +269,16 @@ Key findings:
 
 ## [2026-11-02] lint | Weekly health check
 Broken links: 0 (full wikilink scan across 229 pages excluding log.md, escaped-pipe and anchor syntax handled). Index drift: 0 (all content pages in index.md, no dangling entries; log.md is not indexed, as in earlier runs; index header raw count updated to 354; ltx-desktop, ltx-2.5-comfyui-integration, wan-video, competitor-runway and competitor-veo summaries refreshed). Format issues: 0 on the 8 touched pages (all frontmatter fields present, updated: 2026-11-02, new raw sources listed). Line counts: touched pages 83 to 234 lines. Still over 300 and pending a split: fal-ai.md (301), installation-quickstart.md, python-performance-memory.md.
+
+## [2026-11-09] ingest | Weekly update
+Sources added: 5 files (Area1/LTX news: 1, Area2/Community: 1, Area3/Competitors: 2, Area4/Tutorials: 1). Research window: 2026-11-02 to 2026-11-09. Pages created: none. Pages updated: [[ltx-2.5-model]], [[community-sentiment-overview]], [[competitor-landscape-overview]], [[competitor-kling]], [[competitor-seedance]], [[wan-video]], [[competitor-runway]], [[fal-ai]].
+
+Key findings:
+(1) **Quiet week for LTX.** ltx.io/release-notes still tops out at 2026-10-13 (LTX Trainer in Explore). No in-window press, blog, Desktop or model release found. GitHub release pages could not be fetched this run, so a new Desktop or LTX-2 tag is unverified rather than ruled out.
+(2) **Community.** Still no dated Reddit/X LTX threads (fourth week running). New third-party arena snapshot: llm-stats Video Arena (Nov 9, 1,450 votes) ranks Kling v3 1934, Happy Horse 1.0 1816, Seedance 2.0 Fast 1747; no LTX model in the visible top entries.
+(3) **Competitors.** Felo (Nov 5) added Seedance 2.5, Wan 3.0 Prime and Kling 4.0, all at 30 s max, versus a 20 s cap on hosted LTX-2.5. Runway changelog has nothing after Oct 27; enterprise promo (2 months free, sign by 12/31); Max-plan unlimited Wan 3.0 promo ended Oct 26 (secondary). No new Kling, Wan, Hunyuan, Seedance or MiniMax model in-window.
+(4) **Tutorials/pricing.** No fal price change after Oct 26 (Nov 9 capture), no LTX price change; ltxworkflow.com hub unchanged since Sep 19; no new ComfyUI LTX-2.5 templates.
+Open items for next run: confirm the LTX V1 API retirement on docs.ltx.io; check LTX-Desktop and LTX-2 GitHub release tags.
+
+## [2026-11-09] lint | Weekly health check
+Broken links: 0 (full wikilink scan across 229 pages excluding log.md). Index drift: 0 (all content pages indexed, no dangling entries; index header raw count updated to 359; competitor-landscape-overview, wan-video and competitor-runway summaries refreshed). Format issues: 0 on the 8 touched pages (all frontmatter fields present, updated: 2026-11-09, new raw sources listed). Line counts: touched pages 65 to 305. Over 300 and pending a split: fal-ai.md (305), installation-quickstart.md, python-performance-memory.md.

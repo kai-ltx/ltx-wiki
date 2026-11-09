@@ -2,8 +2,9 @@
 title: Seedance (ByteDance)
 type: competitor
 created: 2026-07-06
-updated: 2026-10-26
+updated: 2026-11-09
 sources:
+  - raw/competitor-felo-adds-seedance-2-5-wan-3-prime-kling-4-2026-11-05.md
   - raw/competitor-seedance-25-july-2026.md
   - raw/competitor-video-market-snapshot-2026-10-25.md
   - raw/competitor-kling-4-0-full-launch-and-api-2026-10.md
@@ -53,6 +54,10 @@ However, Seedance does not yet have a direct consumer-facing platform comparable
 
 ## Regulatory Compliance
 - Seedance 2.0 ships with **C2PA watermarking** built in, compliant with EU AI Act Article 50 (enforcement August 2, 2026) and California SB 942
+
+## Felo Integration (2026-11-05)
+
+- Felo added Seedance 2.5 at 4-30 s, 480P or 720P only, with image, video and audio references or first+last frame, and generated audio. The resolution cap is lower than Runway's 1080p Seedance 2.5 (Aug 15) and the 4K enterprise trial.
 
 ## See Also
 - [[competitor-landscape-overview]]

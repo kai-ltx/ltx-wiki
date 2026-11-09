@@ -2,8 +2,9 @@
 title: Runway (Gen-3 / Gen-4 / Agent)
 type: competitor
 created: 2026-04-13
-updated: 2026-11-02
+updated: 2026-11-09
 sources:
+  - raw/competitor-runway-changelog-quiet-and-wan3-promo-end-2026-11.md
   - raw/competitor-product-runway.md
   - raw/competitor-runway-agent-launch-may-2026.md
   - raw/competitor-runway-gen45-benchmark-2026.md
@@ -185,6 +186,13 @@ Source: [raw/competitor-video-market-snapshot-2026-10-25.md](raw/competitor-vide
 - **Read for LTX:** Runway keeps building workflow layers around third-party and older first-party models rather than shipping a new model. The nearest LTX equivalents are [[ltx-explore]] and [[ltx-studio]]'s Elements and Brand Kit; LTX has no user-built app layer.
 
 Source: [raw/competitor-runway-app-studio-and-ads-ga-2026-10.md](raw/competitor-runway-app-studio-and-ads-ga-2026-10.md)
+
+## Changelog Check (2026-11-09)
+
+- No changelog entries after Oct 27 (Runway Ads). No new first-party model; Gen-4.5 (Dec 2025) and Aleph 2.0 (May 2026) remain current. No Gen-5 date.
+- New enterprise promotion: up to 2 months of usage free for contracts signed by 12/31.
+- PricingSaaS (secondary) logged the end of the Max plan's unlimited [[wan-video|Wan 3.0]] promo on Oct 26.
+- Earlier October MCP additions not previously logged: Project Credit Caps (Enterprise, Oct 9), Seedream 5.0 Flash (Oct 12), Fish Audio Drama 3 (Oct 14), Mirelo SFX 2.0 and BiRefNet v2 (Oct 15).
 
 ## Strengths
 - Industry-standard status with proven enterprise adoption

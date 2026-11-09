@@ -2,8 +2,10 @@
 title: Competitor Landscape Overview
 type: overview
 created: 2026-04-13
-updated: 2026-10-12
+updated: 2026-11-09
 sources:
+  - raw/community-llm-stats-video-arena-snapshot-2026-11-09.md
+  - raw/competitor-felo-adds-seedance-2-5-wan-3-prime-kling-4-2026-11-05.md
   - raw/competitor-aa-leaderboard-refresh-2026-09.md
   - raw/competitor-kling-30-official-launch-june-2026.md
   - raw/community-video-leaderboard-june-2026.md
@@ -271,6 +273,11 @@ No new releases were found in the window from **[[competitor-sora|Sora/OpenAI]]*
 ### California SB 942
 - In effect since January 1, 2026
 - Requires disclosure of AI-generated content distributed in California
+
+## llm-stats Video Arena and Aggregator Rollouts (2026-11-09)
+
+- **llm-stats Video Arena (Nov 9):** Kling v3 1934, Happy Horse 1.0 1816, Seedance 2.0 Fast 1747 (1,450 blind votes, 13 models). A smaller, separate arena from Artificial Analysis; LTX is not in its visible top entries.
+- **Felo AI Video (Nov 5)** added Seedance 2.5, Wan 3.0 Prime and Kling 4.0 alongside MiniMax H3. All three new models run 30-second clips on Felo, which makes 30 s single-pass the de facto ceiling among closed competitors. LTX-2.5 hosted endpoints top out at 20 s.
 
 ## See Also
 - [[ltx-studio]]
